@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and after pseudo Selectors</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: black;
+            color: white;
+        }
+        header::before{
+            background: url("https://www.tasteofhome.com/wp-content/uploads/2018/12/Modern-Tuna-Casserole_EXPS_THFM19_228112_B09_27_9b.jpg") no-repeat center center/cover;
+            opacity: 0.75;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .navigation {
+            font-family: "Bree Serif", serif;
+            font-size: 20px;
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+            padding: 20px 23px;
+        }
+
+        section {
+            height: 344px;
+            margin: 3px 230px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            text-decoration: none;
+            text-align: center;
+            font-size: 25px;
+        }
+        ul li a{
+            color: white;
+            text-decoration: none;
+        }
+        ul li a:hover{
+            color: rgb(255, 251, 0);
+        }
+
+        /*section::before{
+        content: "this is a content";
+    }*/
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item"><a href="#">Home</a></li>
+                <li class="item"><a href="#">About</a></li>
+                <li class="item"><a href="#">Services</a></li>
+                <li class="item"><a href="#">Contact Us </a></li>
+            </ul>
+        </nav>
+    </header>
+        <section>
+            <h1> Welcome to coding work </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere porro dolorum sequi repudiandae? Minus
+                officiis doloribus veniam architecto. Architecto quasi fugit tempore enim animi maxime ullam
+                perspiciatis aut dignissimos, eius maiores natus illum consequuntur.</p>
+        </section>
+</body>
+
+</html>
