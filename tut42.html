@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid + Media queries</title>
+</head>
+<style>
+    .container{
+        display: grid;
+        grid-gap:1rem;
+    }
+    @media only screen and (max-width: 300px){
+        body{
+            background-color: red;
+        }
+    }
+
+    @media only screen and (max-width: 300px) and (max-width:500px){
+        body{
+            background-color: blue;
+        }
+    }
+
+    @media (min-width: 500px) and (max-width:800px) {
+        body{
+            background-color: yellow;
+        }
+    }
+
+    @media (min-width: 800px) {
+        body{
+            background-color: green;
+        }
+    }
+
+    .bdr{
+        border: 2px solid black;
+        padding: 23px;
+        background-color: wheat;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <nav class="bdr">
+            Home About Contact
+        </nav>
+        <aside class="bdr">
+            <section>
+                <h2>Learn CSS in Hindi</h2>
+            </section>
+        <aside class="bdr">
+            <h1>More about us</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo obcaecati dolor nihil repellendus deserunt enim, rem dignissimos! Animi eaque perferendis, distinctio deserunt quidem reiciendis vero non eveniet a cupiditate quae labore voluptates quas similique veritatis. Odit ex odio magnam aut atque corrupti ipsam, esse voluptatibus impedit. Aliquid, soluta ea?</p>
+        </aside>
+    </div>
+    
+</body>
+</html>
