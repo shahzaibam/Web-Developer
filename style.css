@@ -1,233 +1,51 @@
-/*CSS Reset*/
-*{
+body{
     margin: 0px;
     padding: 0px;
-}
- 
-
-/*CSS Variables*/
-:root{
-    --navbar-height: 59px;
+    font-family: sans-serif;
 }
 
-/*Navigation Bar*/
-#navbar{
-  display: flex;
-  align-items: center; 
-  position: relative;
-  top: 0px; 
-}
-#navbar::before{
-    content: " ";
-    background-color: black;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: .4;
-}
-
-/*Navigation Bar: Logo and Image*/
-#logo{
-    margin: 10px 34px;
-}
-
-#logo img{
-    height: 59px;
-    margin: 3px 6px;
-}
-#image{
-    border: 0.1px solid black;
-    border-radius: 30px;
-}
-
-/* Navigation Bar: List Styling */
-
-#navbar ul{
-    display: flex;
-    font-family: 'Baloo Bhai 2', cursive;
-}
-
-
-
-#navbar ul li{
-    color: white;
-    list-style: none;
-    font-size: 1.3rem;
-}
-
-#navbar ul li a{
-    color: white;
-    display: block;
-    padding: 3px 22px;
-    border-radius: 20px;
-    text-decoration: none;
-}
-
-#navbar ul li a:hover{
-    color: black;
-    background-color: white;
-}
-
-
-/*Home Section*/
-
-#home{
-    display: flex;
-    flex-direction: column;
-    padding: 3px 200px;
-    height: 550px;
-    justify-content: center;
-    align-items: center;
-}
-
-#home::before{
-    content: " ";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background: url("/img/food-1932466_1920.jpg") no-repeat center center/cover;
-    height: 642px;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.95;
-}
-
-
-#home h1{
-    color: white;
+h1{
     text-align: center;
+    color: steelblue;
 }
 
-#home p{
-    color: white;
-    text-align: center;
-    font-size: 1.5rem;
-    font-family: 'Baloo Bhai 2', cursive;
+div img{
+    width: 120px;
+    height: 120px;
 }
-/* Services Section */
-#services{
-    margin: 34px;
-    display: flex;
-}
-#services .box  {
-    border: 2px solid brown;
-    padding: 34px;
-    margin: 25px 5px;
-    border-radius: 28px;
-    background-color: #f2f2f2;
-}
-#services .box img{
-    height: 160px;
+.flexcontainer{
+    width: 500px;
+    height: 300px;
+    background-color: lightblue;
     margin: auto;
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-#services .box p{
-    font-family: 'Baloo Bhai 2', cursive;
-}
-
-/*Clients section*/
-.client-item img{
-    height: 160px;
-    display: block;
-}
-
-#client-section{
-    position: relative;
-    height: 344px;
-}
-#clients{
+.flex-item{
+    background: tomato;
+    color: white;
+    /*width: 100px;
+    height: 100px;*/
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-#clients{
-    content: "";
-    position: absolute;
-    background: url(/img/Free_Sample_By_Wix\ \(3\).jpg);
-    width: 100%;
-    height: 54%;
-    z-index: -1;
-}
-.client-item{
-    padding: 34px;
 }
 
-/*Contact Section*/
-#contact{
-    position: relative;
-}
-#contact::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.7;
-    background: url(/img/naanmurgi.jpg) no-repeat center center/cover;
+.flex-item:nth-child(2){
+    font-size: 3em;
+    align-self: center;
 }
 
-#contact-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 34px;
+img{
+    align-self: flex-end;
 }
 
-#contact-box input,
-#contact-box textarea{
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: 9px;
-    font-size: 1.1rem;
-}
-
-#contact-box form{
-    width: 40%;
-}
-
-#contact-box label{
-    font-size: 1.3em;
-    font-family: 'Baloo Bhai 2', cursive;
+.flex-item:nth-child(odd){
+    background: teal;
 }
 
 footer{
-    background-color: black;
-    color: white;
-    padding: 9px 20px;
-}
-
-
-
-
-
-/* Utility Classes */
-.h-primary{
-    font-family: 'Baloo Bhai 2', cursive;
-    font-size: 3.8rem;
-    padding: 12px;
-}
-
-.h-secondary{
-    font-family: 'Baloo Bhai 2', cursive;
-    font-size: 2.8rem;
-    padding: 12px;
-}
-
-.btn{
-    padding: 6px 20px;
-    border: 2px solid;
-    background-color: brown;
-    color: white;
-    margin: 17px;
-    font-size: 1.5rem;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.center{
+    padding-top: 3em;
     text-align: center;
 }

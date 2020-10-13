@@ -1,0 +1,45 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+    height: 500px;
+    background: pink;
+    align-content: baseline;
+}
+
+.item{
+    flex: 0 1 24%;
+    height: 100px;
+    margin-bottom: 2%;
+    background: #eee;
+    text-align: center;
+    line-height: 100px;
+}
+
+#dos{
+    background: lightblue;
+}
+
+#cuatro{
+    background: lightblue;
+}
+
+#seis{
+    background: lightblue;
+}
+
+#ocho{
+    background: lightblue;
+}
+
+.item{
+    order: 1;
+}
