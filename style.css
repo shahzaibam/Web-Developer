@@ -1,51 +1,279 @@
-body{
+*body{
     margin: 0px;
     padding: 0px;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
-h1{
-    text-align: center;
-    color: steelblue;
+.header{
+    margin-bottom: -170px;
 }
 
-div img{
-    width: 120px;
-    height: 120px;
+
+.main{
+    height: 100vh;
 }
-.flexcontainer{
-    width: 500px;
-    height: 300px;
-    background-color: lightblue;
-    margin: auto;
+
+.navposition{
+    width: 1300px;
+    background-color: #f5fdfe;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    position: sticky;
+    top: 0px;
+    cursor: pointer;
+    z-index: 110;
 }
 
-.flex-item{
-    background: tomato;
+.logo img{
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 100px;
+    height: 80px;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.navbar{
+    padding-top: 30px;
+    z-index: 200;
+    position: absolute;
+    left: 1100px;
+    position: sticky;
+}
+
+.acceder{
+    cursor: pointer;
+    border-radius: 20px;
+    color: #024378;
+    border: 1px solid #024378;
+    outline: 0;
+    box-shadow: none;
+    font-weight: 400px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: transparent;
+    font-size: 15px;
+    padding: 3px 13px;
+}
+
+.imagemain img{
+    position: relative;
+    left: -20px;
+    padding-left: 10px;
+    width: 1210px;
+    height: 450px;
+    
+}
+
+.secondheader{
+    z-index: 100;
+}
+
+.info{
+    position: relative;
+    top: -460px;
+    left: 50px;
+    text-shadow: black;
+}
+
+.info h1{
+    font-size: 50px;
     color: white;
-    /*width: 100px;
-    height: 100px;*/
-    display: flex;
-    justify-content: center;
+    text-shadow: 3px 3px black;
 }
 
-.flex-item:nth-child(2){
-    font-size: 3em;
-    align-self: center;
+.info h2{
+    font-size: 50px;
+    color: white;
+    text-shadow: 3px 3px black;
+    font-weight: 100px;
 }
 
-img{
-    align-self: flex-end;
+
+.hr{
+    width: 100px;
+    position: relative;
+    right: 140px;
+    padding:0px;
 }
 
-.flex-item:nth-child(odd){
-    background: teal;
+.categorias{
+    position: relative;
+    left: 530px;
+    top: -45px;
+    color: #024378;
+    z-index: 140;
 }
 
-footer{
-    padding-top: 3em;
-    text-align: center;
+.hr2{
+    position: relative;
+    width: 100px;
+    right: -130px;
+    top: -90px;
 }
+
+.infoFP{
+    padding-left: 100px;
+    z-index: 150;
+}
+
+.categoryname a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #024378;
+}
+
+.categoryname{
+    z-index: 160;
+    padding: 0px;
+}
+
+.categoryname a:hover{
+    text-decoration: underline;
+}
+
+.bluecolor{
+    margin-top: 100px;
+    background: #024378;
+    padding: 8rem 0;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 60px;
+}
+
+.bluecolor h3{
+    padding: 0px;
+    margin: 10px;
+    color: wheat;
+    font-size: 50px;
+}
+
+.firstOne{
+    width: 15%;
+}
+
+.usuarios{
+    position: relative;
+    top: -250px;
+}
+
+.usuarios h3{
+    font-size: 30px;
+    color: white;
+    position: relative;
+    left: 580px;
+}
+
+.usuarios p{
+    font-size: 25px;
+    color: white;
+    position: relative;
+    left: 573px;
+}
+
+.secondOne{
+    width: 15%;
+}
+
+.cursos{
+    position: relative;
+    top: -410px;
+    left: 200px;
+}
+
+.cursos h3{
+    font-size: 30px;
+    color: white;
+    position: relative;
+    left: 580px;
+}
+
+.cursos p{
+    font-size: 25px;
+    color: white;
+    position: relative;
+    left: 573px;    
+}
+
+.thirdOne{
+    width: 15%;
+}
+
+.actividades{
+    position: relative;
+    top: -560px;
+    left: 400px;
+}
+
+.actividades h3{
+    font-size: 30px;
+    color: white;
+    position: relative;
+    left: 570px;
+}
+
+.actividades p{
+    font-size: 30px;
+    color: white;
+    position: relative;
+    left: 550px;
+}
+
+
+.blue{
+    margin-bottom: 0px;
+}
+
+.lastt{
+    position: relative;
+    top: 1050px;
+    left: 440px;
+    margin-bottom: 0px;
+}
+
+.container h2{
+    color: #024378 ;
+    font-size: 30px;
+}
+
+#footer{
+    position: relative;
+    top: 1100px;
+    background-color: teal;
+    padding: 20px;
+}
+
+#footer h3{
+    font-size: 25px;
+    color: white;
+}
+
+#footer h3 ul li i a{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.social{
+    position: relative;
+    top: 1000px;
+    left: 900px;
+    background-color: white;
+    padding: 10px;
+}
+
+.social i a{
+    border: 1px solid white;
+    border-radius: 40px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
