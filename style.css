@@ -238,7 +238,131 @@ span{
     color: black;
 }
 
+.buttons2{
+    position: relative;
+    left: 300px;
+    top: 100px;
+}
 
+.buttons3{
+    background-color: transparent;
+    color: black;
+    font-size: 13px;
+    font-family:'Open Sans', sans-serif;
+    padding: 11px 17px;
+    border: 2px solid black;
+}
 
+.video{
+    position: relative;
+    top: 100px;
+    width: 1200px;
+    margin-right: 0px;
+}
 
+.video img{
+    width: 100%;
+}
 
+.text{
+    width: 1200px;
+    margin-right: 0px;
+}
+
+.text img{
+    position: relative;
+    left: 250px;
+    top: 150px;
+}
+
+.basekitchen{
+    position: relative;
+    top: 200px;
+    width: 1200px;
+}
+
+.basekitchen img{
+    width: 1226px;
+}
+
+.logofooter{
+    padding-top: 0px;
+}
+
+.logofooter img{
+    position: relative;
+    top: 300px;
+    left: 460px;
+    width: 300px;
+    height: 87px;
+
+}
+
+.location{
+    position: relative;
+    top:300px;
+    left: 400px;
+}
+
+footer{
+    position: relative;
+    top: 300px;
+    background-color: black;
+    color: white;
+}
+
+.icons{
+    position: relative;
+    top: 1000px;
+}
+
+.location{
+    position: relative;
+    height: 30vh;
+    top: 300px;
+    left: 0px;
+    margin-bottom: 100px;
+}
+
+.location p{
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
+
+.correo{
+    position: relative;
+    top: 40px;
+}
+
+.smallink{
+    position: relative;
+    top: 100px;
+    left: 480px;
+}
+
+.smallink a{
+    padding: 5px;
+    text-decoration: none;
+    font-size: 10.8px;
+    color: black;
+}
+
+footer{
+    height: 27vh;
+    background-color: #1f1f1f;
+    position: relative;
+}
+
+footer p{
+    position: relative;
+    top: 120px;
+    left: 500px;
+}
+
+footer img{
+    position: relative;
+    left: 400px;
+}
