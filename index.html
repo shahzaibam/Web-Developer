@@ -3,231 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kitchen</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Login</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/index.js">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo">
-                <img src="/img/kitchen-logo.png" alt="">
-            </div>
-
-            <div class="menu">
-                <ul>
-                    <li><a href="#">EQUIPO</a></li>
-                    <li><a href="#">#ATOPEDEPOWER</a></li>
-                    <li><a href="#">TRABAJOS</a></li>
-                    <li><a href="#">SERVICIOS</a></li>
-                    <li><a href="#">PARTNERS</a></li>
-                    <li><a href="#">CONTACTO</a></li>
-                </ul>
-            </div>
+    <main class="theman">
+        <h1>Login</h1>
+        
+        <div class="error">
+            <p class="errorpara">Invalid Username</p>
         </div>
 
-        <div class="black">
-            <img src="https://kitchen.es/wp-content/uploads/2020/05/PREVIEW.jpg">
-        </div>
+        <form class="loginform"> 
+            <input type="text" name="username" placeholder="username">
+            <input type="text" name="password" placeholder="password">
+            <input type="submit" value="Login" class="submit">
+        </form>
 
-        <div class="fotos">
-            <img src="/img/S.jpg" alt="">
-        </div>
 
-        <div class="starbuck">
-            <h2>StarBucks</h2>
-            <h2>La noche más larga</h2>
-            <span>La noche del 27 de octubre con el cambio de hora muchas personas tuvieron que trabajar una hora más,<br> por eso pensamos que necessitarían un buen café.</span>
-        </div>
-
-        <div class="buttons">
-            <button>VER PROYECTO</button>
-        </div>
-
-
-        <div class="clients">
-            <div class="firstline">
-                <img src="/img/LOGOS-CLIENTES-50.png" alt="">
-
-                <img src="/img/logo-chips-ahoy-3.png" alt="">
-
-                <img src="/img/LOGOS-CLIENTES-50.png" alt="">
-
-                <img src="/img/logo-ie-5.png" alt="">
-
-                <img src="/img/LOGOS-CLIENTES-50.png" alt="">
-
-                <img src="/img/logo-madrid-1.png" alt="">
-            </div>
-
-            <div class="secondline">
-                <img src="/img/logo-aeg-8.png" alt="">
-
-                <img src="/img/logo-google-12.png" alt="">
-
-                <img src="/img/logo-lg-9.png" alt="">
-
-                <img src="/img/LOGOS-CLIENTES-50.png" alt="">
-
-                <img src="/img/logo-mahou-16.png" alt="">
-
-                <img src="/img/logo-oxfam-23.png" alt="">
-            </div>
-
-            <div class="thirdline">
-                <img src="/img/logo-cervezas-alhambra-14.png" alt="">
-
-                <img src="/img/logo-pedro-del-hierro-36.png" alt="">
-
-                <img src="/img/logo-aegon-10.png" alt="">
-
-                <img src="/img/logo-junta-castilla-y-leon-47.png" alt="">
-
-                <img src="/img/logo-san-miguel-42.png" alt="">
-
-                <img src="/img/logo-greenpeace-17.png" alt="">
-            </div>
-
-            <div class="fourthline">
-                <img src="/img/logo-ayuda-en-accion-19.png" alt="">
-
-                <img src="/img/ss" alt="">
-
-                <img src="/img/logo-ministerio-sanidad-48.png" alt="">
-
-                <img src="/img/logo-bankinter-30.png" alt="">
-
-                <img src="/img/logo-atonio-miro-37.png" alt="">
-
-                <img src="/img/logo-electrolux-4.png" alt="">
-            </div>
-
-            <div class="fifthline">
-                <img src="/img/logo-pullmantur-13.png" alt="">
-
-                <img src="/img/logo-ono-41.png" alt="">
-
-                <img src="/img/LOGOS-CLIENTES-50.png" alt="">
-
-                <img src="/img/logo-canal-plus-22.png" alt="">
-
-                <img src="/img/logo-nh-hoteles-32.png" alt="">
-
-                <img src="/img/logo-sunny-delight-15.png" alt="">
-            </div>
-
-            <div class="sixthline">
-                <img src="/img/logo-the-atomic-garden-21.png" alt="">
-
-                <img class="inlac" src="/img/logo_INLAC2.png" alt="">
-
-                <img src="/img/logo-wild-turkey-26.png" alt="">
-
-                <img src="/img/logo-ebay-7.png" alt="">
-
-                <img src="/img/logo-multiopticas-43.png" alt="">
-
-                <img src="/img/logo-barcelo-hoteles-33.png" alt="">
-            </div>
-
-
-            <div class="seventhline">
-                <img src="/img/logo-codere-11.png" alt="">
-
-                <img src="/img/logo-milka-2.png" alt="">
-
-                <img src="/img/logo-kia-38.png" alt="">
-
-                <img src="/img/logo-campari-18.png" alt="">
-
-                <img src="/img/logo-ribera-del-duero-24.png" alt="">
-
-                <img src="/img/logo-fnac-40.png" alt="">
-            </div>
-
-            <div class="eighthline">
-                <img src="/img/logo-change-org-6.png" alt="">
-
-                <img src="/img/logo-balay-44.png" alt="">
-
-                <img src="/img/logo-junta-castilla-y-leon-47.png" alt="">
-
-                <img src="/img/logo-cortefiel-35.png" alt="">
-
-                <img src="/img/logo-fundacion-juegaterapia-34.png" alt="">
-
-                <img src="/img/logo-paf-29.png" alt="">
-            </div>
-
-            <div class="ninethline">
-                <img src="/img/logo-destinia-31.png" alt="">
-
-                <img src="/img/logo-brugal-20.png" alt="">
-
-                <img src="/img/logo-uno-entre-cienmil-org-27.png" alt="">
-
-                <img src="/img/logo-findus-45.png" alt="">
-
-                <img src="/img/logo-cuatro-39.png" alt="">
-
-                <img src="/img/logo-vitaldent-28.png" alt="">
-            </div>
-        </div>
-
-        <div class="buttons2">
-            <button class="buttons3">#PUBLICIDAD</button>
-            <button class="buttons3">#PUBLICIDAD</button>
-            <button class="buttons3">#PUBLICIDAD</button>
-            <button class="buttons3">#PUBLICIDAD</button>
-            <button class="buttons3">#PUBLICIDAD</button>
-        </div>
-
-        <div class="video">
-            <img src="/img/web_kitchen_blanco_v6.gif" alt="">
-        </div>
-
-        <div class="text">
-            <img src="/img/2020-10-20_203550.jpg" alt="">
-        </div>
-
-        <div class="basekitchen">
-            <img src="/img/Base-Kitchen-Web.jpg" alt="">
-        </div>
-
-        <div class="logofooter">
-            <img src="/img/kitchen-logo-300x87.png" alt="">
-        </div>
-
-        <div class="location">
-            <p>Calle de Ferraz 11, 1º Derecha. 28008 MADRID</p>
-            <br>
-            <p>(+34) 913 104 048</p>
-
-            <div class="correo">
-                <p>info@kitchen.es</p>
-            </div>
-
-            <div class="smallink">
-                <a href="#">Aviso Legal</a>
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Política de Cookies</a>
-            </div>
-        </div>
-
-        <div class="icons">
-            <div class="facebook">
-                <i class="fab fa-facebook"></i>
-            </div>
-        </div>
-
-
-    </header>
-
-    <footer>
-        <p>Copyright Kitchen Shebi 2020</p>
-        <a href="#"><img src="/img/425x80.jpg" alt=""></a>
-    </footer>
+    </main>
 </body>
 </html>
