@@ -3,25 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Slider</title>
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/index.js">
 </head>
 <body>
-    <main class="theman">
-        <h1>Login</h1>
-        
-        <div class="error">
-            <p class="errorpara">Invalid Username</p>
+    <div class="slidercontent">
+        <div class="showSlide">
+            <img src="/img/season-6.jpg" alt="">
+            <div class="content">
+                Lorem ipsum dolor sit amet.
+            </div>
         </div>
 
-        <form class="loginform"> 
-            <input type="text" name="username" placeholder="username">
-            <input type="text" name="password" placeholder="password">
-            <input type="submit" value="Login" class="submit">
-        </form>
+        <div class="showSlide">
+            <img src="/img/land-rover-range-rover-velar-gtluxe.jpg" alt="">
+            <div class="content">
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
 
+        <div class="showSlide">
+            <img src="/img/descarga.jpg" alt="">
+            <div class="content">
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
 
-    </main>
+        <div class="showSlide">
+            <img src="/img/images.jpg" alt="">
+            <div class="content">
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+
+        <!-- Navigation arrows -->  
+        <a class="left" onclick="nextSlide(-1)">❮</a>  
+        <a class="right" onclick="nextSlide(1)">❯</a>  
+
+    </div>
+
+    <script>
+    var slide_index = 1;
+
+    displaySlides(slide_index);
+    function nextSlide(n) {
+    displaySlides(slide_index += n);
+}
+
+function currentSlides(n) {
+    displaySlides(slide_index = n);
+}
+
+function displaySlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("showSlide");
+    if (n > slides.length) { slide_index = 1}
+    if (n<1) {slide_index = slides.length}
+    for (i=0; i < slides.length; i++){
+        slides[i].style.display = "none";
+    }
+    slides[slide_index - 1].style.display = "block"
+}
+    </script>
 </body>
 </html>
