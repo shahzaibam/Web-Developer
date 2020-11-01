@@ -3,67 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slider</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Sliderr</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/text.js"></script>
 </head>
 <body>
-    <div class="slidercontent">
-        <div class="showSlide">
-            <img src="/img/season-6.jpg" alt="">
-            <div class="content">
-                Lorem ipsum dolor sit amet.
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <div class="slide first">
+                <img src="/img/emiliano-arias-cvM5od4wslg-unsplash.jpg" alt="">
             </div>
-        </div>
 
-        <div class="showSlide">
-            <img src="/img/land-rover-range-rover-velar-gtluxe.jpg" alt="">
-            <div class="content">
-                Lorem ipsum dolor sit amet.
+            <div class="slide">
+                <img src="/img/rodrigo-gonzalez-SWJn3fWr-rI-unsplash.jpg" alt="">
             </div>
-        </div>
 
-        <div class="showSlide">
-            <img src="/img/descarga.jpg" alt="">
-            <div class="content">
-                Lorem ipsum dolor sit amet.
+            <div class="slide">
+                <img src="/img/narciso-arellano-ceRjYONcaBA-unsplash.jpg" alt="">
             </div>
-        </div>
 
-        <div class="showSlide">
-            <img src="/img/images.jpg" alt="">
-            <div class="content">
-                Lorem ipsum dolor sit amet.
+            <div class="slide">
+                <img src="/img/narciso-arellano-egayxg_FHk8-unsplash.jpg" alt="">
             </div>
+
+            <!--Automatic start-->
+
+            <div class="navigation_auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+
         </div>
-
-        <!-- Navigation arrows -->  
-        <a class="left" onclick="nextSlide(-1)">❮</a>  
-        <a class="right" onclick="nextSlide(1)">❯</a>  
-
+        <!--Manual navigation-->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
     </div>
 
-    <script>
-    var slide_index = 1;
-
-    displaySlides(slide_index);
-    function nextSlide(n) {
-    displaySlides(slide_index += n);
-}
-
-function currentSlides(n) {
-    displaySlides(slide_index = n);
-}
-
-function displaySlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("showSlide");
-    if (n > slides.length) { slide_index = 1}
-    if (n<1) {slide_index = slides.length}
-    for (i=0; i < slides.length; i++){
-        slides[i].style.display = "none";
-    }
-    slides[slide_index - 1].style.display = "block"
-}
+    <script type="text/javascript">
+    var counter = 1;
+    setInterval(function(){
+        document.getElementById("radio" + counter).checked = true;
+        counter++;
+        if(counter>4){
+            counter = 1;
+        }
+    }, 5000);
     </script>
 </body>
 </html>
