@@ -1,11 +1,12 @@
 body{
-    margin: 0px;
-    background: red;
+    margin: 0;
+    background: green;
 }
 
 .showslide{
     display: none;
 }
+
     .showslide img{
         width: 100%;
     }
@@ -48,20 +49,12 @@ body{
     text-align: center;
 }
 
-.active{
-    background-color: blue;
-}
-
-
-
-
 .fade{
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
 }
-
 
 @-webkit-keyframes fade{
     from{
@@ -71,6 +64,7 @@ body{
         opacity: 1;
     }
 }
+
 
 
 @keyframes fade{
