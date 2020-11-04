@@ -3,42 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>slider222</title>
-    <link rel="stylesheet" href="style.css">
+    <title>slider444</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <div class="slidercontent">
         <div class="showslide">
-            <img src="/img/553227_4560257_Dr-Iqbal_updates.jpg" alt="">
-            <div class="content">
-                Iqbal
-            </div>
+            <img src="/img/ali-kazim-k8gK7Ig7wqg-unsplash.jpg" alt="">
         </div>
 
         <div class="showslide">
-            <img src="/img/Jinnah.jpg" alt="">
-            <div class="content">
-                Jinnah
-            </div>
+            <img src="/img/pakistan-land-1457990773gn4k8.jpg" alt="">
         </div>
 
         <div class="showslide">
-            <img src="/img/muhammad-qaan-NapXDGX6pkU-unsplash.jpg" alt="">
-            <div class="content">
-                Pak Flag
-            </div>
+            <img src="/img/sunset-behind-the-trees-in-pakistan.jpg" alt="">
         </div>
 
         <div class="showslide">
-            <img src="/img/hamid-roshaan-9Kj1C8iuX84-unsplash.jpg" alt="">
-            <div class="content">
-                Pak flag
-            </div>
+            <img src="/img/zain-malik-g8_mZA_Me2I-unsplash.jpg" alt="">
         </div>
 
-        <!--Navigation arrows -->
-        <a class="left" onclick="nextSlide(-1)">❮</a>  
-        <a class="right" onclick="nextSlide(1)">❯</a> 
+        <a class="left" onclick="nextSlide(-1)">❮</a>
+        <a class="right" onclick="nextSlide(1)">❯</a>
 
         <script>
             var slide_index = 1;
@@ -54,10 +41,10 @@
 
             function displaySlides(n){
                 var i;
-                var slides = document.getElementsByClassName("showslide")
+                var slides = document.getElementsByClassName("showslide");
                 if(n>slides.length) {slide_index = 1}
                 if(n<1) {slide_index = slides.length}
-                for(i=0;i<slides.length; i++){
+                for(i=0; i<slides.length; i++){
                     slides[i].style.display = "none"
                 }
                 slides[slide_index - 1].style.display = "block"
