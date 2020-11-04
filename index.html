@@ -3,53 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>slider444</title>
+    <title>autoslider111</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <div class="slidercontent">
-        <div class="showslide">
-            <img src="/img/ali-kazim-k8gK7Ig7wqg-unsplash.jpg" alt="">
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <div class="slide first">
+                <img src="/img/christian-wiediger-8d8KfpYCQV0-unsplash.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="/img/eric-michael-KA9W4k0pOn4-unsplash.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="/img/felix-fuchs-_UCC7xtniKA-unsplash.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="/img/george-pagan-iii-PsifAN6_z-k-unsplash.jpg" alt="">
+            </div>
+
+            <div class="navigation_auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
         </div>
 
-        <div class="showslide">
-            <img src="/img/pakistan-land-1457990773gn4k8.jpg" alt="">
+            <!--Manual navigation-->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
         </div>
-
-        <div class="showslide">
-            <img src="/img/sunset-behind-the-trees-in-pakistan.jpg" alt="">
-        </div>
-
-        <div class="showslide">
-            <img src="/img/zain-malik-g8_mZA_Me2I-unsplash.jpg" alt="">
-        </div>
-
-        <a class="left" onclick="nextSlide(-1)">❮</a>
-        <a class="right" onclick="nextSlide(1)">❯</a>
-
-        <script>
-            var slide_index = 1;
-
-            displaySlides(slide_index);
-            function nextSlide(n){
-                displaySlides(slide_index += n)
-            }
-
-            function currentSlides(n){
-                displaySlides(slide_index = n);
-            }
-
-            function displaySlides(n){
-                var i;
-                var slides = document.getElementsByClassName("showslide");
-                if(n>slides.length) {slide_index = 1}
-                if(n<1) {slide_index = slides.length}
-                for(i=0; i<slides.length; i++){
-                    slides[i].style.display = "none"
-                }
-                slides[slide_index - 1].style.display = "block"
-            }
-        </script>
     </div>
-</body>
+
+    <script type="text/javascript">
+        var counter = 1;
+
+        setInterval(function(){
+            document.getElementById("radio" + counter).checked = true;
+            counter ++;
+            if (counter>4){
+                counter=1;
+            }
+        },5000);
+    </script>
+    </body>
 </html>
