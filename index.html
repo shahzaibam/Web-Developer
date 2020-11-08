@@ -2,26 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width= , initial-scale=1.0">
-    <title>sliderr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <div class="slidercontent">
-        <div class="showslide">
-            <img src="/img/mert-kahveci-MlW6OS74hzg-unsplash.jpg" alt="">
+        <div class="slideshow">
+            <img src="/img/descarga.jpg" alt="">
         </div>
 
-        <div class="showslide">
-            <img src="/img/pathum-danthanarayana-kBY8uhuvnT8-unsplash.jpg" alt="">
+        <div class="slideshow">
+            <img src="/img/images.jpg" alt="">
         </div>
 
-        <div class="showslide">
-            <img src="/img/rahul-chakraborty-UE9uflQvAcY-unsplash.jpg" alt="">
+        <div class="slideshow">
+            <img src="/img/land-rover-range-rover-velar-gtluxe.jpg" alt="">
         </div>
 
-        <div class="showslide">
-            <img src="/img/william-warby-ld4wZGqlLF4-unsplash.jpg" alt="">
+        <div class="slideshow">
+            <img src="/img/season-6.jpg" alt="">
         </div>
 
         <a class="left" onclick="nextSlide(-1)">previous</a>
@@ -42,14 +42,15 @@
 
         function displaySlides(n){
             var i;
-            var slides = document.getElementsByClassName("showslide")
+            var slides = document.getElementsByClassName("slideshow");
             if(n>slides.length){slide_index = 1}
             if(n<1){slide_index = slides.length}
-            for(i=0; i<slides.length;i++){
+            for (i=0; i<slides.length; i++){
                 slides[i].style.display = "none"
             }
             slides[slide_index - 1].style.display = "block"
         }
     </script>
+
 </body>
 </html>
