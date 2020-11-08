@@ -2,34 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>slider</title>
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>sliderr</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <div class="slidercontent">
         <div class="showslide">
-            <img src="/img/27932403-pistola-semiautomática-que-miente-sobre-un-bolso-de-cuero-pistola-9mm-proceso-detalle-hdr.jpg" alt="">
+            <img src="/img/mert-kahveci-MlW6OS74hzg-unsplash.jpg" alt="">
         </div>
 
         <div class="showslide">
-            <img src="/img/ak-47-asi-funciona-el-kalashnikov-que-apuntaba-al-rey-felipe-vi-y-a-juan-carlos-i.jpg" alt="">
+            <img src="/img/pathum-danthanarayana-kBY8uhuvnT8-unsplash.jpg" alt="">
         </div>
 
         <div class="showslide">
-            <img src="/img/descarga.jpg" alt="">
+            <img src="/img/rahul-chakraborty-UE9uflQvAcY-unsplash.jpg" alt="">
         </div>
 
         <div class="showslide">
-            <img src="/img/PEO_M4_Carbine_RAS_M68_CCO.jpg" alt="">
+            <img src="/img/william-warby-ld4wZGqlLF4-unsplash.jpg" alt="">
         </div>
 
-        <a class="left" onclick="nextSlide(-1)">#21FE</a>
-        <a class="right" onclick="nextSlide(1)">#21FD</a>
+        <a class="left" onclick="nextSlide(-1)">previous</a>
+        <a class="right" onclick="nextSlide(1)">next</a>
     </div>
 
     <script>
-        slide_index = 1;
+        var slide_index = 1;
 
         displaySlides(slide_index);
         function nextSlide(n){
@@ -45,12 +45,11 @@
             var slides = document.getElementsByClassName("showslide")
             if(n>slides.length){slide_index = 1}
             if(n<1){slide_index = slides.length}
-            for (i=0; i<slides.length; i++){
+            for(i=0; i<slides.length;i++){
                 slides[i].style.display = "none"
             }
             slides[slide_index - 1].style.display = "block"
         }
-
     </script>
 </body>
 </html>
