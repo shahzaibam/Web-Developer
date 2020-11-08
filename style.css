@@ -35,8 +35,8 @@ body{
     height: 500px;
 }
 
-/* css auto navigation */
 
+/* css auto navigation */
 
 .navigation_auto{
     position: absolute;
@@ -73,7 +73,11 @@ body{
     background: #40D3DC;
 }
 
+
+
+
 /* css for manual navigation */
+
 
 .navigation-manual{
     position: absolute;
@@ -115,3 +119,5 @@ body{
 #radio4:checked ~ .first{
     margin-left: -60%;
 }
+
+
