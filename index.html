@@ -3,54 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>slider</title>
+    <title>Hamburger menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <div class="slidercontent">
-        <div class="slideshow">
-            <img src="/img/descarga.jpg" alt="">
-        </div>
+    <div class="container">
+        <nav class="navbar">
+            <div class="hamburger-menu">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+            </div>
 
-        <div class="slideshow">
-            <img src="/img/images.jpg" alt="">
-        </div>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" >Home</a>
+                </li>
 
-        <div class="slideshow">
-            <img src="/img/land-rover-range-rover-velar-gtluxe.jpg" alt="">
-        </div>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" >About Us</a>
+                </li>
 
-        <div class="slideshow">
-            <img src="/img/season-6.jpg" alt="">
-        </div>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" >News</a>
+                </li>
 
-        <a class="left" onclick="nextSlide(-1)">previous</a>
-        <a class="right" onclick="nextSlide(1)">next</a>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" >Gallery</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link" >Events</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link" >Pricing</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link" >Contact Us</a>
+                </li>
+            </ul>
+        </nav>
     </div>
-
-    <script>
-        var slide_index = 1;
-
-        displaySlides(slide_index);
-        function nextSlide(n){
-            displaySlides(slide_index += n)
-        }
-
-        function currentSlides(n){
-            displaySlides(slide_index = n)
-        }
-
-        function displaySlides(n){
-            var i;
-            var slides = document.getElementsByClassName("slideshow");
-            if(n>slides.length){slide_index = 1}
-            if(n<1){slide_index = slides.length}
-            for (i=0; i<slides.length; i++){
-                slides[i].style.display = "none"
-            }
-            slides[slide_index - 1].style.display = "block"
-        }
-    </script>
-
+    <script src="/script.js"></script>
 </body>
 </html>
