@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
 }
-
 body{
     font-family: "Dosis", sans-serif;
 }
@@ -66,7 +65,7 @@ body{
 
 .change .line-3{
     transform: rotateZ(405deg) translate(-8px, -6px);
-}
+}       
 
 .nav-list{
     text-align: right;
