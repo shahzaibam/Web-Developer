@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
 }
-
 body{
     font-family: "Dosis", sans-serif;
 }
@@ -12,10 +11,10 @@ body{
     height: 100vh;
     background: linear-gradient(
             rgba(0,0,0, 0.4),
-            rgba(148,48,48, 0.2),
-            rgba(167,67,67, 0.4)   
+            rgba(148,48,48, .02),
+            rgba(167, 67, 67, 0.4)
         ),
-        url(/img/donnie-rosie-pVt1BHlK97I-unsplash.jpg) center no-repeat;
+        url(/img/sangga-rima-roman-selia-zYIajDsNOKg-unsplash.jpg) center no-repeat;
     background-size: cover;
 }
 
@@ -30,7 +29,7 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 20% 0 0 20%;
-    transition: right .8s cubic-bezier(1, 0 , 0 , 1);
+    transition: right .8s cubic-bezier(1, 0 , 0, 1);
 }
 
 .change{
@@ -57,7 +56,7 @@ body{
 }
 
 .change .line-1{
-    transform: rotateZ(-405deg) translate(-8px , 6px);
+    transform: rotateZ(-405deg) translate(-8px, 6px);
 }
 
 .change .line-2{
@@ -66,7 +65,7 @@ body{
 
 .change .line-3{
     transform: rotateZ(405deg) translate(-8px, -6px);
-}
+}       
 
 .nav-list{
     text-align: right;
@@ -114,3 +113,9 @@ body{
 .nav-link:hover::after{
     transform: scaleX(1);
 }
+
+
+
+
+
+
