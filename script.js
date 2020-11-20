@@ -1,6 +1,6 @@
 const menuIcon = document.querySelector(".hamburger-menu");
-const navlist = document.querySelector(".nav-list");
+const navlist  = document.querySelector(".nav-list");
 
-menuIcon.addEventListener("click", (e) => {
+menuIcon.addEventListener("click", () => {
     navlist.classList.toggle("change");
 })
