@@ -1,6 +1,10 @@
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "Dosis", sans-serif;
 }
 
 .hamburger-menu{
@@ -17,18 +21,18 @@
 
 .nav-list{
     background: #000;
-    list-style: none;
     display: flex;
     justify-content: space-between;
+    list-style: none;
 }
 
 .nav-link{
+    color: #fff;
     display: inline-block;
     padding: 15px;
-    color: #fff;
+    text-transform: uppercase;
     text-decoration: none;
     font-size: 1.5rem;
-    text-transform: uppercase;
 }
 
 .nav-link:hover{
@@ -41,6 +45,7 @@
     background: chocolate;
 }
 
+
 @media(max-width: 800px){
     .nav-link{
         height: 100vh;
@@ -50,6 +55,7 @@
         left: 0;
         z-index: 10;
         display: none;
+        background: #000;
     }
 
     .change{
@@ -62,9 +68,8 @@
         position: fixed;
         top: 50px;
         right: 50px;
-        cursor: pointer;
         display: flex;
         flex-direction: column;
-        z-index: 100;
+        z-index: 100;    
     }
 }
