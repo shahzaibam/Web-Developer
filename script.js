@@ -1,6 +1,8 @@
-const menuIcon = document.querySelector(".hamburger-menu");
-const navlist = document.querySelector(".nav-list");
+const user = document.querySelector(".hola");
+const password = document.querySelector(".hello");
 
-menuIcon.addEventListener("click", () => {
-    navlist.classList.toggle("change")
-});
+if(user === "shebi123" && password ==="h23"){
+    console.log("ok")
+}else{
+    console.log("nada")
+}
