@@ -1,8 +1,10 @@
-const user = document.querySelector(".hola");
-const password = document.querySelector(".hello");
-
-if(user === "shebi123" && password ==="h23"){
-    console.log("ok")
-}else{
-    console.log("nada")
+function light(value){
+    var pic;
+    if(value === 0){
+        pic = src = "/img/2020-11-26_223847.jpg"
+    }
+    else{
+        pic = src = "/img/bulb on.jpg"
+    }
+    document.getElementById("bulb").src = pic;
 }
