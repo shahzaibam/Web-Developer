@@ -30,7 +30,7 @@ span[1].onclick = () => {
     }
 
     span[0].onclick = () => {
-        l--;
+        l--; 
         for(var i of div){
             if(l==0) {
                 i.style.left = "0px";
