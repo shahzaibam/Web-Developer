@@ -42,9 +42,8 @@ section{
     margin: 10px auto;
     display: flex;
     justify-content: left;
-    overflow-x:auto ;
+    overflow-x: auto;
 }
-
 section::-webkit-scrollbar{
     visibility: hidden;
 }
