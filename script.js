@@ -1,64 +1,10 @@
-var span = document.getElementsByTagName("span");
-var div = document.getElementsByTagName("div");
-
-var l=0;
-
-span[1].onclick = () => {
-    l++;
-    for(var i of div){
-        if(l==0){
-            i.style.left = "0px";
-        }
-
-        if(l==1){
-            i.style.left = "-740px";
-        }
-
-        if(l==2){
-            i.style.left = "-1480px";
-        }
-
-        if(l==3){
-            i.style.left = "-2220px";
-        }
-
-        if(l==4){
-            i.style.left = "-2990px";
-        }
-
-        if(l>4){
-            l=4
-        }
-
+function light(value){
+    var pic;
+    if(value === 0){
+        pic = src = "/img/2020-11-26_223847.jpg"
     }
-
-    span[0].onclick = () => {
-        l--;
-        for(var i of div){
-            if(l==0){
-                i.style.left = "0px";
-            }
-    
-            if(l==1){
-                i.style.left = "-740px";
-            }
-    
-            if(l==2){
-                i.style.left = "-1480px";
-            }
-    
-            if(l==3){
-                i.style.left = "-2220px";
-            }
-    
-            if(l==4){
-                i.style.left = "-2960px";
-            }
-    
-            if(l<0){
-                l=0
-            }
-    
-        }
+    else{
+        pic = src = "/img/bulb on.jpg"
     }
+    document.getElementById("bulb").src = pic;
 }
