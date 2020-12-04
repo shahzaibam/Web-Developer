@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>login signout</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <img id="bulb" src="/img/2020-11-26_223847.jpg">
-    <br>
-    <button onclick="light(0)">Turn Off</button>
-    <button onclick="light(1)">Turn On</button>
+    <div class="login-page">   
+        <div class="form">
+            <form class="login-form">
+                <input class="user" type="text" name="username" placeholder="username">
+                <input class="password" type="password" name="pass" placeholder="password">
+                <input type="submit" value="Login" class="login-button">
+            </form>
+        </div>
+    </div>
     <script src="/script.js"></script>
 </body>
 </html>
