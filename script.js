@@ -1,19 +1,20 @@
-const names = document.getElementById("name");
+const name = document.getElementById("name");
 const password = document.getElementById("password");
 const form = document.getElementById("form");
-const errorElement = document.getElementById("error")
+const errorElement = document.getElementById("error");
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("click", (e) => {
     let messages = []
-    if (names.value === "" || names.value == null){
+    if (name.value === "" || name.value == null){
         messages.push("Name is required")
     }
+
 
     if(password.value.length <= 6) {
         messages.push("Password must be longer than 6 characters")
     }
 
-    if(password.value.length >= 20) {
+    if(password.value.length >= 6) {
         messages.push("Password must be less than 6 characters")
     }
 
