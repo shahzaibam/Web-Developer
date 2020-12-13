@@ -1,29 +1,60 @@
-const name = document.getElementById("name");
-const password = document.getElementById("password");
-const form = document.getElementById("form");
-const errorElement = document.getElementById("error");
+let formData;
 
-form.addEventListener("click", (e) => {
-    let messages = []
-    if (name.value === "" || name.value == null){
-        messages.push("Name is required")
+const signUp = function (e) { 
+    console.log("hi")
+     formData = {
+        fname : document.getElementById("fname").value,
+        lname : document.getElementById("lname").value,
+        email : document.getElementById("email").value,
+        pwd : document.getElementById("pwd").value
     }
+    localStorage.setItem("formData", JSON.stringify(formData));
+    console.log(localStorage.getItem("formData"));
+    
+    e.preventDefault();
+    
+}
+var j = localStorage.getItem("formData")
+
+//console.log(signUp)  
 
 
-    if(password.value.length <= 6) {
-        messages.push("Password must be longer than 6 characters")
-    }
+// let formData = {
+//     fname : "first name",
+//     lname : "last name",
+//     email : "email",
+//     pwd : "pasword"
+//     }
+// localStorage.setItem("formData", JSON.stringify(formData));
+// // console.log(localStorage.getItem("formData"));
 
-    if(password.value.length >= 6) {
-        messages.push("Password must be less than 6 characters")
-    }
+// var a =""
+// var b =""
+// var c =""
+// var d = ""
 
-    if(password.value === "password"){
-        messages.push("Password cannot be password")
-    }
 
-    if(messages.lenght > 0){
-        e.preventDefault()
-        errorElement.innerText = messages.join(", ")
-    }
-})
+// const signUp = function (e) { 
+//     console.log("hi")
+//     a = document.getElementById("fname").value,
+//     b = document.getElementById("lname").value,
+//     c = document.getElementById("email").value,
+//     d = document.getElementById("pwd").value
+    
+//     formData = {
+//                 fname : document.getElementById("fname").value,
+//                 lname : document.getElementById("lname").value,
+//                 email : document.getElementById("email").value,
+//                 pwd : document.getElementById("pwd").value
+//             }
+        
+
+//     e.preventDefault();
+//     localStorage.setItem("formData", JSON.stringify(formData));
+    
+// }
+
+// console.log(a);
+//         console.log(b);
+//         console.log(c);
+//         console.log(d);
