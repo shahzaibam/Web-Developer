@@ -1,46 +1,39 @@
-body{
-    background: url(/img/charles-deluvio-Lks7vei-eAg-unsplash.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-
-.login-page{
-    width: 360px;
-    padding: 10% 0 0;
-    margin: auto;
-}
-
-.form{
-    position: relative;
-    z-index: 1;
-    background: #ffffff;
-    max-width: 360px;
-    margin: 0 auto 100px;
-    padding: 45px;
-    text-align: center;
-}
-
-.form input{
-    font-family: "Roboto", sans-serif;
-    outline: 1;
-    background: #f2f2f2;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
+*{
     box-sizing: border-box;
-    font-size: 14px;
+} 
+
+html, body{
+    margin: 0;
+    padding: 0;
 }
 
-.login-button{
+.container{
+    margin: 10px 50px;
+}
+
+.form-group{
+    margin: 10px;
+}
+
+input{
     width: 100%;
-    padding: 7px;
-    border: none;
-    border-radius: 5px;
-    color: black;
-    font-weight: bold;
-    background-color: #3a3a3a;
-    cursor: pointer;
-    outline: none;
+    border: solid 1px #eee;
+    padding: 15px 10px;
+}
+
+button{
+    width: 200px;
+    padding: 15px;
+    margin-left: 480px;
+    background: #fff;
+    color: dodgerblue;
+    border: solid 1px dodgerblue;
+    border-radius: 33px;                                    
+    cursor: pointer;                          
+    transition: all .38s ease-in-out;               
+}          
+
+button:hover{
+    background: dodgerblue;
+    color: #fff;
 }
