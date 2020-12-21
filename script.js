@@ -32,6 +32,23 @@ function dos (sCorreo, sContrasenna){
 
 
 
+/*function validarCredenciales(pCorreo , pContrasenna){
+var bAcceso = false;
+
+    for (var i = 0; i < localStorage.getItem("formData"); i++){
+        if(pCorreo == localStorage.getItem("formData")[i][2] &&    
+        pContrasenna == localStorage.getItem("formData")[i][3]){
+          bAcceso = true;
+        }
+        else{
+            bAcceso = false;
+        }
+    }
+
+    console.log(alert)
+}*/
+
+
 function iniciarSesion(){
     var sCorreo = "";
     var sContrasenna = "";
