@@ -2,136 +2,161 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 }
 
-section{
+p{
+    font-weight: 300;
+    color: #111;
+}
+
+body{
+    min-height: 1000px;
+}
+
+.banner{
     position: relative;
-    widows: 100%;
+    width: 100%;
     min-height: 100vh;
-    background: #222;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    background: url(/img/roihan-haidar-trxlritzmUU-unsplash.jpg);
+    background-size: cover;
 }
 
 .content{
-    position: relative;
-    padding: 100px 50px 100px 150px;
-    box-sizing: border-box;
-    animation: left-in 0.5s ease-in forwards;
-    animation-delay: 0.5s;
-    opacity: 0;
+    max-width: 900px;
+    text-align: center;
 }
 
 .content h2{
+    font-size: 5em;
     color: #fff;
-    font-size: 3em;
-    font-weight: 800;
 }
 
 .content p{
+    font-size: 1em;
     color: #fff;
-    font-size: 1.2em;
 }
 
-.content a{
-    position: relative;
+.btn{
+    font-size: 1em;
+    color: #fff;
+    background: #ff0157;
     display: inline-block;
-    padding: 15px 30px;
+    padding: 10px 30px;
     margin-top: 20px;
-    background: #ff2562;
-    color: #fff;
-    text-decoration: none;
     text-transform: uppercase;
-    font-size: 0.95em;
-    font-weight: 700;
+    text-decoration: none;
     letter-spacing: 2px;
+    transition: 0.5s;
 }
 
-.imgBx{
-    position: relative;
-    padding-right: 100px;
+.btn:hover{
+    letter-spacing: 6px;
 }
 
-.imgBx img{
-    max-width: 500px;
-}
 
-.sci{
-    position: absolute;
-    bottom: 75px;
-    left: 150px;
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
     display: flex;
-    animation: left-in 0.5s ease-in forwards;
-    animation-delay: 1s;
-    opacity: 0;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
 }
 
-.sci li{
-    list-style: none;
+header .sticky{
+    background: #fff;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
-.sci li a{
-    text-decoration: none;
-    color: #999;
-    margin-right: 30px;
-    font-size: 0.9em;
-}
-
-.sci li a:hover{
+header .logo{
     color: #fff;
-}
-
-
-
-.nav{
-    position: absolute;
-    top: 75px;
-    left: 150px;
-    display: flex;
-    border-left: 5px solid #ff2562;
-    padding-left: 20px;
-    animation: left-in 0.5s ease-in forwards;
-    animation-delay: 0s;
-    opacity: 0;
-}
-
-.nav li{
-    list-style: none;
-}
-
-.nav li a{
-    text-decoration: none;
-    color: #999;
-    margin-right: 30px;
-    font-size: 0.9em;
-    text-transform: uppercase;
     font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
 }
 
-.nav li a.active,
-.nav li a:hover{
-    color: #ff2562;
+header .sticky .logo{
+    color: #111;
 }
 
-@keyframes fade-in{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+header .logo span{
+    color: #ff0157;
+}
+
+header .navigation{
+    position: relative;
+    display: flex;
+}
+
+header .navigation li{
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navigation li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+
+}
+
+header .sticky .navigation li a{
+    color: #111;
+}
+
+header .navigation li a:hover{
+    color: #ff0157;
 }
 
 
-@keyframes left-in{
-    0%{
-        transform: translateX(-200px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
+section{
+    padding: 100px;
+}
+
+.row{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row .col50{
+    position: relative;
+    width: 48%;
+}
+
+.titleText{
+    color: #111;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.titleText span{
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.row .col50 .imgBx{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.row .col50 .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
