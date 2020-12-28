@@ -16,6 +16,19 @@ setInterval(function(){
     }
 }, 3000);
 
+
+//Change signIn to SignUp
+
+var register = document.querySelector("register")
+var signiNN = document.querySelector("sign-in-container")
+
+if(register.addEventListener("click", () =>{
+    signiNN.style.display = "block"
+}))
+
+
+
+
 //Code for SignUp and SignIn
 const signUp = function (e) { 
     let formData = {
