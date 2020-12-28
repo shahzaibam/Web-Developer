@@ -37,78 +37,89 @@
         </ul>
     </nav>
 
-    <div class="slider">
-        <div class="slides">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
-
-            <div class="slide first">
-                <img src="/img/zahid-lilani-bnjHJO3c5uM-unsplash.jpg" alt="">
+    <div class="body">
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+    
+                <div class="slide first">
+                    <img src="/img/zahid-lilani-bnjHJO3c5uM-unsplash.jpg" alt="">
+                </div>
+    
+                <div class="slide">
+                    <img src="/img/faruk-kaymak-CNVvDjVDiVI-unsplash.jpg" alt="">
+                </div>
+    
+                <div class="slide">
+                    <img src="/img/david-rodrigo-kZ1zThg6G40-unsplash.jpg" alt="">
+                </div>
+    
+                <div class="slide">
+                    <img src="/img/artur-aldyrkhanov-82lWYD-Pquk-unsplash.jpg" alt="">
+                </div>
+    
+                <!--Automatic-->
+    
+                <div class="navigation_auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+    
             </div>
-
-            <div class="slide">
-                <img src="/img/faruk-kaymak-CNVvDjVDiVI-unsplash.jpg" alt="">
+            <!--Manual-->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
             </div>
-
-            <div class="slide">
-                <img src="/img/david-rodrigo-kZ1zThg6G40-unsplash.jpg" alt="">
-            </div>
-
-            <div class="slide">
-                <img src="/img/artur-aldyrkhanov-82lWYD-Pquk-unsplash.jpg" alt="">
-            </div>
-
-            <!--Automatic-->
-
-            <div class="navigation_auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
-            </div>
-
-        </div>
-        <!--Manual-->
-        <div class="navigation-manual">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
         </div>
     </div>
-
+   
     <div class="container">
-        <form id="form" role="form" onsubmit="signUp(event)">
-        <div class="form-group">
-            <input type="text" id="fname" name="fname" placeholder="First Name">
+        <div class="sign-up-container">
+            <form id="form" role="form" onsubmit="signUp(event)">
+                <h1>Create Account</h1>
+                <a href="#" class="register">Register Now</a> 
+                <div class="form-group">
+                    <input type="text" id="fname" name="fname" placeholder="First Name">
+                </div>
+        
+                <div class="form-group">
+                    <input type="text" id="lname" name="lname" placeholder="Last Name">
+                </div>
+        
+                <div class="form-group">
+                    <input type="text" id="email" name="email" placeholder="email">
+                </div>
+        
+                <div class="form-group">
+                    <input type="password" id="pwd" name="pwd" placeholder="pwd">
+                </div>
+        
+                <div class="form-group">
+                    <button id="button" type="submit">Sign Up</button>
+                </div>
+            </form>
         </div>
-
-        <div class="form-group">
-            <input type="text" id="lname" name="lname" placeholder="Last Name">
-        </div>
-
-        <div class="form-group">
-            <input type="text" id="email" name="email" placeholder="email">
-        </div>
-
-        <div class="form-group">
-            <input type="password" id="pwd" name="pwd" placeholder="pwd">
-        </div>
-
-        <div class="form-group">
-            <button id="button" type="submit">Sign Up</button>
-        </div>
-    </form>
     </div>
 
-    <form>
-        <input type="text" placeholder="Ingrese su email" id="txtCorreo">
-        <input type="password" placeholder="Ingrese su contrasenna" id="txtContrasenna">
+    <div class="sign-in-container">
+        <form>
+            <h1>Sign In</h1>
+            <span>Or use your Account</span>
+            <input type="email" placeholder="Ingrese su email" id="txtCorreo">
+            <input type="password" placeholder="Ingrese su contrasenna" id="txtContrasenna">
+            <a href="#">Forgot Your Password?</a>
+            <button>Sign In</button>
+        </form>
+    </div>
         
-        <input type="button" value="Ingresar" id="btnIngresar">
-    </form>
     <br>
     <br>
     <footer>
