@@ -19,12 +19,14 @@ setInterval(function(){
 
 //Change signIn to SignUp
 
-var register = document.querySelector("register")
-var signiNN = document.querySelector("sign-in-container")
+const noCuenta = document.querySelector(".noCuenta");
+const pageDos = document.querySelector(".login-page-dos");
+const pageOne = document.querySelector(".login-page");
 
-if(register.addEventListener("click", () =>{
-    signiNN.style.display = "block"
-}))
+noCuenta.addEventListener("click", function (e) {
+    pageDos.classList.toggle("change");
+    e.preventDefault()
+});
 
 
 
@@ -37,8 +39,11 @@ const signUp = function (e) {
         email : document.getElementById("email").value,
         pwd : document.getElementById("pwd").value
     }
-    localStorage.setItem("formData", JSON.stringify(formData));
-    console.log(localStorage.getItem("formData"));
+
+    signUp_array.push(formData)
+    console.log(signUp_array)
+    localStorage.setItem("signUp_array", JSON.stringify(signUp_array));
+    console.log(localStorage.getItem("signUp_array"));
 
     e.preventDefault();
     
@@ -47,24 +52,36 @@ const signUp = function (e) {
 ///sign in
 
 
-localStorage.getItem("formData")
+localStorage.getItem("signUp_array")
 
 
 
 function dos (sCorreo, sContrasenna){
 
-    const data = JSON.parse(localStorage.getItem("formData"))
+    const data = JSON.parse(localStorage.getItem("signUp_array"))
 
-    if(data.email === sCorreo && data.pwd == sContrasenna){
+    for(i = 0; i<data.length; i++){
+
+    if(data[i].email === sCorreo && data[i].pwd == sContrasenna){
         console.log("bien")
+        var pic = "img/"
+        pic = pic + data[i].fname + ".png"
+        document.getElementById("pic").src = pic
+        console.log(pic)
+
+        document.getElementById("name").innerHTML = data[i].fname
+
+        document.getElementById("pic").style.display = "block"
     } else{
+
         console.log("nada")
+    }  
     }
 }
 
 
 
-function iniciarSesion(){
+function iniciarSesion(e){
     var sCorreo = "";
     var sContrasenna = "";
     var bAcceso;
@@ -74,8 +91,13 @@ function iniciarSesion(){
 
     bAcceso = dos(sCorreo, sContrasenna);
     console.log(bAcceso);
+
+    e.preventDefault()
 }
 
 
-document.querySelector("#btnIngresar").addEventListener("click", iniciarSesion);
+document.querySelector(".login-button").addEventListener("click", iniciarSesion);
+
+
+var signUp_array = []
 
