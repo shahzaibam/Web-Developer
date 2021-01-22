@@ -3,41 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THAPA CAFE</title>
+    <title>Scientific Calculator</title>
     <link rel="stylesheet" href="/styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Flamenco&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/all.css">
 </head>
 <body>
-    
-    <header>
-        <nav>
-            <div class="row clearfix">
-                <img src="/img/3-37777_cup-clipart-tasa-siluetas-de-tazas-de-cafe.png" class="logo">
-            
-                <ul class="main-nav animated slideInDown" id="check-class">
-                    <li><a href="#">CAKE DELIVERY</a></li>
-                    <li><a href="#">HOW TO ORDER</a></li>
-                    <li><a href="#">CHECK MORE</a></li>
-                    <li><a href="#">SIGN UP</a></li>
-                </ul>
-                <a href="#" class="mobile-icon"  onclick="slideshow()"><i class="fas fa-bars"></i></a>
-            </div>
-        </nav>
+    <form name="sci_cal" class="sci-calc">
+        <div class="clock"><p id="time" class="time"></p></div>
+        <div class="display"><input type="text" readonly name="screen" id="screen"></div>
+        <div class="buttons">
+            <p>
+                <input type="button" class="button trig" value="sin" onclick="sine()" >
+                <input type="button" class="button trig" value="cos" onclick="cosine()" >
+                <input type="button" class="button trig" value="tan" onclick="tan()" >
+                <input type="button" class="button trig" value="asin" onclick="invsine()" >
+                <input type="button" class="button trig" value="acos" onclick="invcosine()" >
+            </p>
 
-        <div class="main-content-header">
-            <h1>WELCOME TO <span class="colorchange">THAPA CAFE.</span>  <br> 
-                HOUSE OF CAKE LOVER OO YES.
-            </h1>
-    
-            <a href="#" class="btn btn-full"> click to order </a>
-            <a href="#" class="btn btn-nav"> show me more </a>
+            <p>
+                <input type="button" class="button trig" value="atan" onclick="invtan()" >
+                <input type="button" class="button trig" value="π" onclick="v('22/7');" >
+                <input type="button" class="button trig" value="In" onclick="In()" >
+                <input type="button" class="button trig" value="log" onclick="log()" >
+                <input type="button" class="button trig" value="%" onclick="percent()" >
+            </p>
+
+            <p>
+                <input type="button" class="button trig" value="sqr" onclick="sqaure()" >
+                <input type="button" class="button trig" value="cube" onclick="cube()" >
+                <input type="button" class="button trig" value="√" onclick="sqrt()" >
+                <input type="button" class="button trig" value="(" onclick="v('(')" >
+                <input type="button" class="button trig" value=")" onclick="v(')')" >
+            </p>
+
+            <p>
+                <input type="button" class="button btnNum" value="7" onclick="v('7')" >
+                <input type="button" class="button btnNum" value="8" onclick="v('8')" >
+                <input type="button" class="button btnNum" value="9" onclick="v('9')" >
+                <input type="button" class="button btnRed" value="Del" onclick="backspace()" >
+                <input type="button" class="button btnRed" value="C" onclick="c('')" >
+            </p>
+
+            <p>
+                <input type="button" class="button btnNum" value="4" onclick="v('4')" >
+                <input type="button" class="button btnNum" value="5" onclick="v('5')" >
+                <input type="button" class="button btnNum" value="6" onclick="v('6')" >
+                <input type="button" class="button btnsign" value="x" onclick="v('*')" >
+                <input type="button" class="button btnsign" value="÷" onclick="v('/')" >
+            </p>
+
+            <p>
+                <input type="button" class="button btnNum" value="1" onclick="v('1')" >
+                <input type="button" class="button btnNum" value="2" onclick="v('2')" >
+                <input type="button" class="button btnNum" value="3" onclick="v('3')" >
+                <input type="button" class="button btnsign" value="+" onclick="v('+')" >
+                <input type="button" class="button btnsign" value="-" onclick="v('-')" >
+            </p>
+
+            <p>
+                <input type="button" class="button btnNum" value="0" onclick="v('0')" >
+                <input type="button" class="button btnsign" value="±" onclick="plusminus()" >
+                <input type="button" class="button btnsign" value="." onclick="v('.')" >
+                <input type="button" class="button btnsign" value="Exp" onclick="Exp()" >
+                <input type="button" class="button btnsign" value="=" onclick="solve()" >
+            </p>
+
+
         </div>
-
-
-    </header>
-
+    </form>
     <script src="/script.js"></script>
 </body>
 </html>
