@@ -1,23 +1,10 @@
-var button = document.querySelector(".btn");
-var first = document.querySelector(".first-quote");
-var second = document.querySelector(".second-quote");
+function startTime(){
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
 
-button.addEventListener("click", function(e) {
-    second.classList.toggle("change");
-    e.preventDefault()
-});
-
-
-/*
-button.addEventListener("click", function (e) {
-    var aa = firste.classList.toggle("change")
-    console.log(aa)
-    e.preventDefault()
-})  */
-
- 
-
-/*
-if(button.addEventListener("click", function(){
-    first.style.display = "none"
-}));*/
+    document.getElementsByClassName("clock").innerHTML = h + ":" + m + ":" + s;
+}
