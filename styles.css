@@ -1,6 +1,24 @@
+body{
+    background-color: #323232;
+}
 
-.clock{
-    width: 300px;
-    height: 300px;
-    border: 1px solid black;
+#container{
+    height: 275px;
+    width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#btn{
+    margin: 50px auto;
+    height: 50px;
+    width: 250px;
+    font-size: 22px;
+    background-color: rgb(192, 191, 191);
+}
+
+#output{
+    margin: 25px auto;
+    font-size: 26px;
+    color: white;
 }
