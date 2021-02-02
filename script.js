@@ -77,7 +77,69 @@ function timeformat(){
 document.getElementById("time").innerHTML = hour + ":" + min + ":" + sec;
 document.getElementById("date").innerHTML = date + ":" + month + ":" + year;
 
+}
 
+function daysOfWeek(){
+    var date = new Date();
+    var days = date.getDate();
+    switch(days){
+        case 0:
+            day = "Sunday";
+            document.getElementById("sun").style.background = "tan";
+            document.getElementById("sun").style.borderRadius = "2px";
+            document.getElementById("sun").style.color = "red";
+            document.getElementById("sun").style.boxShadow = "1px 1px 2px 2px white";
+            break;
 
+        case 1:
+            day = "Monday";
+            document.getElementById("mon").style.background = "tan";
+            document.getElementById("mon").style.borderRadius = "2px";
+            document.getElementById("mon").style.color = "black";
+            document.getElementById("mon").style.boxShadow = "1px 1px 2px 2px white";
+            break;
+        
+        case 2:
+            day = "Tuesday";
+            document.getElementById("tue").style.background = "tan";
+            document.getElementById("tue").style.borderRadius = "2px";
+            document.getElementById("tue").style.color = "black";
+            document.getElementById("tue").style.boxShadow = "1px 1px 2px 2px white";
+            break;
+
+        case 3:
+            day = "Wednesday";
+            document.getElementById("wed").style.background = "tan";
+            document.getElementById("wed").style.borderRadius = "2px";
+            document.getElementById("wed").style.color = "black";
+            document.getElementById("wed").style.boxShadow = "1px 1px 2px 2px white";
+            break;
+
+        case 4:
+            day = "Thursday";
+            document.getElementById("thu").style.background = "tan";
+            document.getElementById("thu").style.borderRadius = "2px";
+            document.getElementById("thu").style.color = "black";
+            document.getElementById("thu").style.boxShadow = "1px 1px 2px 2px white";
+            break;
+        
+        case 5:
+            day = "Friday";
+            document.getElementById("thu").style.background = "tan";
+            document.getElementById("thu").style.borderRadius = "2px";
+            document.getElementById("thu").style.color = "black";
+            document.getElementById("thu").style.boxShadow = "1px 1px 2px 2px white";
+            break;
+
+        case 6:
+            day = "Saturday";
+            document.getElementById("thu").style.background = "tan";
+            document.getElementById("thu").style.borderRadius = "2px";
+            document.getElementById("thu").style.color = "black";
+            document.getElementById("thu").style.boxShadow = "1px 1px 2px 2px white";
+            break;
 
 }
+}
+
+daysOfWeek()
