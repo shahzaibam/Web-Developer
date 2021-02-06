@@ -1,36 +1,30 @@
 body{
-    background-color: black;
+    background: green;
 }
 
-#ampm{
+.ampm{
     width: 50px;
-    height: 50px;
-    background-color: blue;
+    height: 30px;
+    background: blue;
+}
+
+
+#time{
+    width: 100px;
+    height: 30px;
+    background: brown;
 }
 
 #date{
-    width: 300px;
-    height: 50px;
-    background-color: blue;
-    color: white;
+    width: 150px;
+    height: 40px;
+    background: brown;
 }
 
-#time{
-    width: 90px;
-    height: 50px;
-    background-color: blue;
-    color: white;
-}
-
-p{
-    color: white;
-}
-
-.days{
+.day{
     display: flex;
-
 }
 
-p{
-    padding: 12px;
+.day p{
+    padding: 10px;
 }
