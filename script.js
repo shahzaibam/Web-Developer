@@ -1,134 +1,109 @@
-function startTime(){
-    var today = new Date();
-    var hour = today.getHours()
-    var min = today.getMinutes()
-    var sec = today.getSeconds()
-    var day = today.getDate()
-    var month = today.getMonth()
-    var year = today.getFullYear()
+let today = new Date();
 
-    function addZero(x){
-        if(x<10){
-            x = "0" + x;
+let thisMonth = today.getMonth();
+
+let thisYear = today.getFullYear();
+
+
+
+let chooseYear = document.getElementById("year");
+let chooseMonth = document.getElementById("month");
+
+
+
+let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+
+let monthAndYear  = document.getElementById("monthAndYear");
+
+displayCalendar(thisMonth, thisYear);
+
+//A function to display the next month from the month on the calender when clicked
+
+function nextMonth(){
+    if(thisMonth === 11){
+        thisYear = thisYear + 1;
+    }else{
+        thisYear = thisYear;
+    }
+    thisMonth = (thisMonth + 1) % 12; //we have only 12 months
+    displayCalendar(thisMonth,thisYear);
+}
+
+
+//A function to display the previous month from the month on the calender when clicked
+
+function previousMonth() {
+    if(thisMonth === 0){
+        thisYear = thisYear - 1;
+        thisMonth = 11; 
+    }else{
+        thisYear = thisYear;
+        thisMonth = thisMonth - 1;
+    }
+    displayCalendar(thisMonth, thisYear);
+}
+
+
+//A function that display the choosed month and year
+
+function goTo(){
+    thisYear = parseInt(chooseYear.value);
+    thisMonth = parseInt(chooseMonth.value);
+    displayCalendar(thisMonth, thisYear);
+}
+
+function displayCalendar(month, year){
+    let firstDay = (new Date(year, month)).getDay();
+    let daysInMonth = 32 - new Date(year, month, 32).getDate();
+
+    let tbl = document.getElementById("calendar-body");
+
+    //clearing all previous cell
+
+    tbl.innerHTML = "";
+
+    //filling data about month and in the page via DOM
+
+    monthAndYear.innerHTML  = months[month] + " " + year;
+    chooseYear.value = year;
+    chooseMonth.value = month;
+
+    //creating all cells
+    let date = 1;
+    for (let i = 0; i < 6; i++){
+        //create table row
+        let row = document.createElement("tr");
+
+        //creating individual cells, filling them up with data
+        for (let j = 0; j < 7; j++){
+            if(i === 0 && j < firstDay){
+                let cell = document.createElement("td");
+                let cellText = document.createTextNode("");
+                cell.appendChild(cellText);
+                row.appendChild(cell);
+            }else if(date>daysInMonth){
+                break;
+            }else{
+                let cell = document.createElement("td");
+                let cellText = document.createTextNode(date);
+                if(date === today.getDate() && year === today.getFullYear() && month === today.getMonth()){
+                    cell.classList.add("bg-secondary");
+                    cell.classList.add("text-white");
+                }//color todays date
+                cell.appendChild(cellText);
+
+                row.appendChild(cell);
+                date++;
+            }
         }
+        tbl.appendChild(row)
 
-        return x;
     }
 
-    day = addZero(day);
-    min = addZero(min);
-    sec = addZero(sec);
 
-    switch(month){
-        case 0:
-            month = "January"; break;
-        case 1:
-            month = "February"; break;ç
-        case 2:
-            month = "March"; break;
-        case 3:
-            month = "April"; break;
-        case 4:
-            month = "May"; break;
-        case 5:
-            month = "June"; break;
-        case 6:
-            month = "July"; break;
-        case 7:
-            month = "August"; break;
-        case 8:
-            month = "September"; break;
-        case 9:
-            month = "October"; break;
-        case 10:
-            month = "November"; break;
-        case 11:
-            month = "December"; break;
-    }
 
-    var mode;
 
-    if(hour>11){
-        mode = "PM"
-    }else{
-        mode = "AM"
-    }
-
-    document.getElementsByClassName("ampm").innerHTML = mode;
-
-    //12 hour format
-    
-function timeFormat(){
-    if(hour>12){
-        hour = hour - 12;
-    }else if(hour == 0){
-        hour = 12;
-    }else{
-        hour = hour;
-    }
-}
-
-document.getElementById("time").innerHTML = hour + ":" + min + ":" + sec;
-document.getElementById("date").innerHTML = day + month + year;
 
 }
 
-
-function daysOfWeek(){
-    var date = new Date();
-    var days = date.getDate();
-
-    switch(days){
-        case 0:
-            days = "Sunday"
-            document.getElementById("sun").style.background = "tan";
-            document.getElementById("sun").style.borderRadius = "2px";
-            document.getElementById("sun").style.color = "red";
-            document.getElementById("sun").style.boxShadow = "1px 1px 2px 2px white";
-            break;
-        case 1:
-            days = "Monday"
-            document.getElementById("mon").style.background = "tan";
-            document.getElementById("mon").style.borderRadius = "2px";
-            document.getElementById("mon").style.color = "red";
-            document.getElementById("mon").style.boxShadow = "1px 1px 2px 2px white";
-            break;
-        case 0:
-            days = "Tuesday"
-            document.getElementById("tue").style.background = "tan";
-            document.getElementById("tue").style.borderRadius = "2px";
-            document.getElementById("tue").style.color = "red";
-            document.getElementById("tue").style.boxShadow = "1px 1px 2px 2px white";
-            break;
-        case 0:
-            days = "Wednesday"
-            document.getElementById("wed").style.background = "tan";
-            document.getElementById("wed").style.borderRadius = "2px";
-            document.getElementById("wed").style.color = "red";
-            document.getElementById("wed").style.boxShadow = "1px 1px 2px 2px white";
-            break;
-        case 0:
-            days = "Thursday"
-            document.getElementById("thu").style.background = "tan";
-            document.getElementById("thu").style.borderRadius = "2px";
-            document.getElementById("thu").style.color = "red";
-            document.getElementById("thu").style.boxShadow = "1px 1px 2px 2px white";
-            break;
-        case 0:
-            days = "Friday"
-            document.getElementById("fri").style.background = "tan";
-            document.getElementById("fri").style.borderRadius = "2px";
-            document.getElementById("fri").style.color = "red";
-            document.getElementById("fri").style.boxShadow = "1px 1px 2px 2px white";
-            break;
-        case 0:
-            days = "Saturday"
-            document.getElementById("sat").style.background = "tan";
-            document.getElementById("sat").style.borderRadius = "2px";
-            document.getElementById("sat").style.color = "red";
-            document.getElementById("sat").style.boxShadow = "1px 1px 2px 2px white";
-            break;
-    }
-}
-
-daysOfWeek()

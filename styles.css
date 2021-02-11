@@ -1,30 +1,34 @@
 body{
-    background: green;
-}
-
-.ampm{
-    width: 50px;
-    height: 30px;
-    background: blue;
-}
-
-
-#time{
-    width: 100px;
-    height: 30px;
-    background: brown;
-}
-
-#date{
-    width: 150px;
-    height: 40px;
-    background: brown;
-}
-
-.day{
+    box-sizing: border-box;
+    margin: 0;
+    background: #c0cbd1;
     display: flex;
 }
 
-.day p{
-    padding: 10px;
+.card{
+    width: 500px;
+    height: auto;
+    padding: 0px 15px;
+    border-radius: 20px;
+    background: #EEF3FA;
+    top: 55%;
+    left: 570px;
+    position: relative;
+    top: 250px;
+    background: #ecf0f3!important;
+    box-shadow: 2px 2px 10px #444546, -2px -2px 10px #fff;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+
+select,td,button,h3{
+    background: #EEF3FA!important;
+    border: none!important;
+    border-radius: 16px;
+    box-shadow: 0px 0px 3px #A3B1C6;
+}
+
+th{
+    border: none!important;
 }
