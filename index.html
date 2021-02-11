@@ -2,30 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>digitall</title>
-    <link rel="stylesheet" href="/styles.css">
+    <title>Document</title>
 </head>
-<body onload="startTime()">
-    <div class="container">
-        <div class="ampm"></div>
-
-        <div class="timeDate">
-            <p id="time"></p>
-            <p id="date"></p>
-        </div>
-
-        <div class="day">
-            <p id="mon" class="wkdy">Monday</p>
-            <p id="tue" class="wkdy">Tuesday</p>
-            <p id="wed" class="wkdy">Wednesday</p>
-            <p id="thu" class="wkdy">Thursday</p>
-            <p id="fri" class="wkdy">Friday</p>
-            <p id="sat" class="wkdy">Saturday</p>
-            <p id="sun" class="wkdy">Sunday</p>
-        </div>
-    </div>
+<body>
+    <img id="bulb" src="/img/2020-11-26_223847.jpg">
+    <br>
+    <button onclick="light(0)">Turn Off</button>
+    <button onclick="light(1)">Turn On</button>
     <script src="/script.js"></script>
 </body>
 </html>
