@@ -6,6 +6,7 @@ body{
     height: 95vh;
     color: white;
     opacity: 0.9;
+    font-family: 'Benne', serif;
 }
 
 .nav-list{
@@ -62,6 +63,10 @@ body{
     font-size: 1.5em;
 }
 
+.heading2 h1{
+    box-shadow: 5px 5px 5px 5px #0000;
+}
+
 .heading3{
     position: relative;
     left: 850px;
@@ -69,3 +74,21 @@ body{
     font-size: 1.5em;
 }
 
+#butt{
+    background-color: chocolate;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px; 
+    color: white;
+    border-radius: 12px;
+    padding: 7px;
+    position: relative;
+    top: -50px;
+    left: 550px;
+}
+
+#butt:hover{
+    background-color: black;
+    transition: .8s;
+}
