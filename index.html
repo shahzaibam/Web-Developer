@@ -1,82 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel</title>
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/css/all.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Brygada+1918:wght@500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Brygada+1918:wght@500&family=Source+Serif+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"></head>
-<body>
-    <div class="container">
-        <div class="nav">
-            <nav>
-                <ul class="nav-list">
-                    <li class="nav-item">Home</li>
-                    <li class="nav-item">About Us</li>
-                    <li class="nav-item">News</li>
-                    <li class="nav-item">Services</li>
-                    <li class="nav-item">Offers</li>
-                    <li class="nav-item">Contact Us</li>
-                </ul>
-            </nav>
-        </div> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gastos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
 
-        <div class="heading">
-            <h1 class="travel">Travel <span id="to">to</span> <span id="everywhere">EveryWhere</span> </h1>
-        </div>
-
-        <div class="heading2">
-            <h1 class="rate">With The Cheapest Rate</h1>
-        </div>
-
-        <div class="heading3">
-            <h1 class="ever">Ever</h1>
-        </div>
-
-        <div class="button">
-            <button onclick="windowOpen()" id="butt">Plan Your Trip <i class="fas fa-location-arrow"></i></button>
-        </div>
-
-        <div class="footer">
-            <footer>
-                
-            </footer>
-        </div>
-    </div>
-    <div class="carrousels">
-        <h1>What We Have to Offer?</h1>
-
-        <div class="carrousel">
-            <h3>Adventure</h3>
-            <button>Explore</button>
-        </div>
-
-        
-        <div class="carrosel">
-            <h3>Family Fun</h3>
-            <button>Explore</button>
-        </div>
-
-        <div class="carousel">
-            <h3>Popular Attractions</h3>
-            <button>Explore</button>
-        </div>
-
-    </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  </head>
+  <body>
     
+    <nav class="navbar blue z-depth-4">
+      <h2>Budget</h2>
+    </nav>
 
-    <script src="/script.js"></script>
-</body>
+    <div class="main">
+      <form id="vacationCalc">
+        <input type="text" placeholder="Destiny" id="destiny" required />
+        <input type="number" placeholder="Budget" id="budget" required />
+        <input
+          type="number"
+          placeholder="Acomodation"
+          id="acomodation"
+          required
+        />
+        <input type="number" placeholder="Transport " id="transport" required />
+        <input type="number" placeholder="Food" id="food" required />
+        <input type="submit" value="Calculate" class="btn blue z-depth-4" />
+      </form>
+    </div>
+
+    <div class="container">
+      <div class="icons">
+        <h5><i class="fas fa-plane"></i></h5>
+        <h5><i class="fas fa-wallet"></i></h5> 
+        <h5><i class="fas fa-money-bill-wave-alt"></i></h5>  
+      </div>
+      
+      <div class="data">
+        <div class="result" id="result"></div>
+      </div>
+    </div>
+
+
+
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
