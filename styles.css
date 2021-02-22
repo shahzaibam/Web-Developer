@@ -1,261 +1,76 @@
-body{
-    color: white;
-    font-family: 'Benne', serif;
-    height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+ margin: -2.3em 0 7em; 
+}
+h2 {
+  text-align: center;
 }
 
-.container{
-    background-image: url(/img/recal-media-ueBIGLmiI5A-unsplash.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
+.main {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  text-align: center;
+  width: 90%;
+  background-color: #efefef;
+  padding: 20px;
+  color: #fff;
+  border-radius: 20px;
+}
+form input::placeholder {
+  width: 15em;
+  margin: 3px;
+  height: 2em;
+  color: #6c757d;
+}
+form .btn {
+  margin: 2em 1em;
+  width: 60%;
+  height: 40px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+.icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1em;
+
+}
+.fas {
+  font-size: 2.5em;  
+  border-radius: 50%;
+  padding: 40px;
+
+}
+.fa-plane {
+  color: #2a96f3;
+}
+.fa-wallet {
+  color: #a96d65;
+}
+.fa-money-bill-wave-alt{
+  color: #42a3b8;
 }
 
-.nav-list{
-    color: white;
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    width: 100%;
-    position: relative;
-    top: -16px;
-    left: 0;
-    left: -32px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    justify-content: space-between;
+.container-data {
+  display: flex;
+  justify-content: space-around;
+  margin-top: -1em;
 }
 
-.nav-item {
-    list-style: none;
-    font-size: 1.5em;
-    padding:7px;
-    padding-right: 20px;
-    cursor: pointer;
+.container-data h6 {
+  text-align: center;
 }
-
-.nav-item li{
-    cursor: pointer;
-
-}
-
-.nav-item:hover{
-    background-color: chocolate;
-}
-
-.heading{
-    position: relative;
-    left: 100px;
-    margin-right: 700px;
-    font-size: 1.5em;
-}
-
-#to{
-    color: yellow;
-}
-
-#everywhere{
-    color: coral;
-}
-
-.heading2{
-    position: relative;
-    left: 400px;
-    margin-right: 700px;
-    font-size: 1.5em;
-}
-
-.heading2 h1{
-    box-shadow: 5px 5px 5px 5px #0000;
-}
-
-.heading3{
-    position: relative;
-    left: 850px;
-    margin-right: 1125px;
-    font-size: 1.5em;
-}
-
-#butt{
-    background-color: chocolate;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 14px; 
-    color: white;
-    border-radius: 12px;
-    padding: 7px;
-    position: relative;
-    top: -50px;
-    left: 550px;
-}
-
-#butt:hover{
-    background-color: black;
-    transition: .8s;
-}
-
-.carrousels h1{
-    color: rgba(8, 22, 175, 0.765);
-    font-family: 'Brygada 1918', serif;
-}
-
-.carrousels p{
-    font-family: 'Brygada 1918', serif;
-    color: #444;
-    display: inline-block;
-}
-
-.carrousels{
-    overflow: hidden;
-    padding:30px;
-    margin-top: 100px;
-    margin-bottom: 1000px;
-    background: yellowgreen;
-}
-
-.carrousel{
-    background: url(/img/ignacio-ceballos-eP94dHUaY1U-unsplash.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 350px;
-    height: 500px;
-    float: left;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.429) ;
-    border-radius: 10px;
-    color: white;
-    font-size: 24px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.carrousel:hover{
-    cursor: pointer;
-}
-
-.carrousel h3{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: -300px;
-    text-shadow: 2px 3px black;
-}
-
-.carrousel button{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: -300px;
-    left: 132px;
-    background-color: white;
-    border: none;
-    outline: none;
-    color: rgb(201, 34, 62);
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.carrousel:hover button{ 
-    background: rgb(201, 34, 62);
-    color: white;
-}
-
-.carrosel{
-    background: url(/img/patricia-prudente-6UyWK8mDcWo-unsplash.jpg);
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    width: 350px;
-    height: 500px;
-    margin-right: 1000px;
-    margin-left: 400px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.429) ;
-    border-radius: 10px;
-    color: black;
-    color: white;
-    font-size: 28px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.carrosel:hover{
-    cursor: pointer;
-}
-
-.carrosel h3{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: -300px;
-    text-shadow: 2px 3px black;
-}
-
-.carrosel button{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: -300px;
-    left: 132px;
-    background-color: white;
-    border: none;
-    outline: none;
-    color: rgb(201, 34, 62);
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.carrosel:hover button{ 
-    background: rgb(201, 34, 62);
-    color: white;
-}
-
-.carousel{
-    background: url(/img/jacek-dylag-jo8C9bt3uo8-unsplash.jpg);
-    overflow: hidden;
-    float: right;
-    position: relative;
-    top: -500px;
-    width: 350px;
-    height: 500px;
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.429) ;
-    color: white;
-    font-size: 28px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.carousel:hover{
-    cursor: pointer;
-}
-
-.carousel h3{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: -300px;
-    text-shadow: 2px 3px black;
-}
-
-.carousel button{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: -300px;
-    left: 132px;
-    background-color: white;
-    border: none;
-    outline: none;
-    color: rgb(201, 34, 62);
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.carousel:hover button{ 
-    background: rgb(201, 34, 62);
-    color: white;
-}
-
-
