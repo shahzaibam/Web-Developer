@@ -3,7 +3,7 @@ dconst { parse } = require("path");
 let vacationCalc = document.getElementById("vacationCalc")
 
 vacationCalc.addEventListener("submit", calcExpenses);
-
+ 
 function getValues(){
     let destiny  = document.getElementById("destiny").value;
         budget  = document.getElementById("budget").value;
