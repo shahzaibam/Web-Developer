@@ -1,60 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gastos</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">    
+</head>
+<body>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
-      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-  </head>
-  <body> 
+    <header>
+        <h1>My Todo List</h1>
+    </header>
+
+    <form>
+        <input type="text" class="todo-input">
+        <button class="todo-button" type="submit">
+            <i class="fas fa-plus-square"></i>
+        </button>
+    </form>
+
+    <div class="todo-container">
+        <ul class="todo-list">
+        </ul>
+    </div>
     
-    <nav class="navbar blue z-depth-4">
-      <h2>Budget</h2>
-    </nav>
-
-    <div class="main">
-      <form id="vacationCalc">
-        <input type="text" placeholder="Destiny" id="destiny" required />
-        <input type="number" placeholder="Budget" id="budget" required />
-        <input
-          type="number"
-          placeholder="Acomodation"
-          id="acomodation"
-          required
-        />
-        <input type="number" placeholder="Transport " id="transport" required />
-        <input type="number" placeholder="Food" id="food" required />
-        <input type="submit" value="Calculate" class="btn blue z-depth-4" />
-      </form>
-    </div>
-
-    <div class="container">
-      <div class="icons">
-        <h5><i class="fas fa-plane"></i></h5>
-        <h5><i class="fas fa-wallet"></i></h5> 
-        <h5><i class="fas fa-money-bill-wave-alt"></i></h5>  
-      </div>
-      
-      <div class="data">
-        <div class="result" id="result"></div>
-      </div>
-    </div>
-
-
-
-    <script src="script.js"></script>
-  </body>
+    <script src="/script.js"></script>
+</body>
 </html>
