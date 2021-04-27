@@ -1,90 +1,106 @@
-*{
-    margin: 0;
-    padding: 0; 
-    box-sizing: border-box;
-}    
-
 body{
-    background-image: linear-gradient(120deg, #e2c35d, #d88771);
-    color: white;
-    font-family: "Poppins", sans-serif;
-    min-height: 100vh;
+    font-family: monospace;
+    font-size: 20px;
 }
 
-header{
-    font-size: 1.5rem;
+.container{
+    border: 1px solid black;
+    width: 700px;
+    height: 300px;
+    box-shadow: 1px 1px 2px 2px;
+    border-radius: 10px;
 }
 
-header,
-form{
-    min-height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.start{
+    border: 1px solid black;
+    width: 100px;
+    font-size: 1.5em;
+    word-break: break-all;
+    height: 150px;
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    left: 300px;
 }
 
-form input, 
-form button{
-    padding: 0.5rem;
-    font-size: 2rem;
-    border: none;
-    background: white;
-}
-
-form button{
-    color: #d88771;
-    background: white;
+.start:hover{
+    border: 3px solid green;
+    color: green;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
-form button:hover{
-    background: #d88771;
-    color: white;
+.question{
+    position: absolute;
+    top:20px;
+    left: 220px;
+    font-size: 23px;
 }
 
-.todo-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.qImg{
+    width: 200px;
+    height: 180px;
+
 }
 
-.todo{
-    margin: 0.5rem;
-    background: white;
-    color: black;
-    font-size: 2rem;
-    display: flex;
-    width: 400px;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
+.qImg img{
+    width: 200px;
+    height: 180px;
 }
 
-.todo li{
-    flex: 1;
+.choices{
+    position: absolute;
+    top: 160px;
+    left: 220px;
 }
 
-.trash-btn,
-.complete-btn{
-    background: #ff6f47;
-    color: white;
-    border: none;
-    padding: 1rem;
+.choice{
+    border: 1px solid black;
+    width: 135px;
+    display: inline-block;
+    top: 100px;
+    text-align: center;
     cursor: pointer;
-    font-size: 1rem;
 }
 
-.complete-btn{
-    background: rgb(73, 204, 73);
+.choice:hover{
+    border: 3px solid black;
 }
 
-.fa-trash,
-.fa-check{
-    pointer-events: none;
+#counter{
+    width: 200px;
+    text-align: center;
+    font-size: 3.2em;
 }
 
-.completed{
-    text-decoration: line-through;
-    opacity: 0.5;
+#btimeGauge{
+    background-color: crimson;
+    width: 150px;
+    height: 10px;
+    border-radius: 10px;
+    margin-left: 25px;
+    margin-top: 10px;
 }
+
+#timeGauge{
+    background-color: black;
+    height: 10px;
+    border-radius: 10px;
+    margin-left: 25px;
+    margin-top: -10px;
+}
+
+.progress{
+    position: absolute;
+    left: 550px;
+    top: 260px;
+    width: 200px;
+}
+
+.prog{
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px;
+}   
