@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Multiple quiz</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+    <div class="container">
+        <div class="start">Start Quiz</div>
+        <div class="quiz" style="display: none;">
+            <div class="question"></div>
+            <div class="qImg">
+                <img src="/img/2789_google.jpg" alt="">
+            </div>
+            <div class="choices">
+                <div class="choice" id="A" onclick="checkAnswer()"></div>
+                <div class="choice" id="B" onclick="checkAnswer()"></div>
+                <div class="choice" id="C" onclick="checkAnswer()"></div>
+            </div>
+            <div class="timer">
+                <div id="counter"></div>
+                <div id="btimeGauge"></div>
+                <div id="timeGauge"></div>
+            </div>
+            <div class="progress"></div>
+        </div>
+        <div class="score"></div>
+    </div>
     <script src="/script.js"></script>
 </body>
 </html>
