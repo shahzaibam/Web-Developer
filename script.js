@@ -1,129 +1,133 @@
-//Greeting user
+const start = document.querySelector(".start")
+const quiz = document.querySelector(".quiz")
+const question = document.querySelector(".question")
+const qImg = document.querySelector(".qImg")
+const choiceA = document.querySelector("#A")
+const choiceB = document.querySelector("#B")
+const choiceC = document.querySelector("#C")
+const counter = document.querySelector("#counter")
+const timeGauge = document.querySelector("#timeGauge")
+const progress = document.querySelector(".progress")
+const score = document.querySelector(".score")
 
-let greetUser = function() {
-    console.log("Welcome User!")
+
+let questions = [
+    {
+        question : "When was Microsoft Founded ?",
+        imgsrc : `<img src="/img/1595442845_918343_1595443241_noticia_normal.jpg">`,
+        choiceA : "4th April 1975",
+        choiceB : "11th June 1957",
+        choiceC : "4th July 1985",
+        correct : "A"
+    }, 
+
+    {
+        question : "When bill gates became billionaire ?",
+        imgsrc : `<img src="/img/descarga.jpg">`,
+        choiceA : "In 1993",
+        choiceB : "In 1987",
+        choiceC : "In 2012",
+        correct : "B"
+    }, 
+
+    {
+        question : "When was the internet invented? In...",
+        imgsrc : `<img src="/img/internet.jpg">`,
+        choiceA : "1980s",
+        choiceB : "1999s",
+        choiceC : "1960s",
+        correct : "C"
+    }, 
+
+]
+
+const lastQuestion = questions.length - 1;
+var runningQuestion = 0;
+
+function renderQuestion(){
+    let q = questions[runningQuestion]
+
+    question.innerHTML = "<p>" + q.question + "</p>"
+    qImg.innerHTML = q.imgsrc
+    choiceA.innerHTML = q.choiceA
+    choiceB.innerHTML = q.choiceB
+    choiceC.innerHTML = q.choiceC
 }
 
-console.log(greetUser())
 
-
-// a function has a input(argument), code, and a output(return value) .
-
-let square = function(num){
-    let result = num * num;
-    return result;
-}
-
-let value = square(3);
-let otherValue = square(10);
-
-console.log(value, otherValue)
-//console.log(otherValue)
-
-
-//Challange Area
-
-
-let FtoCelsius = function(farenheit){
-    let fToc_formula = (farenheit - 32) / 1.8;
-
-    return fToc_formula;
-};
-
-let resultOne = FtoCelsius(32);
-let resultTwo = FtoCelsius(68);
-console.log(resultOne);
-console.log(resultTwo);
-
-
-////////////////UNDEFINED AND NULL
-
-//Undefined for variables
-let name;
-//name = "shahzaib"
-
-if (name===undefined){
-    console.log("please provide us your name")
-}else{
-    console.log(name)
-}
-
-//Undefined for functions
-
-let example = function(num){
-    console.log(num)
-}
-
-example()
-
-
-//Multiple arguments 
-
-let add = function(a,b,c){
-    return a + b + c
-}
-
-let result = add(10,1,5)
-console.log(result)
-
-
-//Default Arguments 
-
-let gameScore = function(username = "Anonymous", score = 0){
-    return `Your name is ${username} and your score is ${score}`
-}
-
-let table =  gameScore("Shebi", 100)
-console.log(table)
-
-
-//Challange area Tip Percent
-
-
-let tipCalc = function(total, tipPercent){
-    let calc = total*tipPercent/100
-    return `A ${tipPercent}% tip on ${total}$ would be ${calc}$`
-}
-
-let calculate = tipCalc(100,20)
-console.log(calculate)
-
-
-//Building a Grade Calculator
-
-
-let gradeCalc = function(score, totalScore){   
-
-    let percent = score/totalScore*100
-
-    let letterGrade = ""
-
-    if(percent < 50 || percent === 0){
-        letterGrade = "F"
+function renderProgress(){
+    for (let qIndex = 0; qIndex <= lastQuestion; qIndex++){
+        progress.innerHTML += "<div class='prog' id=" + qIndex + "></div";
     }
-    else if(percent < 60 || percent === 50){
-        letterGrade = "E"
-    }
-    else if(percent < 70 || percent === 60){
-        letterGrade = "D"
-    }
-    else if(percent < 80 || percent === 70){
-        letterGrade = "C"
-    }
-    else if(percent<90 || percent === 80){
-        letterGrade = "B"
-    }
-    else if(percent <= 100 || percent === 90){
-        letterGrade = "A"
+}
+
+
+
+let count = 0;
+let questionTime = 10;
+let gaugeWidth = 150;
+let gaugeUnit = gaugeWidth / questionTime;
+let TIMER;
+
+function renderCounter(){
+    if(count <= questionTime){
+        counter.innerHTML = count
+        timeGauge.style.width = count * gaugeUnit + "px"
+        count ++
     }else{
-        console.log("You haven't presented at the exam")
+        count = 0;
+        answerIsWrong()
+        if(runningQuestion<lastQuestion){
+            runningQuestion++
+            renderQuestion()
+        }else{
+            clearInterval(TIMER)
+        }
     }
-
-    return `You got a ${letterGrade} and your percentatge is ${percent}%`
 }
 
-let yourGrade = gradeCalc(8.5,10)
-console.log(yourGrade)
+
+let SCORE = 0;
+
+function checkAnswer(answer){
+    if(answer == questions[runningQuestion].correct){
+        SCORE++
+        answerIsCorrect()
+    }else{
+        answerIsWrong()
+    }
+    count = 0;
+    if(runningQuestion<lastQuestion){
+        runningQuestion++
+        renderQuestion()
+    }else{
+        clearInterval(TIMER)
+    }
+}
+
+
+function answerIsCorrect(){
+    document.getElementById(runningQuestion).style.backgroundColor = "#0f0"
+}
+
+function answerIsWrong(){
+    document.getElementById(runningQuestion).style.backgroundColor = "#f00"
+}
+
+
+function startQuiz(){
+    start.style.display = "none"
+    renderQuestion()
+    quiz.style.display = "block"
+    renderProgress()
+    renderCounter()
+    TIMER = setInterval(renderCounter, 1000)
+}   
+
+start.addEventListener("click", startQuiz)
+
+
+
 
 
 
