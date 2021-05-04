@@ -4,31 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiple quiz</title>
+    <title>Todo Quiz</title>
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/all.css">
 </head>
 <body>
     <div class="container">
-        <div class="start">Start Quiz</div>
-        <div class="quiz" style="display: none;">
-            <div class="question"></div>
-            <div class="qImg">
-                <img src="/img/2789_google.jpg" alt="">
+        <div class="header">
+            <img src="/img/mar-bustos-ARVFsI-32Uk-unsplash.jpg" height="200px" width="500px">
+            <div class="clear">
+                <i class="fas fa-sync"></i>
             </div>
-            <div class="choices">
-                <div class="choice" id="A" onclick="checkAnswer()"></div>
-                <div class="choice" id="B" onclick="checkAnswer()"></div>
-                <div class="choice" id="C" onclick="checkAnswer()"></div>
-            </div>
-            <div class="timer">
-                <div id="counter"></div>
-                <div id="btimeGauge"></div>
-                <div id="timeGauge"></div>
-            </div>
-            <div class="progress"></div>
         </div>
-        <div class="score"></div>
+        <div class="content">
+            <div class="list">
+                <ul class="unlist">
+                    
+                     <!-- <li class="item">
+                        <i class="far fa-circle"></i>
+                        <p class="text">Drink Coffe</p>
+                        <i class="fas fa-trash-alt"></i>
+                    </li>  -->
+                </ul>
+            </div>
+            <div class="lastDiv">
+                <i class="fas fa-plus-square" id="add"></i>  
+                <input type="text" id="input" placeholder="Add a Todo">
+            </div>
+        </div>
     </div>
+
     <script src="/script.js"></script>
 </body>
 </html>
