@@ -1,128 +1,87 @@
 body{
     display: flex;
     justify-content: center;
-    background-color: rgba(128, 128, 128, 0.411);
-    align-items: center;
-    height: 100vh;
-    overflow-x: hidden;
+    background-color: gray;
 }
 
-.container{
-    border: px solid black;
-    width: 500px;
+
+i{
+    cursor: pointer;
+    font-size: 20px;
+}
+
+img{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    border-radius: 10px;
+    position: relative;
+}
+.containerOne{
     background-color: white;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
+.content{
+    height: 300px;
+    width: 400px;
+    position: relative;
+    top: -40px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
 
-.header img{
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+.lastDiv{
+
+    position: relative;
+    top: -35px;
+    margin-bottom: -20px;
+    border-top: 1px solid black;
+    padding-top: 10px;
 }
 
 .clear{
     position: relative;
-    bottom: 190px;
-    left: 420px;
-    color: black    ;
-    display: flex;
-    display: inline-block;
-}
-
-.clear i{
+    top: -180px;
+    left: 330px;
+    font-size: 24px;
     color: white;
-    font-size: 23px;
-    cursor: pointer;
-}
-
-.content{
-    width: 500px;
-}
-
-li{
-    list-style: none;
-    text-decoration: none;
-}
-
-.item{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid black;
-    margin-bottom: 10px;
-    align-items: center;
-}
-
-.list{
-    display: flex;
-    display: inline-block;
-    width: 500px;
-    justify-content: center;
-    height: 300px;
-    overflow: auto;
 }
 
 .text{
+    margin-top: 1px;
+}
+
+
+
+li{
+    display: flex;
+    justify-content: space-between;
     position: relative;
-}
+    border-bottom: 1px solid black;
+    padding-top: 10px;
 
-.fa-trash-alt{
-    /*margin-left: 200px;*/
-    font-size: 23px;
-    cursor: pointer;
-    padding-right:10px;
-    text-align: center;
-
-}
-
-.fa-circle{
-    /*margin-right: 100px;*/
-    font-size: 23px;
-    cursor: pointer;
-    padding-left: 10px;
-    text-align: center;
-}
-
-.fa-check-circle{
-    font-size: 23px;
-    cursor: pointer;
-    color: white;
-    color: green;
-    border:none;
-    outline: none;
-    border-radius: 50%;
-    margin-left: 10px;
 }
 
 .lineThrough{
     text-decoration: line-through;
 }
 
-
-.lastDiv{
-    display: flex;
-    padding: 10px;
-}
-
 #input{
-    margin-left: 20px;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 7px 7px 7px 7px;
     position: relative;
-    top: 50%;
+    left: 45px;
+    border-radius: 10px;
     outline: none;
-    width: 350px;
+    border: 1px solid black;
+    padding: 5px;
+    width: 290px;
 }
 
-#add{
+.fa-trash{
+    margin-right: 10px;
+}
+
+.far{
     margin-left: 10px;
-    font-size: 23px;
-    padding: 7px 7px 7px 7px;
-    color: green;
 }
-
-
-
-
