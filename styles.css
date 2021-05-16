@@ -1,125 +1,151 @@
 body{
-    justify-content: center;
-    background-color: gray;
-}
-
-
-i{
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.image-todo{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    position: relative;
-}
-.containerOne{
-    background-color: white;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    display: inline-block;
-}
-
-.content{
-    height: 300px;
-    width: 400px;
-    position: relative;
-    top: -40px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-
-.lastDiv{
-
-    position: relative;
-    top: -35px;
-    margin-bottom: -20px;
-    border-top: 1px solid black;
-    padding-top: 10px;
-}
-
-.clear{
-    position: relative;
-    top: -180px;
-    left: 330px;
-    font-size: 24px;
-    color: white;
-}
-
-.text{
-    margin-top: 1px;
-}
-
-
-
-li{
     display: flex;
-    justify-content: space-between;
-    position: relative;
-    border-bottom: 1px solid black;
-    padding-top: 10px;
-
+    justify-content: center;
 }
 
-.lineThrough{
-    text-decoration: line-through;
-}
-
-#input{
-    position: relative;
-    left: 45px;
-    border-radius: 10px;
-    outline: none;
-    border: 1px solid black;
-    padding: 5px;
-    width: 290px;
-}
-
-.fa-trash{
-    margin-right: 10px;
-}
-
-.far{
-    margin-left: 10px;
-}
-
-
-.containerTwo{
-    background-color: white;
-    width: 700px;
-    height: 400px;
+.container{
+    width: 500px;
+    height: auto;
+    background-color: #333;
     border-radius: 10px;
 }
 
-.start{
+.numPage{
+    background-color: brown;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
     position: relative;
-    top: 40%;
-    left: 44%;
-    font-size: 23px;
-    cursor: pointer;
-    border: 3px solid black;
-    width:50px;
-    height: 100px;
-    padding: 15px;
-}
-
-.start:hover{
-    border: 4px solid green;
+    top: 20px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 10px ;
 }
 
 .question{
-    position: relative;
-    top: -120px;
-    left: 300px;
+    background-color: blue;
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+.choice1{
+    display: flex;
+    margin-left: 100px;
+    margin-top: 10px;
+    font-size: 23px;
+}
+.choice2{
+    display: flex;
+    margin-left: 100px;
+    margin-top: 10px;
+    font-size: 23px;
+}
+.choice3{
+    display: flex;
+    margin-left: 100px;
+    margin-top: 10px;
     font-size: 23px;
 }
 
-.img{
-    width: 100px;
-    height: 100px;
+.choice1 i{
+    cursor: pointer;
+}
+.choice2 i{
+    cursor: pointer;
+}
+.choice3 i{
+    cursor: pointer;
+}
+
+#choiceA{
     position: relative;
-    top: -162px;
+    top: -46px;
+    left: 10px;
+}
+
+
+#choiceB{
+    position: relative;
+    top: -46px;
+    left: 10px;
+}
+
+#choiceC{
+    position: relative;
+    top: -46px;
+    left: 10px;
+}
+
+
+
+.numPage2{
+    background-color: brown;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 10px ;
+}
+
+.question2{
+    background-color: blue;
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+.choice12{
+    display: flex;
+    margin-left: 100px;
+    margin-top: 10px;
+    font-size: 23px;
+}
+.choice22{
+    display: flex;
+    margin-left: 100px;
+    margin-top: 10px;
+    font-size: 23px;
+}
+.choice32{
+    display: flex;
+    margin-left: 100px;
+    margin-top: 10px;
+    font-size: 23px;
+}
+
+.choice12 i{
+    cursor: pointer;
+}
+.choice22 i{
+    cursor: pointer;
+}
+.choice32 i{
+    cursor: pointer;
+}
+
+#choiceA2{
+    position: relative;
+    top: -18px;
+    left: 10px;
+}
+
+
+#choiceB2{
+    position: relative;
+    top: -18px;
+    left: 10px;
+}
+
+#choiceC2{
+    position: relative;
+    top: -18px;
+    left: 10px;
 }
