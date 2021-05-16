@@ -1,102 +1,70 @@
-const clear = document.querySelector(".clear")
-const list = document.querySelector(".list")
-const input = document.querySelector("#input")
-const uncheck = "fa-circle"
-const check = "fa-check-circle"
-const lineThrough = "lineThrough"
-let LIST=[]
-let id = 0;
-
-const data = localStorage.getItem("TODO")
-
-if(data){
-    LIST = JSON.parse(data)
-    loadTodos(LIST)
-    id = LIST.length
-}else{
-    LIST = []
-    id = 0;
-}
-
-function loadTodos(array){
-    array.forEach(function(index){
-        addTodo(index.toDo, index.id, index.done, index.trash)
-    })
-}
-
-clear.addEventListener("click", function(){
-    localStorage.clear()
-    location.reload()
-})
+const question = document.querySelector(".question")
+const choices = document.querySelector(".choices")
+const choice1 = document.querySelector(".choice1")
+const choiceA = document.querySelector("#choiceA")
+const choice2 = document.querySelector(".choice2")
+const choiceB = document.querySelector("#choiceB")
+const choice3 = document.querySelector(".choice3")
+const choiceC = document.querySelector("#choiceC")
 
 
-function addTodo(toDo, id, done, trash){
-
-    if(trash){return;}
-
-    const DONE = done ? check : uncheck
-    const LINE = done ? lineThrough : ""
-
-    const text = `      
-        <li>
-            <i class="far ${DONE}" job="complete" id="${id}"></i>
-            <p class="text ${LINE}">${toDo}</p>
-            <i class="fas fa-trash" job="delete" id="${id}"></i>
-        </li>
-    `
-
-    const position = "beforeend"
+const question2 = document.querySelector(".question2")
+const choiceA2 = document.querySelector("#choiceA2")
+const choiceB2 = document.querySelector("#choiceB2")
+const choiceC2 = document.querySelector("#choiceC2")
 
 
-    list.insertAdjacentHTML(position, text)
-}
 
-localStorage.setItem("TODO", JSON.stringify(LIST))
+let questions = [
+    {
+        question1 : "Las leyes orgánicas normativas de las comunidades y ciudades autónomas de España se denominan...",
+        choiceA1 : "Leyes de autonomía",
+        choiceB1 : "Estatuos de autonomía",
+        choiceC1 : "Reglaementos de autonomia",
+        correct1 : "A",
+    },
 
-document.addEventListener("keyup", function(event){
-    if(event.keyCode == 13){
-        const toDo = input.value
-        if(toDo){
-            addTodo(toDo, id, false, false)
-            LIST.push({
-                toDo : toDo,
-                id : id,
-                done : false,
-                trash : false,
-            })
-            input.value = ""
-            id++;
-            localStorage.setItem("TODO", JSON.stringify(LIST))
-        }
+    {
+        question2 : "Las leyes orgánicas normativas de las comunidades y ciudades autónomas de España se denominan...",
+        choiceA2 : "Leyes de autonomía",
+        choiceB2 : "Estatuos de autonomía",
+        choiceC2 : "Reglaementos de autonomia",
+        correct2 : "A",
+    },
+
+
+    {
+        question3 : "Las leyes orgánicas normativas de las comunidades y ciudades autónomas de España se denominan...",
+        choiceA3 : "Leyes de autonomía",
+        choiceB3 : "Estatuos de autonomía",
+        choiceC3 : "Reglaementos de autonomia",
+        correct3 : "A",
     }
+]
 
 
-})
+const lastQuestion = questions.length - 1;
+var runningQuestion = 0;
 
-function completeTodos(element){
-    element.classList.toggle(check)
-    element.classList.toggle(uncheck)
-    element.parentNode.querySelector(".text").classList.toggle(lineThrough)
-    LIST[element.id].done = LIST[element.id].done ? true : false
+
+function renderQuestion1(){
+    let q = questions[runningQuestion]
+
+    question.innerHTML = "<p>" + q.question1 + "</p>"
+    choiceA.innerHTML = "<p>" + q.choiceA1 + "</p>"
+    choiceB.innerHTML = "<p>" + q.choiceB1 + "</p>"
+    choiceC.innerHTML = "<p>" + q.choiceC1 + "</p>"
 }
 
-function removeTodo(element){
-    element.parentNode.parentNode.removeChild(element.parentNode)
-    LIST[element.id].trash = true;
+
+function renderQuestion2(){
+    let q = questions[runningQuestion]
+
+    question2.innerHTML = "<p>" + q.question2 + "</p>"
+    choiceA2.innerHTML = "<p>" + q.choiceA2 + "</p>"
+    choiceB2.innerHTML = "<p>" + q.choiceB2 + "</p>"
+    choiceC2.innerHTML = "<p>" + q.choiceC2 + "</p>"
 }
 
-
-
-list.addEventListener("click", function(event){
-    let element = event.target
-    let elementJOB = event.target.attributes.job.value;
-
-    if(elementJOB === "complete"){
-        completeTodos(element)
-    }else if(elementJOB === "delete"){
-        removeTodo(element)
-    }
-    localStorage.setItem("TODO", JSON.stringify(LIST))
-})
-
-localStorage.setItem("TODO", JSON.stringify(LIST))
+renderQuestion1()
+renderQuestion2()
