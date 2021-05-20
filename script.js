@@ -6,7 +6,7 @@ const choice2 = document.querySelector(".choice2")
 const choiceB = document.querySelector("#choiceB")
 const choice3 = document.querySelector(".choice3")
 const choiceC = document.querySelector("#choiceC")
-
+ 
 
 const question2 = document.querySelector(".question2")
 const choiceA2 = document.querySelector("#choiceA2")
@@ -42,15 +42,16 @@ let questions = [
     }
 ]
 
+const CHECK = 1;
 
-const lastQuestion = questions.length - 1;
+const lastQuestion = questions.length -1;
 var runningQuestion = 0;
 
 
 function renderQuestion1(){
     let q = questions[runningQuestion]
 
-    question.innerHTML = "<p>" + q.question1 + "</p>"
+    question.innerHTML =  q.question1 
     choiceA.innerHTML = "<p>" + q.choiceA1 + "</p>"
     choiceB.innerHTML = "<p>" + q.choiceB1 + "</p>"
     choiceC.innerHTML = "<p>" + q.choiceC1 + "</p>"
@@ -60,7 +61,7 @@ function renderQuestion1(){
 function renderQuestion2(){
     let q = questions[runningQuestion]
 
-    question2.innerHTML = "<p>" + q.question2 + "</p>"
+    question2.innerHTML =  q.question2 
     choiceA2.innerHTML = "<p>" + q.choiceA2 + "</p>"
     choiceB2.innerHTML = "<p>" + q.choiceB2 + "</p>"
     choiceC2.innerHTML = "<p>" + q.choiceC2 + "</p>"
