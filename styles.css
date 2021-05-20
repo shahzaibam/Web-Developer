@@ -1,8 +1,9 @@
 body{
     display: flex;
     justify-content: center;
+    color: white;
 }
-
+ 
 .container{
     width: 500px;
     height: auto;
