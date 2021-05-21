@@ -26,7 +26,6 @@ body{
 }
 
 .question{
-    background-color: blue;
     padding: 10px;
     font-size: 18px;
     margin-top: 50px;
@@ -81,72 +80,3 @@ body{
 }
 
 
-
-.numPage2{
-    background-color: brown;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: 20px;
-    left: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    padding-top: 10px ;
-}
-
-.question2{
-    background-color: blue;
-    padding: 10px;
-    font-size: 18px;
-    margin-top: 50px;
-}
-
-.choice12{
-    display: flex;
-    margin-left: 100px;
-    margin-top: 10px;
-    font-size: 23px;
-}
-.choice22{
-    display: flex;
-    margin-left: 100px;
-    margin-top: 10px;
-    font-size: 23px;
-}
-.choice32{
-    display: flex;
-    margin-left: 100px;
-    margin-top: 10px;
-    font-size: 23px;
-}
-
-.choice12 i{
-    cursor: pointer;
-}
-.choice22 i{
-    cursor: pointer;
-}
-.choice32 i{
-    cursor: pointer;
-}
-
-#choiceA2{
-    position: relative;
-    top: -18px;
-    left: 10px;
-}
-
-
-#choiceB2{
-    position: relative;
-    top: -18px;
-    left: 10px;
-}
-
-#choiceC2{
-    position: relative;
-    top: -18px;
-    left: 10px;
-}
