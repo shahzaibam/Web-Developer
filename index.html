@@ -10,51 +10,37 @@
 </head>
 <body>
     <div class="container">
-        <div class="list">
-            <div class="numPage">1</div>
-            <div class="question">La diputacio de barcelona esta en...</div>
-            <div class="choices">
-                <div class="choice1">
-                    <i class="far fa-circle"></i>
-                    <p id="choiceA">jaja</p>
-                </div>
+        <form name="quizForm" onsubmit="" class="list">            
 
-                <div class="choice2">
-                    <i class="far fa-circle"></i>
-                    <p id="choiceB">jaja</p>
-                </div>
+            <h3>1. Las leyes orgánicas normativas de las comunidades y ciudades autónomas de España se denominan... </h3>
+            <input type="radio" name="p1" value="a">a. Leyes de autonomía <br>
+            <input type="radio" name="p1" value="b">b. Estatuos de autonomía <br>
+            <input type="radio" name="p1" value="c">c. Reglaementos de autonomia <br>
 
-                <div class="choice3">
-                    <i class="far fa-circle"></i>
-                    <p id="choiceC">jaja</p>
-                </div>
-                
+
+            <h3>2. La tercera autoridad del Estado, tras el Rey y el presidente del Gobierno, es el... </h3>
+            <input type="radio" name="p2" value="a">a. ministro del Interior <br>
+            <input type="radio" name="p2" value="b">b. jefe del Estado Mayor del Ejército <br>
+            <input type="radio" name="p2" value="c">c. presidente del Congreso de los Diputados <br>
+
+
+            <h3>3. El presidente del Gobierno y los ministros juran o prometen su cargo ante... </h3>
+            <input type="radio" name="p3" value="a">a. la Constitución española <br>
+            <input type="radio" name="p3" value="b">b. la Biblia <br>
+            <input type="radio" name="p3" value="c">c. la ley Internacional de los derechos Humanos <br>
+
+        
+            <h3>4. La organización que defiende y promueve los intereses de los trabajadores se denominan... </h3>
+            <input type="radio" name="p4" value="a">a. asociación <br>
+            <input type="radio" name="p4" value="b">b. partido <br>
+            <input type="radio" name="p4" value="c">c. sindicato <br>
+            
+            <div class="enviar">
+                <button class="btn" onclick="enviar()">enviar</button>
             </div>
         </div>
 
  
-        <div class="list2">
-            <div class="numPage2">2</div>
-            <div class="question2">La diputacio de barcelona esta en...</div>
-            
-            <div class="choices2">
-                <div class="choice12">
-                    <i class="far fa-circle"></i>
-                    <p id="choiceA2">jaja</p>
-                </div>
-
-                <div class="choice22">
-                    <i class="far fa-circle"></i>
-                    <p id="choiceB2">jaja</p>
-                </div>
-
-                <div class="choice32">
-                    <i class="far fa-circle"></i>
-                    <p id="choiceC2">jaja</p>
-                </div>
-                
-            </div>
-        </div>
     </div>
     <script src="/script.js"></script>
 </body>
