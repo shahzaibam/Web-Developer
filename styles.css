@@ -1,7 +1,12 @@
 body{
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
     color: white;
+    margin-left: 400px;
+    display: inline-block;  
+    background-color: black;
+    width: 600px;
+    height: auto;
 }
  
 .container{
@@ -31,52 +36,29 @@ body{
     margin-top: 50px;
 }
 
-.choice1{
-    display: flex;
-    margin-left: 100px;
-    margin-top: 10px;
-    font-size: 23px;
-}
-.choice2{
-    display: flex;
-    margin-left: 100px;
-    margin-top: 10px;
-    font-size: 23px;
-}
-.choice3{
-    display: flex;
-    margin-left: 100px;
-    margin-top: 10px;
-    font-size: 23px;
-}
-
-.choice1 i{
-    cursor: pointer;
-}
-.choice2 i{
-    cursor: pointer;
-}
-.choice3 i{
-    cursor: pointer;
-}
-
 #choiceA{
-    position: relative;
-    top: -46px;
-    left: 10px;
+    display: flex;
 }
-
 
 #choiceB{
-    position: relative;
-    top: -46px;
-    left: 10px;
+    display: flex;
 }
 
 #choiceC{
-    position: relative;
-    top: -46px;
-    left: 10px;
+    display: flex;
 }
 
+
+.question2{
+    margin-top: 80px;
+}
+
+i{
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+    display: flex;
+}
 
