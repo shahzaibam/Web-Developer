@@ -1,64 +1,88 @@
 body{
-    /*display: flex;*/
+    display: flex; 
     justify-content: center;
-    color: white;
-    margin-left: 400px;
-    display: inline-block;  
-    background-color: black;
-    width: 600px;
-    height: auto;
 }
- 
-.container{
-    width: 500px;
-    height: auto;
-    background-color: #333;
+
+.header img{
     border-radius: 10px;
 }
 
-.numPage{
-    background-color: brown;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
+#refresh{
     position: relative;
-    top: 20px;
-    left: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    padding-top: 10px ;
+    bottom: 220px;
+    left: 400px;
+    font-size: 23px;
 }
 
-.question{
-    padding: 10px;
-    font-size: 18px;
-    margin-top: 50px;
+.container{
+    background-color: cornflowerblue;
+    width: 450px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 500px;
 }
 
-#choiceA{
-    display: flex;
-}
-
-#choiceB{
-    display: flex;
-}
-
-#choiceC{
-    display: flex;
-}
-
-
-.question2{
-    margin-top: 80px;
-}
-
-i{
-    cursor: pointer;
+.content{
+    margin-right: 30px;
+    margin-top: -20px;
 }
 
 li{
-    list-style: none;
     display: flex;
+    justify-content: space-between;
+    position: relative;
+    right: 30px;
 }
 
+.text{
+    position: relative;
+    bottom: 14px;
+    font-size: 20px;
+}
+
+i{
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.list{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 200px;
+}
+
+.fa-circle{
+    padding-left: 50px;
+}
+
+.fa-check-circle{
+    padding-left: 30px; 
+}
+
+.lineThrough{
+    text-decoration: line-through;
+}
+
+.input{
+    position: absolute;
+    top: 510px;
+    margin-left: 124px;
+    padding:5px;
+    padding-left: 5px;
+    padding-right: 30px;
+}
+
+.fa-plus-square{
+    position: fixed;
+    top: 512px;
+    margin-left: 100px;
+}
+
+
+.lastDiv{
+    background-color: crimson;
+}
+
+.input{
+    background-color: cyan;
+}
