@@ -3,36 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=12, initial-scale=1.0">
-    <title>Todos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel</title>
     <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="/webfonts/">
 </head>
 <body>
-    
     <div class="container">
-        <div class="header">
-            <img src="/img/umar-khan-kyOthi68nMs-unsplash.jpg" alt="" height="250px" width="450px">
-            <i id="refresh" class="fas fa-sync"></i>
-        </div>
-        <div class="content">
-            <div class="list">
-                <ul class="unlist">
-                    <!-- <li>
-                        <i class="far fa-circle"></i>
-                        <p class="text">Drink Coffe</p>
-                        <i class="fas fa-trash-alt"></i>
-                    </li> -->
+        <button class="btn btn-left">
+            <img src="/img/Left_arrow.svg.png" alt="">
+        </button>
 
-                </ul>
-            </div>
+        <div class="carrousel-container">
+            <ul class="carrousel">
+                <li class="slide active">
+                    <img src="/img/david-russeler-E0xK8SrIzYA-unsplash.jpg" alt="">
+                </li>
 
+                <li class="slide">
+                    <img src="/img/florian-wehde-WBGjg0DsO_g-unsplash.jpg" alt="">
+                </li>
+
+                <li class="slide">
+                    <img src="/img/hector-ramon-perez-3xSGpXeEko8-unsplash.jpg" alt="">
+                </li>
+            </ul>
         </div>
-        <div class="lastDiv">
-            <i class="fas fa-plus-square"></i>
-            <input type="text" class="input">
-        </div>
+        <button class="btn btn-right">
+            <img src="/img/Right_arrow.svg.png" alt="">
+        </button>
+
+        <nav class="nav">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </nav>
     </div>
-    <script src="/script.js"></script>
 </body>
 </html>
