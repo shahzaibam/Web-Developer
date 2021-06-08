@@ -1,46 +1,69 @@
-const carousel = document.querySelector(".carrousel")
-
-const nextButton = document.querySelector(".btn-right")
-
-const previousButton = document.querySelector(".btn-left")
-
+const carrousel = document.querySelector(".carrousel") 
+const carrouselImg = document.querySelectorAll(".carrousel img")
 const nav = document.querySelector(".nav")
 
-const dots = [...nav.children]
+const prevBtn = document.querySelector("#prev")
+const nextBtn = document.querySelector("#next")
 
-const slides = [...carousel.children];
+let counter = 1;
+let size = carrouselImg[0].clientWidth;
 
-let slideWidth = slides[0].getBoundingClientRect().width;
 
-function positionSlides(slides){
-    for(let index = 0; index < slides.length; index++){
-        slides[index].style.left = slideWidth * index + "px";
+carrousel.style.transform = "translateX("+(-size * counter) + "px)";
+
+document.addEventListener("keyup", (e)=>{
+    if(e.keyCode==39){
+        if(counter >= carrouselImg.length - 1 )return;
+        carrousel.style.transition = "transform 0.4s ease-in-out"
+        counter++;
+        carrousel.style.transform = "translateX("+(-size * counter) + "px)";
+        console.log(size)
     }
-}
+})
 
-positionSlides(slides)
-
-nextButton.addEventListener("click", function(){
-    const currentSlide = carousel.querySelector(".active");
-    const nextSlide = currentSlide.nextElementSibling;
-
-    moveToSlide(carousel, currentSlide, nextSlide)
-    hideButton(nextSlide, slides) 
-
-    dotToSlide(nextSlide, slides, nav, dots)
+nextBtn.addEventListener("click", ()=>{
+    if(counter >= carrouselImg.length - 1 )return;
+    carrousel.style.transition = "transform 0.4s ease-in-out"
+    counter++;
+    carrousel.style.transform = "translateX("+(-size * counter) + "px)";
 
 })
 
 
-previousButton.addEventListener("click", function(){
-    const currentSlide = carousel.querySelector(".active");
-    const previousSlide = currentSlide.previousElementSibling;
 
-    moveToSlide(carousel, currentSlide, previousSlide)
-    hideButton(previousSlide, slides) 
-    dotToSlide(previousSlide, slides, nav, dots)
+prevBtn.addEventListener("click", ()=>{
+    if(counter<=0)return;
+    carrousel.style.transition = "transform 0.4s ease-in-out"
+    counter--;
+    carrousel.style.transform = "translateX("+(-size * counter) + "px)";
+})
+
+document.addEventListener("keyup", (e)=>{
+    if(e.keyCode==37){
+
+        if(counter <=0 )return;
+        carrousel.style.transition = "transform 0.4s ease-in-out"
+        counter--;
+        carrousel.style.transform = "translateX("+(-size * counter) + "px)";
+    }
+})
+
+carrousel.addEventListener("transitionend", ()=>{
+    console.log(carrouselImg[counter])
+    if(carrouselImg[counter].id === "abcd"){
+        carrousel.style.transition = "none"
+        counter = carrouselImg.length - 2;
+        carrousel.style.transform = "translateX("+(-size * counter) + "px)";
+    }
+
+    if(carrouselImg[counter].id === "efgh"){
+        carrousel.style.transition = "none"
+        counter = carrouselImg.length - counter;
+        carrousel.style.transform = "translateX("+(-size * counter) + "px)";
+    }
 
 })
+
 
 nav.addEventListener("click", function(e){
 
@@ -61,6 +84,7 @@ nav.addEventListener("click", function(e){
     hideButton(targetSlide, slides)
 })
 
+
 function dotToSlide(targetSlide, slides, nav, dots){
     let slideIndex = findIndex(targetSlide, slides);
     const currentDot = nav.querySelector(".active");
@@ -68,32 +92,10 @@ function dotToSlide(targetSlide, slides, nav, dots){
     toggleActive(currentDot, targetdot)
 }
 
-function moveToSlide(carousel, currentSlide, targetSlide){
-    const position = targetSlide.style.left;
-    carousel.style.transform = `translateX(-${position})`;
-    toggleActive(currentSlide, targetSlide)
-
-}
-
 function toggleActive(current, target){
     current.classList.remove("active");
     target.classList.add("active")
 }
-
-function hideButton(targetSlide, slides){
-    if(targetSlide === slides[0]){
-        previousButton.classList.add("hide");
-        nextButton.classList.remove("hide")
-    }else if(targetSlide === slides[slides.length - 1]){
-        nextButton.classList.add("hide")
-        previousButton.classList.remove("hide");
-    }else{
-        previousButton.classList.remove("hide");
-        nextButton.classList.remove("hide")
-    }
-}
-
-
 
 function findIndex(item, items){
     for(let index = 0; index < items.length; index++){
