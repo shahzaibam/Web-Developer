@@ -2,51 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Signature</title>
+    <title>Image caroousel</title>
     <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/css/all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500&family=Mulish&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 </head>
 <body>
-    <table style="border: 1px solid black; background-position: fixed; background-repeat: no-repeat; background-size: cover; height: 100%; width: 700px; font-family: 'Mulish', sans-serif;">
-        <tr>
-            <td>
-                <img src="/img/WhatsApp Image 2021-06-05 at 19.59.43.png" style="width: 130px;  padding: 2px; position: relative; top: 100px;">
-                <div style="height: 260px; width: 0.3px; border: 2px solid #009bdf; overflow: hidden; position: relative; left: 180px; top: -50px;">hsh</div>
-            </td>
-            <td style="position: relative; left:50px; top: -10px;">
+    <div class="carrousel-container">        
+        <input type="radio" name="r" id="r1" checked>
+        <input type="radio" name="r" id="r2">
+        <input type="radio" name="r" id="r3">
+        <input type="radio" name="r" id="r4">
+        <input type="radio" name="r" id="r5">
 
-                <h3>Naveed Asghar</h3>
-                <h4>EXACT COMMERCE</h4>
-                <h6 style="margin-top:-15px;">Director de Ventas</h6>
-                <p>
-                    <span><span style="color: #009bdf;">p:</span> +34 669 609 203</span>
-                </p>
+        <div class="carrousel">
+            <div class="img i1">
+                <img src="/img/anne-nygard-MEhUybaz9ls-unsplash.jpg" class="abcd" width="100%" alt="">
+            </div>
 
-                <p>
-                    <span><span style="color: #009bdf;">a:</span> Terra Baixa 69, Hospitalet de Llobregat. Barcelona. Spain</span>
-                </p>
+            <div class="img i2">
+                <img src="/img/irina-iriser-P4oktLy-VFA-unsplash.jpg" width="100%" alt="">
+            </div>
 
-                <p>
-                    <span style="color: #009bdf;">w:</span> <span>www.exact.com.es</span> <span><span style="color: #009bdf;">e:</span> ventas@exact.com.es </span>
-                </p>
+            <div class="img i3">
+                <img src="img/jan-canty--CcmWymshm4-unsplash.jpg" width="100%" alt="">
+            </div>
 
-                <p>
-                    <span class="social">
-                        <a href=""><i class="fab fa-instagram" style="padding: 5px;font-size: 21px; cursor: pointer; color: red;"></i></a>
+            <div class="img i4">
+                <img src="/img/kym-mackinnon-nSP8r7Rn8LU-unsplash.jpg" width="100%"alt="">
+            </div>
 
-                        <a href=""><i class="fab fa-facebook"              style="padding: 5px; font-size: 21px; cursor: pointer; color:#009bdf;"></i></a>
+            <div class="img i5">
+                <img src="/img/meric-tuna-znT5MmTjASY-unsplash.jpg" width="100%" alt="">
+            </div>
 
-                        <a href=""><i class="fab fa-linkedin"                   style="padding: 5px; font-size: 21px; cursor: pointer;color: #00009bdf;"></i></a>
+            <div class="img i6">
+                <img src="/img/anne-nygard-MEhUybaz9ls-unsplash.jpg" width="100%" alt="">
+            </div>
 
-                        <a href=""><i class="fab fa-twitter-square"            style="padding: 5px; font-size: 21px; cursor: pointer;color: #009bdf;"></i></a>
-                    </span>
-                </p>
-            </td>
-        </tr>
-    </table>
+            <div class="img i7">
+                <img src="/img/irina-iriser-P4oktLy-VFA-unsplash.jpg" id="efgh" width="100%" alt="">
+
+            </div>
+        </div>
+        <button id="prev"><i class="fas fa-arrow-left"></i></button>
+        <button id="next"><i class="fas fa-arrow-right"></i></button>
+        
+        <div class="navigation">
+            <label for="r1" class="bar dots"></label>
+            <label for="r2" class="bar dots"></label>
+            <label for="r3" class="bar dots"></label>
+            <label for="r4" class="bar dots"></label>
+            <label for="r5" class="bar dots"></label>
+        </div>
+
+    
+    </div>
+
 </body>
 </html>
