@@ -1,108 +1,63 @@
 body{
-    background-color: black;
-
-}
-
-.container{
-    width: 80%;
-    height: 400px;
     margin: 0;
-    position: relative;
-}
-
-
-
-.carousel-container{
-    width: 100px;
-    height: 400px;
-    position: relative;
-    overflow:hidden ;
-}
-
-
-.carousel{
-    padding: 10px;
-    margin: 10px;
-    list-style: none;
-    transition: 300ms transform ease-in;
-    overflow:hidden ;
-
-}
-
-.slide{
     padding: 0;
-    margin: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
+    background: #34495e;
 }
 
-.slide img{
-    width: 100%;
+.carrousel-container{
+    width: 700px;
     height: 400px;
-    object-fit: cover;
-}
-
-.btn{
+    overflow: hidden;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: white;
+    top: 15%;
+    left: 25%;
 }
 
-.btn img{
-    width: 20px;
-    height: 20px;
-
-}
-
-.btn-left{
-    position: relative;
-    top: 250px;
-    left: -30px;
-    z-index: 10;
-}
-
-.btn-right{
-    position: relative;
-    top: 210px;
-    right: -1100px;
-}
-
-.nav{
-    width: 100%;
-    height: 30px;
+.navigation{
     position: absolute;
-    top: 400px;
-    left: 40px;
+    bottom: 10px;
+    left: 27%;
     display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 400px;
 }
 
-
-
-.nav .dot{
-    background: rgb(255, 255, 255, 0.3);
-    border: none;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin: 8px 10px;
+.bar{
+    width: 50px;
+    height: 10px;
+    border: 2px solid #fff;
+    margin: 6px;
     cursor: pointer;
 }
 
-.dot.active{
-    background: rgb(255, 255, 255, 1);
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
 }
 
-.hide{
-    display: none;
+.carrousel{
+    width: 700%;
+    height: 500px;
+    display: flex;
 }
+
+#r1:checked ~ .i1{
+    margin-left: 0;
+}
+
+#r2:checked ~ .i1{
+    margin-left: -20%;
+}
+
+#r3:checked ~ .i1{
+    margin-left: -40%;
+}
+
+#r4:checked ~ .i1{
+    margin-left: -80%;
+
+}
+#r5:checked ~ .i1{
+    margin-left: -816px;
+}
+
+
+
