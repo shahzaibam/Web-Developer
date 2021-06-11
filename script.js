@@ -97,41 +97,36 @@ let calculator_buttons = [
     }
 ];
 
-
 let input_element = document.querySelector(".input")
-let output_result_element = document.querySelector(".result .value")
 let output_operation_element = document.querySelector(".operation .value")
-let value = document.querySelector(".value")
+let output_result_element = document.querySelector(".result .value")
 
+function showButtons(){
+    let btns_per_row = 4;
+    let added_btns = 0;
 
-function createButtons(){
-    const btn_per_row = 4;
-    let added_buttons = 0;
-
-    calculator_buttons.forEach((button) =>{
-        if( added_buttons % btn_per_row  == 0){
+    calculator_buttons.forEach((button)=>{
+        if(added_btns % btns_per_row == 0){
             input_element.innerHTML += `<div class="row"></div>`
         }
-    
+
         const row = document.querySelector(".row:last-child")
-    
+
         row.innerHTML += `<button id="${button.name}">
-                        ${button.symbol}
-                        </button>
-                        `
-        added_buttons++;
+                            ${button.symbol}
+        </button>`
+
+        added_btns++;
     })
-
-
 }
 
-createButtons() 
+showButtons()
 
 
-input_element.addEventListener("click", event =>{
+input_element.addEventListener("click", event=>{
     let targetBtn = event.target;
 
-    calculator_buttons.forEach(button=>{
+    calculator_buttons.forEach((button)=>{
         if(button.name == targetBtn.id){
             return calculator(button)
         }
@@ -140,32 +135,30 @@ input_element.addEventListener("click", event =>{
 
 let data = {
     operation : [],
-    result : [0]
+    result : []
 }
+
 
 function calculator(button){
     if(button.type == "operator"){
         data.operation.push(button.symbol)
         data.result.push(button.formula)
-    }
 
-    else if(button.type == "number"){
+    }else if(button.type == "number"){
         data.operation.push(button.symbol)
         data.result.push(button.formula)
-    }
-
-    else if(button.type == "key"){
+        
+    }else if(button.type == "key"){
         if(button.name == "clear"){
             data.operation = []
             data.result = []
-            updateOutputResult()
+            updateOutputResult(0)
         }else if(button.name == "delete"){
             data.operation.pop()
             data.result.pop()
         }
-    }
-
-    else if(button.type == "calculate"){
+        
+    }else if(button.type == "calculate"){
         let join_result = data.result.join("")
 
         let result;
@@ -177,11 +170,10 @@ function calculator(button){
                 result = "SyntaxError!"
                 updateOutputResult(result)
                 return;
-
             }
         }
 
-        result = formatResult(result)
+        result = formatData(result)
 
         updateOutputResult(result)
 
@@ -203,23 +195,21 @@ function updateOutputResult(result){
     output_result_element.innerHTML = result
 }
 
+function formatData(result){
+    let maxNumbers = 10;
+    let output_precision = 5;
 
-function formatResult(result){
-    let totalNumbers = 10;
-    const output_precision = 5;
-
-    if(digitCounter(result) > totalNumbers){
+    if(digitCounter(result)>maxNumbers){
         if(isFloat(result)){
-            const resultInt = parseInt(result)
-            const resultInt_length = digitCounter(resultInt)
+            let result_Int = parseInt(result)
+            let result_Int_length = digitCounter(result_Int)
 
-            if(resultInt_length > totalNumbers){
+            if(result_Int_length > maxNumbers){
                 return result.toPrecision(output_precision)
             }else{
-                const numOfDigits  =  totalNumbers - resultInt_length
-                return result.toFixed(numOfDigits)
+                const digitNumber = maxNumbers - result_Int_length
+                return result.toFixed(digitNumber)
             }
-
         }else{
             return result.toPrecision(output_precision)
         }
@@ -229,9 +219,11 @@ function formatResult(result){
 }
 
 function digitCounter(number){
-    return number.toString().length;
+    return number.toString().length
 }
 
 function isFloat(number){
-    return number % 1 !=0
+    return number%1 !=0
 }
+
+
