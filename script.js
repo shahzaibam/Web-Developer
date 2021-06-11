@@ -94,15 +94,27 @@ let calculator_buttons = [
         symbol : "=",
         formula : "=",
         type : "calculate"
+    }, {
+        name : "parenthesis",
+        symbol : "(",
+        formula : "(",
+        type : "number"
+    }, {
+        name : "parenthesis-right",
+        symbol : ")",
+        formula : ")",
+        type : "number"
     }
 ];
 
-let input_element = document.querySelector(".input")
-let output_operation_element = document.querySelector(".operation .value")
-let output_result_element = document.querySelector(".result .value")
+
+const input_element = document.querySelector(".input")
+const output_operation_element = document.querySelector(".operation .value") 
+const output_result_element = document.querySelector(".result .value")
+
 
 function showButtons(){
-    let btns_per_row = 4;
+    const btns_per_row = 4;
     let added_btns = 0;
 
     calculator_buttons.forEach((button)=>{
@@ -114,24 +126,27 @@ function showButtons(){
 
         row.innerHTML += `<button id="${button.name}">
                             ${button.symbol}
-        </button>`
+                            </button>
+        `
 
         added_btns++;
     })
+
 }
 
 showButtons()
 
 
-input_element.addEventListener("click", event=>{
-    let targetBtn = event.target;
+input_element.addEventListener("click", event => {
+    let targetedBtn = event.target;
 
     calculator_buttons.forEach((button)=>{
-        if(button.name == targetBtn.id){
-            return calculator(button)
+        if(button.name == targetedBtn.id){
+            calculator(button)
         }
     })
 })
+
 
 let data = {
     operation : [],
@@ -147,7 +162,7 @@ function calculator(button){
     }else if(button.type == "number"){
         data.operation.push(button.symbol)
         data.result.push(button.formula)
-        
+
     }else if(button.type == "key"){
         if(button.name == "clear"){
             data.operation = []
@@ -157,7 +172,6 @@ function calculator(button){
             data.operation.pop()
             data.result.pop()
         }
-        
     }else if(button.type == "calculate"){
         let join_result = data.result.join("")
 
@@ -182,7 +196,9 @@ function calculator(button){
 
         data.operation.push(result)
         data.result.push(result)
+
         return;
+
     }
     updateOutputOperation(data.operation.join(""))
 }
@@ -195,20 +211,21 @@ function updateOutputResult(result){
     output_result_element.innerHTML = result
 }
 
+
 function formatData(result){
-    let maxNumbers = 10;
+    let max_numbers = 10;
     let output_precision = 5;
 
-    if(digitCounter(result)>maxNumbers){
+    if(digitCounter(result)>max_numbers){
         if(isFloat(result)){
             let result_Int = parseInt(result)
             let result_Int_length = digitCounter(result_Int)
 
-            if(result_Int_length > maxNumbers){
+            if(result_Int_length > max_numbers){
                 return result.toPrecision(output_precision)
             }else{
-                const digitNumber = maxNumbers - result_Int_length
-                return result.toFixed(digitNumber)
+                const digitNumbers = max_numbers - result_Int_length
+                return result.toFixed(digitNumbers)
             }
         }else{
             return result.toPrecision(output_precision)
@@ -223,7 +240,9 @@ function digitCounter(number){
 }
 
 function isFloat(number){
-    return number%1 !=0
+    return number % 1 !=0
 }
+
+
 
 
