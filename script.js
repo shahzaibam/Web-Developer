@@ -2,12 +2,12 @@ const input_element = document.querySelector(".input")
 const output_operation_element = document.querySelector(".operation .value")
 const output_result_element = document.querySelector(".result .value")
 
-const OPERATORS = ["+", "-", "*", "/"]
-const POWER = "POWER(", FACTORIAL = "FACTORIAL"
+const OPERATORS = ["+","-","*", "/"]
+const POWER = "POWER",FACTORIAL = "FACTORIAL"
 
 let data = {
     operation : [],
-    formula : [],
+    formula : []
 }
 
 let calculator_buttons = [
@@ -108,22 +108,6 @@ let calculator_buttons = [
         formula : "Math.E",
         type : "number"
     },
-    // {
-    //     name : "acos",
-    //     symbol : "acos",
-    //     formula : "inv_trigo(Math.acos,",
-    //     type : "trigo_function"
-    // },{
-    //     name : "asin",
-    //     symbol : "asin",
-    //     formula : "inv_trigo(Math.asin,",
-    //     type : "trigo_function"
-    // },{
-    //     name : "atan",
-    //     symbol : "atan",
-    //     formula : "inv_trigo(Math.atan,",
-    //     type : "trigo_function"
-    // },
     {
         name : "4",
         symbol : 4,
@@ -222,8 +206,8 @@ let calculator_buttons = [
     }
 ];
 
-function calculatorshow(){
-    const btns_per_row = 8;
+function showBtns(){
+    let btns_per_row = 8;
     let added_btns = 0;
 
     calculator_buttons.forEach(button =>{
@@ -235,19 +219,20 @@ function calculatorshow(){
 
         row.innerHTML += `<button id="${button.name}">
                             ${button.symbol}
-        </button>`
+                            </button>`
 
         added_btns++;
+
     })
 }
 
-calculatorshow()
+showBtns()
 
 
 let RADIAN = true;
 
-const rad_btn = document.getElementById("rad")
-const deg_btn = document.getElementById("deg")
+let rad_btn = document.getElementById("rad")
+let deg_btn = document.getElementById("deg")
 
 rad_btn.classList.add("active-angle")
 
@@ -256,19 +241,17 @@ function angleToggler(){
     deg_btn.classList.toggle("active-angle")
 }
 
+input_element.addEventListener("click", event =>{
+    let targetedBtn = event.target;
 
-input_element.addEventListener("click", event => {
-    let targetedEvent = event.target;
-
-    calculator_buttons.forEach(button=>{
-        if(button.name == targetedEvent.id){
-            return calculate(button)
+    calculator_buttons.forEach(button =>{
+        if(button.name == targetedBtn.id){
+            return calculator(button)
         }
     })
-
 })
 
-function calculate(button){
+function calculator(button){
     if(button.type == "operator"){
 
         data.operation.push(button.symbol)
@@ -280,6 +263,7 @@ function calculate(button){
         data.formula.push(button.formula)
 
     }else if(button.type == "trigo_function"){
+
         data.operation.push(button.symbol + "(")
         data.formula.push(button.formula)
 
@@ -290,6 +274,12 @@ function calculate(button){
 
         if(button.name == "factorial"){
             symbol = "!"
+            formula = button.formula
+
+            data.operation.push(button.symbol)
+            data.formula.push(button.formula)
+        }else if(button.name == "power"){
+            symbol = "^("
             formula = button.formula
 
             data.operation.push(button.symbol)
@@ -310,19 +300,15 @@ function calculate(button){
             data.operation.push(symbol)
             data.formula.push(formula)
         }
-
     }else if(button.type == "key"){
-
         if(button.name == "clear"){
             data.operation = []
             data.formula = []
 
             updateOutputResult(0)
         }else if(button.name == "delete"){
-            
             data.operation.pop()
             data.formula.pop()
-
         }else if(button.name == "rad"){
             RADIAN = true;
             angleToggler()
@@ -331,16 +317,15 @@ function calculate(button){
             angleToggler()
         }
 
-
-    }else if(button.name == "calculate"){
-        let formula_str = data.formula.join("")
+    }else if(button.type == "calculate"){
+        formula_str = data.formula.join("")
 
         let POWER_SEARCH_RESULT = search(data.formula, POWER)
         let FACTORIAL_SEARCH_RESULT = search(data.formula, FACTORIAL)
 
         console.log(data.formula, POWER_SEARCH_RESULT, FACTORIAL_SEARCH_RESULT)
-        
-        const BASES = powerBaseGetter(data.formula, POWER_SEARCH_RESULT)
+
+        let BASES = powerBaseGetter(data.formula, POWER_SEARCH_RESULT)
 
         BASES.forEach(base =>{
             let toReplace = base + POWER
@@ -349,13 +334,13 @@ function calculate(button){
             formula_str = formula_str.replace(toReplace, replacement)
         })
 
-        const NUMBERS = factorialNumberGetter(data.formula, FACTORIAL_SEARCH_RESULT)
+        let NUMBERS = powerBaseGetter(data.formula, POWER_SEARCH_RESULT)
 
         NUMBERS.forEach(factorial =>{
             formula_str = formula_str.replace(factorial.toReplace, factorial.replacement)
         })
 
-        let result;
+        let result = eval(formula_str)
 
         try{
             result = eval(formula_str)
@@ -367,20 +352,21 @@ function calculate(button){
             }
         }
 
-        ans = result
+        ans = result;
+
         data.operation = [result]
         data.formula = [result]
 
-
         updateOutputResult(result)
         return
-    }
-    updateOutputResult(data.operation.join(""))
+    }     
+    updateOutputOperation(data.operation.join(""))
 }
 
+
 function factorialNumberGetter(formula, FACTORIAL_SEARCH_RESULT){
-    let numbers = [0]
-    let factorial_sequence = [0]
+    let numbers = []
+    let factorial_sequence = 0;
 
     FACTORIAL_SEARCH_RESULT.forEach(factorial_index =>{
         let number = []
@@ -395,110 +381,106 @@ function factorialNumberGetter(formula, FACTORIAL_SEARCH_RESULT){
 
         let first_factorial_index = factorial_index - factorial_sequence
 
-        let previous_index = first_factorial_index - 1
-        let parenthesis_Count = 0;
+        let previous_index = first_factorial_index - 1;
 
-        while(previous_index >= 0){
-            if(formula[previous_index] == "(") parenthesis_Count--;
-            if(formula[previous_index] == ")") parenthesis_Count++;
+        let parenthesis_count = 0;
 
-            let is_operator = true;
+        while(previous_index>=0){
+            if(formula[previous_index] == "(") parenthesis_count--;
+            if(formula[previous_index] == ")") parenthesis_count++;
+
+            let is_operator = false;
 
             OPERATORS.forEach(OPERATOR =>{
                 if(formula[previous_index] == OPERATOR) is_operator = true;
             })
 
-            if(is_operator && parenthesis_Count == 0) break;
+            if(is_operator && parenthesis_count == 0) break;
 
-            base.unshift(formula[previous_index]);
-                previous_index--
-            
+            number.unshift(formula[previous_index])
+            parenthesis_count--;
         }
-        let number_str = number.join("")
-
-        const factorial = "factorial(", closeParenthesis = ")"
+        let numbers_str = number.join("")
+        let factorial = "factorial(", parenthesis_close = ")"
         let times = factorial_sequence + 1;
 
-        let toReplace = number_str + FACTORIAL.repeat(times)
-        let replacement = factorial.repeat(times) + number_str + closeParenthesis.repeat(times)
-        
+        let toReplace = numbers_str + FACTORIAL.repeat(times)
+        let replacement = factorial.repeat(times) + numbers_str + parenthesis_close.repeat(times)
+
         numbers.push({
             toReplace : toReplace,
             replacement : replacement
         })
 
     })
+
     return numbers;
 }
 
-
 function powerBaseGetter(formula, POWER_SEARCH_RESULT){
-    let power_Bases = [];
+    let powers_bases = []
 
-    POWER_SEARCH_RESULT.forEach(power_index =>{
-        let base = [];
+    POWER_SEARCH_RESULT.forEach(powers_index =>{
+        let base = []
 
+        let previous_index = powers_index - 1;
         let parenthesis_count = 0;
 
-        let previous_index = power_index - 1;
-
-        while(previous_index >= 0){
+        while(previous_index>=0){
             if(formula[previous_index] == "(") parenthesis_count--;
             if(formula[previous_index] == ")") parenthesis_count++;
 
-            let is_operator = true;
+            let is_operator = false;
 
             OPERATORS.forEach(OPERATOR =>{
                 if(formula[previous_index] == OPERATOR) is_operator = true;
-            })  
-            let is_power = formula[previous_index] == POWER;
+            })
 
-            if((is_operator && parenthesis_count == 0) || is_power) break;
-    
-            base.unshift(formula[previous_index]);
-            previous_index--;
+            let isPower = formula[previous_index] == POWER
 
+            if((is_operator && parenthesis_count == 0) || isPower) break;
+
+            base.unshift(formula[previous_index])
+            parenthesis_count--;
         }
-        power_Bases.push(base.join(""))
+        powers_bases.push(base.join(""))
     })
-    return power_Bases;
+    return powers_bases;
 }
 
 function search(array, keyword){
     let search_result = []
 
     array.forEach((element, index)=>{
-        if(element == keyword) search_result.push(index)
+        if(element == keyword){
+            search_result.push(index)
+        }
     })
-
-    return search_result;
+    return search_result
 }
 
+function updateOutputResult(result){
+    output_result_element.innerHTML = result;
+}
 
 function updateOutputOperation(operation){
     output_operation_element.innerHTML = operation
 }
 
-function updateOutputResult(result){
-    output_result_element.innerHTML = result
-}
-
 function factorial(number){
-    if(number % 1 !=0)return gamma(number + 1)
-    if(number === 0 || number === 1){
-         return 1;
-     }
+    if(number%1 !=0) return gamma(number + 1)
+    if(number === 1 || number === 0){
+        return 1;
+    }
 
-     let result = 1;
+    let result = 1;
 
-     for(let i = 1; i<= number; i++){
-         result *= i;
-         if(result === Infinity) return Infinity
-     }
-     return result;
- }
-
-
+    for(let i = 1; i<=number; i++){
+        result *= 1;
+        if(result === Infinity) return Infinity
+    }
+    return result;
+}
 
 function gamma(n) {  // accurate to about 15 decimal places
     //some magic constants 
@@ -521,25 +503,19 @@ function gamma(n) {  // accurate to about 15 decimal places
 
 function trigo(callback, angle){
     if(!RADIAN){
-        angle = angle * Math.PI/100 
+        angle = angle * Math.PI/100
     }
     return callback(angle)
 }
 
 function inv_trigo(callback, value){
-    let angle = callback(value);
+
+    let angle = callback(value)
 
     if(!RADIAN){
-        angle = angle * 180/Math.PI 
+        angle = angle * 180/Math.PI
     }
-
-    return angle;
+    return angle
 }
-
-
-
-
-
-
 
 
