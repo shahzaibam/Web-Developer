@@ -1,66 +1,78 @@
-body{
-    background-color: aqua;
+*{
+    padding: 0;
+    margin: 0;
+    background-origin: padding-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 16px;
+    background-color: #636363;
 }
 
 .calculator{
-    width: 300px;
-    height: auto;
     position: absolute;
-    background-color: azure;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .calc-container{
-    width: 300px;
+    background-color: #1d1d1d;
+    width: 600px;
     height: auto;
     border-radius: 0 0 30px 30px;
 }
+
 .output{
-    width: 100%;
-}
+    width: 100%;;
+}   
 
 .operation{
-    width: 300px;
+    width: 600px;
     height: 70px;
-    color: red;
-    font-size: 24px;
+    color: #878787;
+    font-size: 1.9em;
     font-weight: bold;
     position: relative;
+    overflow: hidden;
 }
-
 .operation .value{
     position: absolute;
     bottom: 5px;
-    right: 10px;
+    right : 10px;
     white-space: nowrap;
     overflow: hidden;
 }
 
 .result{
-    width: 300px;
+    width: 600px;
     height: 140px;
-    color: red;
-    font-size: 24px;
+    color: #FFF;
+    font-size: 2.6em;
     font-weight: bold;
+    overflow: hidden;
     position: relative;
 }
 
 .result .value{
     position: absolute;
     top: 50%;
-    right: 10px;
+    transform: translateY(-50%);
+    right : 10px;
     white-space: nowrap;
     overflow: hidden;
 }
 
 
 .input{
-    background-color: #fff;
+    background-color: #FFF;
     border-radius: 0 0 25px 25px;
-    border: 1px solid grey;
-    height: 340px;
+    border: 1px solid #1d1d1d;
+    height: 500px;
 }
 
-.row{
+.row {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -69,9 +81,11 @@ body{
 .row button{
     width: 50px;
     height: 50px;
-    font-size: 25px;
+    font-size: 1.5em;
     border: none;
-    margin: 8px;
+    border-radius: 50%;
+    background-color: transparent;
+    margin : 8px;
     cursor: pointer;
 }
 
@@ -80,23 +94,27 @@ body{
 }
 
 .row #calculate{
-    color: #fff;
-    background-color: hotpink;
-    width: 121px;
+    color: #FFF;
+    background-color: #46e0bc;
+    width : 121px;
     border-radius: 50px;
 }
-
 .row #delete{
-    color: #fff;
+    color: #FFF;
     background-color: #e05046;
 }
 
-#division, #multiplication ,#substraction, #addition {
+#division, #multiplication, #subtraction, #addition {
     color: #18b893;
 }
 
+.input button span{
+    font-size: 0.6em;
+    position: absolute;
+}
 
-
-
-
-
+.active-angle{ 
+    background-color: #1d1d1d !important;
+    color: #FFF !important;
+    border-radius: 10px !important;
+}
