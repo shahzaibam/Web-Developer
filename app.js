@@ -10,13 +10,14 @@ const notificationElement = document.querySelector(".notification")
 const weather = {}
 
 weather.temperature = {
-    unit : "celsius" 
+    unit : "celsius"
 }
 
 //App const and vars
 const KELVIN = 273;
 
 //API key
+
 const key = "ef7877b8c666feed22d2d02c567aabbc"
 
 //check if browser supports geolocation
@@ -50,7 +51,7 @@ function getWeather(latitude, longitude){
         })
         .then(function(data){
             weather.temperature.value = Math.floor(data.main.temp - KELVIN)
-            weather.description = data.weather[0].description;
+            weather.main = data.weather[0].main;
             weather.iconId = data.weather[0].icon;
             weather.city = data.name;
             weather.country = data.sys.country
@@ -63,13 +64,12 @@ function getWeather(latitude, longitude){
 function displayWeather(){
     iconElement.innerHTML = `<img src="icons/${weather.iconId}.png"/>`
     tempElement.innerHTML = `${weather.temperature.value}º<span>C</span>`
-    descElement.innerHTML = weather.description;
+    descElement.innerHTML = weather.main;
     locationElement.innerHTML = `${weather.city}, ${weather.country}`
 }
 
-
 function celsiusToFahrenheit(temperature){
-    return (temperature * 9/5) + 32
+    return (temperature * 9/5) + 32;
 }
 
 tempElement.addEventListener("click", function(){
@@ -82,7 +82,7 @@ tempElement.addEventListener("click", function(){
         tempElement.innerHTML = `${fahrenheit}º<span>F</span>`
         weather.temperature.unit = `${weather.temperature.value}`
     }else{
-        tempElement.innerHTML =` ${weather.temperature.value}º<span>C</span>`
+        tempElement.innerHTML =`${weather.temperature.value}º<span>C</span>`
         weather.temperature.unit = "celsius"
     }
 
