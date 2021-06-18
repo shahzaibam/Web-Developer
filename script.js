@@ -30,8 +30,8 @@ function setPosition(position){
 }
 
 function showError(error){
-    navigator.style.display = "block"
-    navigator.innerHTML = `<p>${error.message}</p>`
+    notification.style.display = "block"
+    notification.innerHTML = `<p>${error.message}</p>`
 }
 
 function getWeather(latitude, longitude){
@@ -57,7 +57,7 @@ function getWeather(latitude, longitude){
 function displayWeather(){
     weather_icon.innerHTML = `<img src="icons/${weather.iconId}.png">`
     temperature_value.innerHTML = `<p>${weather.temperature.value}º <span>C</span><p>`
-    temp_description = `<p>${weather.main}</p>`
+    temp_description.innerHTML = `<p>${weather.main}</p>`
     location_.innerHTML = `<p>${weather.city}, ${weather.country}</p>`
 }
 
