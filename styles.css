@@ -1,5 +1,5 @@
 body{
-    background-color: rgba(0, 0, 255, 0.438);
+    background: rgba(8, 8, 119, 0.459);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -7,62 +7,72 @@ body{
 }
 
 .container{
+    background: #fff;
     width: 300px;
     height: auto;
+    padding: 10px;
     border: 1px solid black;
-    background: #fff;
 }
 
-.app-title p{
+
+.app-title{
+    color: rgba(12, 12, 131, 0.877);
     position: relative;
-    left: 110px;
-    color: rgb(2, 2, 59);
-    margin-right: 246px;
+    top: -10px;
+    left: 85px;
+    font-size: 2em;
 }
 
 .weather-icon{
+    color: rgba(12, 12, 131, 0.877);
     position: relative;
-    left: 70px;
-    margin-right: 180px;
-
+    left: 65px;
+    bottom: 20px;
+    margin-right: 160px;
 }
 
-
-.temperature-value p{
-    font-size: 1.9em;
-    font-weight: bold;
+.temperature-value{
+    color: rgba(12, 12, 131, 0.877);
     position: relative;
-    left: 110px;
-    top: -14px;
+    left: 100px;
+    bottom: 50px;
+    font-size: 2em;
     cursor: pointer;
-    margin-right:230px;
+    margin-right: 200px;
+
 }
 
 .temperature-description{
-    font-size: 1em;
+    color: rgba(12, 12, 131, 0.877);
     position: relative;
-    left: 116px;
-    bottom: 20px;
-    margin-right: 264px;
+    left: 96px;
+    bottom: 50px;
+    font-size: 2em;
+    margin-right: 200px;
 
 }
 
 .location{
+    color: rgba(12, 12, 131, 0.877);
     position: relative;
     left: 50px;
-    bottom: 20px;
-    margin-right: 114px;
+    bottom: 50px;
+    font-size: 1em;
+    margin-right: 100px;
 }
 
+
 .notification{
-    background: rgba(177, 4, 4, 0.692);
+    position: relative;
+    top: -30px;
+    background: rgba(160, 9, 9, 0.507);
     padding: 1px;
+    width: 318px;
+    position: relative;
+    left: -10px;
 }
 
 .notification p{
     position: relative;
-    left: 60px;
+    left: 70px;
 }
-
-
-
