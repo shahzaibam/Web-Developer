@@ -2,7 +2,7 @@ const notification = document.querySelector(".notification")
 const weather_container = document.querySelector(".weather-container")
 const weather_icon = document.querySelector(".weather-icon")
 const temperature_value = document.querySelector(".temperature-value")
-let temp_description = document.querySelector(".temperature-description")
+const weather_desc = document.querySelector(".weather-description")
 const location_ = document.querySelector(".location")
 
 const weather = {}
@@ -11,15 +11,15 @@ weather.temperature = {
     unit : "celsius"
 }
 
-const KELVIN = 273;
-
 const key = "ef7877b8c666feed22d2d02c567aabbc"
+
+const KELVIN = 273;
 
 if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(setPosition, showError)
 }else{
-    navigator.style.display = "block"
-    navigator.innerHTML = `<p>Browser doesn't support Geolocation</p>`
+    notification.style.display = "block"
+    notification.innerHTML = `<p>Browser doesn't support geolocation</p>`
 }
 
 function setPosition(position){
@@ -39,13 +39,13 @@ function getWeather(latitude, longitude){
 
     fetch(api)
         .then(function(response){
-            let data = response.json()
+            let data = response.json();
             return data;
         })
         .then(function(data){
             weather.temperature.value = Math.floor(data.main.temp - KELVIN)
-            weather.main = data.weather[0].main
             weather.iconId = data.weather[0].icon
+            weather.main = data.weather[0].main
             weather.city = data.name
             weather.country = data.sys.country
         })
@@ -55,9 +55,9 @@ function getWeather(latitude, longitude){
 }
 
 function displayWeather(){
-    weather_icon.innerHTML = `<img src="icons/${weather.iconId}.png">`
-    temperature_value.innerHTML = `<p>${weather.temperature.value}º <span>C</span><p>`
-    temp_description.innerHTML = `<p>${weather.main}</p>`
+    temperature_value.innerHTML = `<p>${weather.temperature.value}</p>`
+    weather_icon.innerHTML = `<img src="/icons/${weather.temperature.value}.png">`
+    weather_desc.innerHTML = `<p>${weather.main} </p>`
     location_.innerHTML = `<p>${weather.city}, ${weather.country}</p>`
 }
 
@@ -81,6 +81,10 @@ temperature_value.addEventListener("click", function(){
     }
 
 })
+
+
+
+
 
 
 
