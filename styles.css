@@ -1,78 +1,156 @@
-body{
-    background: rgba(8, 8, 119, 0.459);
+.carrousel-container{
+    position: relative;
+    height: 500px;
+    width: 800px;
+}
+
+.slide{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: 500px;
+    width: 800px;
 }
 
-.container{
-    background: #fff;
-    width: 300px;
-    height: auto;
-    padding: 10px;
+img{
+    height: 500px;
+    width: 800px;
+}
+
+.arrow-prev{
+    position: absolute;
+    left: 10px;
+    top: 47%;
+    font-size: 27px;
+    color: white;
+}
+
+.arrow-next{
+    position: absolute;
+    right: 10px;
+    top: 47%;
+    font-size: 27px;
+    color: white;
+}
+
+.dotes{
+    display: flex;
+    width: 200px;
+    height: 100px;
+    position: relative;
+    top: 450px;
+    left: 340px;
+}
+
+.nav-dot{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
     border: 1px solid black;
-}
-
-
-.app-title{
-    color: rgba(12, 12, 131, 0.877);
-    position: relative;
-    top: -10px;
-    left: 85px;
-    font-size: 2em;
-}
-
-.weather-icon{
-    color: rgba(12, 12, 131, 0.877);
-    position: relative;
-    left: 65px;
-    bottom: 20px;
-    margin-right: 160px;
-}
-
-.temperature-value{
-    color: rgba(12, 12, 131, 0.877);
-    position: relative;
-    left: 100px;
-    bottom: 50px;
-    font-size: 2em;
+    margin: 8px;
+    background-color: blue;
     cursor: pointer;
-    margin-right: 200px;
-
 }
 
-.temperature-description{
-    color: rgba(12, 12, 131, 0.877);
-    position: relative;
-    left: 96px;
-    bottom: 50px;
-    font-size: 2em;
-    margin-right: 200px;
-
+.nav-dot:hover{
+    background-color: chocolate;
+    transition: 0.8s;
 }
 
-.location{
-    color: rgba(12, 12, 131, 0.877);
-    position: relative;
-    left: 50px;
-    bottom: 50px;
-    font-size: 1em;
-    margin-right: 100px;
+.active-dot{
+    background-color: chocolate;
 }
 
 
-.notification{
-    position: relative;
-    top: -30px;
-    background: rgba(160, 9, 9, 0.507);
-    padding: 1px;
-    width: 318px;
-    position: relative;
-    left: -10px;
+
+
+.calculator{
+    width:400px;
+    height: auto;
+    background-color: azure;
 }
 
-.notification p{
-    position: relative;
-    left: 70px;
+.calc-container{
+    width: 400px;
+    height: auto;
+    border-radius: 0 0 30px 30px;
 }
+
+.output{
+    width: 100%;
+}
+
+.operation{
+    width: 300px;
+    height: 70px;
+    color: red;
+    font-size: 23px;
+    font-weight: bold;
+    position: relative;
+}
+
+.operation .value{
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.result{
+    width: 300px;
+    height: 70px;
+    color: red;
+    font-size: 23px;
+    font-weight: bold;
+    position: relative;
+}
+
+.result .value{
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.input{
+    background-color: #fff;
+    border-radius: 0 0 25px 25px;
+    border: 1px solid grey;
+    height: 340px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.row button{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    border: none;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.row button:hover{
+    font-weight: bold;
+}
+
+.row #calculate{
+    color: #fff;
+    background-color: hotpink;
+    width: 121px;
+    border-radius: 50px;
+}
+
+.row #delete{
+    color: #fff;
+    background-color: #e05046;
+}
+
+#division, #multiplication ,#substraction, #addition {
+    color: #18b893;
+}
+
