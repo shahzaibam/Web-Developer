@@ -4,37 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
+    <title>Carrousel</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="app-title">
-            <p>Weather</p>
-        </div>
-        <img src="/icons/" alt="">
-        <div class="notification">
-
+    <div class="carrousel-container">
+        <div class="img1 slide">
+            <img src="img/todd-diemer-uFomxGheuGk-unsplash.jpg" alt="">
         </div>
 
-        <div class="weather-container">
-            <div class="weather-icon">
-                <img src="/icons/unknown.png" alt="">
+        <div class="img2 slide">
+            <img src="/img/nick-scheerbart-8DMuvdp-vso-unsplash.jpg" alt="">
+        </div>
+
+        <div class="img3 slide">
+            <img src="/img/mohamed-thasneem-3bAblStd-IY-unsplash.jpg" alt="">
+        </div>
+
+
+
+        <div class="arrows">
+            <div class="arrow-prev slider-arrow">
+                <i class="fas fa-arrow-left"></i>
             </div>
 
-            <div class="temperature-value">
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;-</p>
+            <div class="arrow-next slider-arrow">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+        </div>
+
+        <div class="dotes dots">
+            <div class="nav-dot"></div>
+            <div class="nav-dot"></div>
+            <div class="nav-dot"></div>
+        </div>
+    </div>
+
+    <div class="calculator">
+        <div class="calc-container">ss
+            <div class="output">
+                <div class="operation">
+                    <div class="value"></div>
+                </div>
+
+                <div class="result">
+                    <div class="value">0</div>
+                </div>
+
             </div>
 
-            <div class="temperature-description">
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-</p>
-            </div>
+            <div class="input">
 
-            <div class="location">
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -</p>
             </div>
         </div>
     </div>
+
     <script src="/script.js"></script>
 </body>
 </html>
