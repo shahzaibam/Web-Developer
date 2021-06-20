@@ -195,7 +195,7 @@ ul li p{
     cursor: pointer;
 }
 
-#clear{
+#refresh{
     font-size: 23px;
     cursor: pointer; 
     position: relative;
@@ -204,3 +204,6 @@ ul li p{
     color: white;
 }
 
+.lineThrough{
+    text-decoration: line-through;
+}
