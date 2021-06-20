@@ -46,6 +46,11 @@ document.querySelectorAll(".nav-dot").forEach((element)=>{
 })
 
 
+
+
+
+
+
 let calculator_buttons = [
     {
         name : "delete",
@@ -178,11 +183,111 @@ input_element.addEventListener("click", event =>{
     let targetedBtn = event.target;
 
     calculator_buttons.forEach(button=>{
-        if(targetedBtn == button.id){
+        if(button.name == targetedBtn.id){
             return calculate(button)
         }
     })
 })
+
+let data = {
+    operation : [],
+    result : []
+}
+
+function calculate(button){
+    if(button.type == "operator"){
+        data.operation.push(button.symbol)
+        data.result.push(button.formula)
+
+    }else if(button.type == "number"){
+        data.operation.push(button.symbol)
+        data.result.push(button.formula)
+
+    }else if(button.type == "key"){
+        if(button.name == "clear"){
+            data.operation = []
+            data.result = []
+
+            updateOutputResult(0)
+        }
+
+        if(button.name == "delete"){
+            data.operation.pop()
+            data.result.pop()
+        }
+
+    }else if(button.type == "calculate"){
+        let join_result = data.result.join("")
+
+        let result;
+
+        try{
+            result = eval(join_result)
+        }catch(error){
+            if(error instanceof SyntaxError){
+                result = "SyntaxError!"
+                updateOutputResult(result)
+                return;
+            }
+        }
+
+        result = formatData(result)
+
+        updateOutputResult(result)
+
+        data.operation = []
+        data.result = []
+
+        data.operation.push(result)
+        data.result.push(result)
+
+        return;
+
+    }     
+    updateOutputOperation(data.operation.join(""))
+}
+
+function updateOutputOperation(operation){
+    output_operation_element.innerHTML = operation;
+}
+
+function updateOutputResult(result){
+    output_result_element.innerHTML = result;
+}
+
+function formatData(result){
+    let max_Numbers = 10;
+    output_precision = 5;
+    if(digitCounter(result) > max_Numbers){
+        if(isFloat(result)){
+            let result_Int = parseInt(result)
+            let result_Int_length = digitCounter(result_Int)
+        
+            if(result_Int_length > max_Numbers){
+                return result.toPrecision(output_precision)
+            }else{
+                const countNumber = max_Numbers - result_Int_length
+                return result.toFixed(countNumber)
+            }
+        }else{
+            return result.toPrecision(output_precision)
+        }
+    }else{
+        return result 
+    }
+}
+
+function digitCounter(number){
+    return number.toString().length
+}
+
+function isFloat(number){
+    return number%1 !=0
+}
+
+
+
+
 
 
 
