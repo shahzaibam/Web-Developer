@@ -154,3 +154,53 @@ img{
     color: #18b893;
 }
 
+
+
+
+
+.todo-container{
+    position: absolute;
+    top: 1100px;
+    border: 1px solid black;
+    height: 600px;
+    margin-left: 370px;
+}
+
+.image-todo{
+    background: url(/img/mohamed-thasneem-3bAblStd-IY-unsplash.jpg);
+    height: 300px;
+    width: 600px;
+    background-size: cover;
+}
+
+ul li{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    right: 25px;
+}
+
+ul li p{
+    margin-top: -0.1px;
+    font-size: 23px;
+}
+
+#circle-thin{
+    font-size: 23px;
+    cursor: pointer;
+}
+
+#trash{
+    font-size: 23px;
+    cursor: pointer;
+}
+
+#clear{
+    font-size: 23px;
+    cursor: pointer; 
+    position: relative;
+    top: -280px;
+    left: 550px;
+    color: white;
+}
+
