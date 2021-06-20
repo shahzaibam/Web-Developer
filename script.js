@@ -47,7 +47,7 @@ document.querySelectorAll(".nav-dot").forEach((element)=>{
 
 
 
-
+////////////////////////////////////////////////////////////////////////////7
 
 
 
@@ -287,8 +287,113 @@ function isFloat(number){
 
 
 
+////////////////////////////////////////////////////////////////////
+
+
+const unlist = document.querySelector(".unlist")
+const refresh = document.querySelector("#refresh")
+const input = document.querySelector("#input-td")
+LIST = []
+id = 0;
+const list = document.querySelector(".list")
+
+const uncheck = "fa-circle"
+const checked = "fa-check-circle"
+const lineThrough = "lineThrough"
+
+let dataLocal = localStorage.getItem("Todo")
+
+if(dataLocal){
+    LIST = JSON.parse(dataLocal)
+    loadTodos(LIST)
+    id = LIST.length
+
+}else{
+    LIST = []
+    id = 0;
+}
+
+function loadTodos(array){
+    array.forEach(function(index){
+        showTodos(index.toDo, index.id, index.done, index.trash)
+    })
+}
+
+refresh.addEventListener("click", function(){
+    localStorage.clear()
+    location.reload()
+
+})
+
+function showTodos(toDo, id, done, trash){
+
+    const DONE = done ? checked : uncheck
+    const LINE = done ? lineThrough : ""
+
+    let text = `<li>
+        <i id="circle-thin" class="far ${DONE}" job="complete" id="${id}"></i>
+        <p class="text ${LINE}">${toDo}</p>
+        <i id="trash" class="fas fa-trash-alt" job="delete" id="${id}"></i>
+    </li>`
+
+    let position = "beforeend"
+
+    unlist.insertAdjacentHTML(position, text)
+
+}
+localStorage.setItem("Local", JSON.stringify(LIST))
+
+
+document.addEventListener("keyup", event=>{
+    if(event.keyCode == 13){
+        const toDo = input.value;
+        if(toDo){
+            showTodos(toDo, id, false, false)
+            LIST.push({
+                toDo : toDo,
+                id : id,
+                done : false,
+                trash : false
+            })
+        }
+        input.value = ""
+        id++;
+        localStorage.setItem("Local", JSON.stringify(LIST))
+
+    }
+
+})
+localStorage.setItem("Local", JSON.stringify(LIST))
 
 
 
+function completeTodo(element){
+    element.classList.toggle(checked)
+    element.classList.toggle(uncheck)
+    element.parentNode.querySelector(".text").classList.toggle(lineThrough)
+    LIST[element.id].done = LIST[element.id].done ? false : true
+}
+
+function removeTodo(element){
+    element.parentNode.parentNode.removeChild(element.parentNode)
+    LIST[element.id].trash  = true;
+}
+localStorage.setItem("Local", JSON.stringify(LIST))
+
+
+list.addEventListener("click", function(event){
+    let element = event.target
+    let elementJOB = event.target.attributes.job.value
+
+    if(elementJOB == "complete"){
+        completeTodo(element)
+    }else if(elementJOB == "delete"){
+        removeTodo(element)
+    }
+    localStorage.setItem("Local", JSON.stringify(LIST))
+
+})
+
+localStorage.setItem("Local", JSON.stringify(LIST))
 
 
