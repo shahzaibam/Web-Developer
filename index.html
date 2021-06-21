@@ -4,84 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrousel</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Exact - Buy the Exact Things</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+
 </head>
 <body>
-    <div class="carrousel-container">
-        <div class="img slide">
-            <img src="img/todd-diemer-uFomxGheuGk-unsplash.jpg" alt="">
-        </div>
-
-        <div class="img slide">
-            <img src="/img/nick-scheerbart-8DMuvdp-vso-unsplash.jpg" alt="">
-        </div>
-
-        <div class="img slide">
-            <img src="/img/mohamed-thasneem-3bAblStd-IY-unsplash.jpg" alt="">
-        </div>
-
-
-
-        <div class="arrows">
-            <div class="arrow-prev slider-arrow">
-                <i class="fas fa-arrow-left"></i>
-            </div>
-
-            <div class="arrow-next slider-arrow">
-                <i class="fas fa-arrow-right"></i>
-            </div>
-        </div>
-
-        <div class="dotes dots">
-            <div class="nav-dot"></div>
-            <div class="nav-dot"></div>
-            <div class="nav-dot"></div>
-        </div>
-    </div>
-
-    <div class="calculator">
-        <div class="calc-container">ss
-            <div class="output">
-                <div class="operation">
-                    <div class="value"></div>
-                </div>
-
-                <div class="result">
-                    <div class="value">0</div>
-                </div>
-
-            </div>
-
-            <div class="input">
-
-            </div>
-        </div>
-    </div>
-
-    <div class="todo-container">
-        <div class="header">
-            <div class="image-todo"></div>
-            <i id="refresh" class="fas fa-sync"></i>
-        </div>
-
-        <div class="list">
-            <ul class="unlist">
-                <!-- <li>
-                    <i id="circle-thin" class="far fa-circle"></i>
-                    <p>Drink coffe</p>
-                    <i id="trash" class="fas fa-trash-alt"></i>
-                </li> -->
+    <div class="container">
+        <nav class="navbar">
+            <ul class="nav-unlist">
+                <li>INICIO</li>
+                <li>PRODUCTOS</li>
+                <li>CONTACTO</li>
+                <li>MI CUENTA</li>
             </ul>
+
+            <ul class="nav-unlist-2">
+                <li>0,00€</li>
+                <li><i class="fas fa-shopping-cart"></i></li>
+                <li><i class="fas fa-user"></i></li>
+            </ul>
+        </nav>
+
+        <div class="logo-search">
+            <img class="exact-logo" src="/img/cropped-logo-pdf2-120x62.png" alt="">
+            <p class="img-below-text">Buy the exact things</p>
+
+            <div class="search-input">
+                <input type="text" class="search">
+                <i class="fas fa-search"></i>
+            </div>
         </div>
 
-        <div class="input-todo">
-            <input type="text" id="input-td">
+        <div class="forms">
+            <a href="#"><p>Iniciar Sesión</p></a>
+            <a href="#"><p>Regístrate</p></a>
         </div>
 
+        <div class="slider-container">
+            <div class="img1 slide">
+                <img src="/img/joanna-kosinska-I3adKpDNAjM-unsplash.jpg" alt="">
+            </div>
+
+            <div class="img2 slide">
+                <img src="/img/nitish-meena-RbbdzZBKRDY-unsplash.jpg" alt="">
+            </div>
+
+            <div class="img3 slide">
+                <img src="/img/sofiya-levchenko-c07dv6i8P4Q-unsplash.jpg" alt="">
+            </div>
+
+            <div class="arrows">
+                <div class="arrow-prev">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+
+                <div class="arrow-next">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+
+            <div class="dotes dots">
+                <div class="nav-dot"></div>
+                <div class="nav-dot"></div>
+                <div class="nav-dot"></div>
+            </div>
+        </div>
     </div>
-
     <script src="/script.js"></script>
 </body>
 </html>
