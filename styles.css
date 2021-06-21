@@ -1,209 +1,165 @@
-.carrousel-container{
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    margin-top: -20px;
+    position: absolute;
+    right: 0;
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 60px;
+}
+
+.nav-unlist{
+    margin-left: 600px;
+    display: flex;
+}
+
+.nav-unlist li{
+    padding: 20px;
+    list-style: none;
+    cursor: pointer;
+    color: #ec1b23;
+    margin-top: -10px;
+
+}
+
+.nav-unlist-2{
+    display: flex;
+}
+
+.nav-unlist-2{
+    padding: 20px;
+    list-style: none;
+    cursor: pointer;
+    color: #ec1b23;
+}
+
+.nav-unlist-2 li{
+    padding: 5px;
+    list-style: none;
+    cursor: pointer;
+    color: #ec1b23;
+    margin-top: -16px;
+}
+
+.exact-logo{
+    margin-top: 60px;
+    margin-left: 20px;
+    width: 100px;
+}
+
+.img-below-text{
+    margin-left: 21px;
+    font-size: 14px;
+    margin-top: -4px;
+}
+
+.search-input{
+    border: 1px solid blue;
+    width: 550px;
+    height: 45px;
+    border-radius: 30px;
+    position: relative;
+    top: -60px;
+    left: 400px;
+}
+
+.search{
+    width: 480px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+    padding: 6px 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.fa-search{
+    font-size: 21px;
+    position: relative;
+    left: 10px;
+    top: 3px;
+}
+
+.forms{
+    position: absolute;
+    right: 100px;
+    display: flex;
+    top: 80px;
+}
+
+.forms a{
+    padding: 10px;
+    color: #ec1b23;
+    text-decoration: none;
+}
+
+/*/////////////////////////////////////////////////////7*/
+
+.slider-container{
     position: relative;
     height: 500px;
-    width: 800px;
+    width: 1335px;
 }
 
 .slide{
     position: absolute;
     height: 500px;
-    width: 800px;
+    width: 1335px;
 }
 
-img{
-    height: 500px;
-    width: 800px;
+.slide img{
+    height: 400px;
+    width: 1335px;
+}
+
+.arrows{
+    position: relative;
+    color: white;
 }
 
 .arrow-prev{
     position: absolute;
     left: 10px;
-    top: 47%;
-    font-size: 27px;
-    color: white;
+    top: 200px;
+    font-size: 23px;
+    cursor: pointer;
 }
 
 .arrow-next{
     position: absolute;
     right: 10px;
-    top: 47%;
-    font-size: 27px;
-    color: white;
+    top: 200px;
+    font-size: 23px;
+    cursor: pointer;
 }
 
 .dotes{
-    display: flex;
+    position: absolute;
     width: 200px;
-    height: 100px;
-    position: relative;
-    top: 450px;
-    left: 340px;
+    height: 30px;
+    bottom: 130px;
+    left: 580px;
+    display: flex;
 }
 
 .nav-dot{
-    width: 20px;
-    height: 20px;
     border-radius: 50%;
     border: 1px solid black;
-    margin: 8px;
-    background-color: blue;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
     cursor: pointer;
 }
 
 .nav-dot:hover{
-    background-color: chocolate;
-    transition: 0.8s;
+    background-color: rgb(233, 180, 233);
 }
 
 .active-dot{
-    background-color: chocolate;
-}
-
-
-
-
-.calculator{
-    width:400px;
-    height: auto;
-    background-color: azure;
-}
-
-.calc-container{
-    width: 400px;
-    height: auto;
-    border-radius: 0 0 30px 30px;
-}
-
-.output{
-    width: 100%;
-}
-
-.operation{
-    width: 300px;
-    height: 70px;
-    color: red;
-    font-size: 23px;
-    font-weight: bold;
-    position: relative;
-}
-
-.operation .value{
-    position: absolute;
-    bottom: 5px;
-    right: 10px;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.result{
-    width: 300px;
-    height: 70px;
-    color: red;
-    font-size: 23px;
-    font-weight: bold;
-    position: relative;
-}
-
-.result .value{
-    position: absolute;
-    bottom: 5px;
-    right: 10px;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.input{
     background-color: #fff;
-    border-radius: 0 0 25px 25px;
-    border: 1px solid grey;
-    height: 340px;
-}
-
-.row{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.row button{
-    width: 50px;
-    height: 50px;
-    font-size: 25px;
-    border: none;
-    margin: 8px;
-    cursor: pointer;
-}
-
-.row button:hover{
-    font-weight: bold;
-}
-
-.row #calculate{
-    color: #fff;
-    background-color: hotpink;
-    width: 121px;
-    border-radius: 50px;
-}
-
-.row #delete{
-    color: #fff;
-    background-color: #e05046;
-}
-
-#division, #multiplication ,#substraction, #addition {
-    color: #18b893;
-}
-
-
-
-
-
-.todo-container{
-    position: absolute;
-    top: 1100px;
-    border: 1px solid black;
-    height: 600px;
-    margin-left: 370px;
-}
-
-.image-todo{
-    background: url(/img/mohamed-thasneem-3bAblStd-IY-unsplash.jpg);
-    height: 300px;
-    width: 600px;
-    background-size: cover;
-}
-
-ul li{
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    right: 25px;
-}
-
-ul li p{
-    margin-top: -0.1px;
-    font-size: 23px;
-}
-
-#circle-thin{
-    font-size: 23px;
-    cursor: pointer;
-}
-
-#trash{
-    font-size: 23px;
-    cursor: pointer;
-}
-
-#refresh{
-    font-size: 23px;
-    cursor: pointer; 
-    position: relative;
-    top: -280px;
-    left: 550px;
-    color: white;
-}
-
-.lineThrough{
-    text-decoration: line-through;
 }
