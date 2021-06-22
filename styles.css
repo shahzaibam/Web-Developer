@@ -1,165 +1,104 @@
+body{
+    overflow-x: hidden;
+}
+
 *{
     font-family: 'Roboto', sans-serif;
 }
 
-.navbar{
-    display: flex;
-    margin-top: -20px;
-    position: absolute;
-    right: 0;
-    background-color: #f5f5f5;
+.nav{
+    background-color: rgba(51, 51, 51, 0.795);
+    padding: 20px;
     width: 100%;
-    height: 60px;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
-.nav-unlist{
-    margin-left: 600px;
-    display: flex;
-}
-
-.nav-unlist li{
-    padding: 20px;
-    list-style: none;
-    cursor: pointer;
-    color: #ec1b23;
-    margin-top: -10px;
-
-}
-
-.nav-unlist-2{
-    display: flex;
-}
-
-.nav-unlist-2{
-    padding: 20px;
-    list-style: none;
-    cursor: pointer;
-    color: #ec1b23;
-}
-
-.nav-unlist-2 li{
-    padding: 5px;
-    list-style: none;
-    cursor: pointer;
-    color: #ec1b23;
-    margin-top: -16px;
-}
-
-.exact-logo{
-    margin-top: 60px;
-    margin-left: 20px;
-    width: 100px;
-}
-
-.img-below-text{
-    margin-left: 21px;
-    font-size: 14px;
-    margin-top: -4px;
-}
-
-.search-input{
-    border: 1px solid blue;
-    width: 550px;
-    height: 45px;
-    border-radius: 30px;
-    position: relative;
-    top: -60px;
-    left: 400px;
-}
-
-.search{
-    width: 480px;
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-left: 10px;
-    padding: 6px 5px;
-    border: none;
-    outline: none;
-    font-size: 14px;
-}
-
-.fa-search{
-    font-size: 21px;
-    position: relative;
-    left: 10px;
-    top: 3px;
-}
-
-.forms{
+.input{
     position: absolute;
     right: 100px;
-    display: flex;
-    top: 80px;
+    top: 10px;
 }
 
-.forms a{
-    padding: 10px;
-    color: #ec1b23;
-    text-decoration: none;
+.input input{
+    padding: 4px;
+    border-radius:7px;
+    outline: none;
+    border: none;
 }
 
-/*/////////////////////////////////////////////////////7*/
+.input button{
+    background-color: transparent;
+    color: rgb(1, 75, 1);
+    border: 1px solid rgb(2, 94, 2);
+    font-size:15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
 
-.slider-container{
+.heading-welcome{
     position: relative;
-    height: 500px;
-    width: 1335px;
+    top: 60px;
+    left: 300px;
 }
 
-.slide{
-    position: absolute;
-    height: 500px;
-    width: 1335px;
-}
-
-.slide img{
-    height: 400px;
-    width: 1335px;
-}
-
-.arrows{
+.add-container{
+    border: 1px solid gray;
+    width: 600px;
+    height: auto;
     position: relative;
+    top: 60px;
+    left: 300px;
+    padding-top: -5px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.textarea{
+    width: 400px;
+    height: 80px;
+}
+
+.add-note{
+    background-color: rgb(1, 139, 185);
+    font-size: 16px;
     color: white;
-}
-
-.arrow-prev{
-    position: absolute;
-    left: 10px;
-    top: 200px;
-    font-size: 23px;
+    font-weight:bold;
+    border-radius: 4px;
+    outline: none;
+    border: none;
     cursor: pointer;
 }
 
-.arrow-next{
-    position: absolute;
-    right: 10px;
-    top: 200px;
-    font-size: 23px;
-    cursor: pointer;
+.your-notes{
+    position: relative;
+    top: 70px;
+    left: 300px;
 }
 
-.dotes{
-    position: absolute;
-    width: 200px;
-    height: 30px;
-    bottom: 130px;
-    left: 580px;
+.notes-cont{   
+    border: 1px solid gray;
+    width: 600px !important;
+    height: 0px;
+    position: relative;
+    left: 300px;
+    top: 70px;
     display: flex;
 }
 
-.nav-dot{
-    border-radius: 50%;
-    border: 1px solid black;
-    height: 30px;
-    width: 30px;
-    margin: 10px;
-    cursor: pointer;
+.notes-body ul{
+    list-style: none;
+    border: 1px solid gray;
+    width: 150px;
+    
 }
 
-.nav-dot:hover{
-    background-color: rgb(233, 180, 233);
+.text1{
+    font-weight: bold;
 }
 
-.active-dot{
-    background-color: #fff;
-}
+
+
+
+
