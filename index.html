@@ -4,75 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exact - Buy the Exact Things</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Notes App</title>
     <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <nav class="navbar">
-            <ul class="nav-unlist">
-                <li>INICIO</li>
-                <li>PRODUCTOS</li>
-                <li>CONTACTO</li>
-                <li>MI CUENTA</li>
-            </ul>
-
-            <ul class="nav-unlist-2">
-                <li>0,00€</li>
-                <li><i class="fas fa-shopping-cart"></i></li>
-                <li><i class="fas fa-user"></i></li>
-            </ul>
-        </nav>
-
-        <div class="logo-search">
-            <img class="exact-logo" src="/img/cropped-logo-pdf2-120x62.png" alt="">
-            <p class="img-below-text">Buy the exact things</p>
-
-            <div class="search-input">
-                <input type="text" class="search">
-                <i class="fas fa-search"></i>
+        <div class="nav">
+            <div class="input">
+                <input type="text" placeholder="Search Here">
+                <button class="search">Search</button>
             </div>
         </div>
 
-        <div class="forms">
-            <a href="#"><p>Iniciar Sesión</p></a>
-            <a href="#"><p>Regístrate</p></a>
+        <div class="heading-welcome">
+            <h2>Welcome to Magic Notes</h2>
         </div>
 
-        <div class="slider-container">
-            <div class="img1 slide">
-                <img src="/img/joanna-kosinska-I3adKpDNAjM-unsplash.jpg" alt="">
-            </div>
-
-            <div class="img2 slide">
-                <img src="/img/nitish-meena-RbbdzZBKRDY-unsplash.jpg" alt="">
-            </div>
-
-            <div class="img3 slide">
-                <img src="/img/sofiya-levchenko-c07dv6i8P4Q-unsplash.jpg" alt="">
-            </div>
-
-            <div class="arrows">
-                <div class="arrow-prev">
-                    <i class="fas fa-arrow-left"></i>
-                </div>
-
-                <div class="arrow-next">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-            </div>
-
-            <div class="dotes dots">
-                <div class="nav-dot"></div>
-                <div class="nav-dot"></div>
-                <div class="nav-dot"></div>
+        <div class="add-container">
+            <h4 class="add-note-heading">Add Note</h4>
+            <textarea class="textarea" placeholder="Add note" cols="30" rows="10"></textarea><br>
+            <div class="button-div">
+                <button class="add-note">Add Note</button>
             </div>
         </div>
+
+        <div class="your-notes">
+            <h2>Your Notes</h2>
+        </div>
+        <div class="notes-cont">
+            <div class="notes-body">
+                <!-- <ul class="unlist">
+                    <li>
+                        <p class="text1">Note 1</p>
+                        <p class="text2">Shop for tomato, potato and vegetables</p>
+                        <i class="btn"><button>Delete Note</button></i>
+                    </li>
+                </ul> -->
+            </div>
+        </div>
+
     </div>
     <script src="/script.js"></script>
 </body>
