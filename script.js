@@ -1,52 +1,32 @@
-const arrow_next = document.querySelector(".arrow-next")
-const arrow_prev = document.querySelector(".arrow-prev")
-let slider_index = 0;
+const notes_body = document.querySelector(".notes-body")
+const button_div = document.querySelector(".button-div")
+const textarea = document.querySelector(".textarea")
+const LIST = [];
+
+function addNotes(notes){
+    let text = `<div class="notes-body">
+    <ul class="unlist">
+        <li>
+            <p class="text1">${notes}</p>
+            <p class="text2">Shop for tomato, potato and vegetables</p>
+            <i class="btn"><button>Delete Note</button></i>
+        </li>
+    </ul>
+</div>`
+    
+    let position = "beforebegin"
+
+    notes_body.insertAdjacentHTML(position, text)
+}
+
+addNotes("hola me llamo juan")
+addNotes("hola me llamo juan")
 
 
-    function showSlide(index){
-        let slide = document.querySelectorAll(".slide")
-        let nav_dot = document.querySelectorAll(".nav-dot")
-        
-        if(index>=slide.length){
-            slider_index = 0;
-        }
-        
-        if(index<0){
-            slider_index = slide.length - 1;
-        }
+button_div.addEventListener("click", function(event){
+    const notes = textarea.value 
     
-    
-        for(let i = 0; i< slide.length; i++){
-            slide[i].style.display = "none"
-            nav_dot[i].classList.remove("active-dot")
-            
-        }
-        
-        
-        slide[slider_index].style.display = "block"
-        nav_dot[slider_index].classList.add("active-dot")
-        
-
-       
-    
-    }
-
-    
+})
 
 
-    console.log(slider_index)
-
-  
-    // showSlide(slider_index)
-    
-    function next(){
-        next.addEventListener("click", function(){
-            return showSlide(slider_index = slider_index + 1)
-        })
-    }
-    
-    // arrow_prev.addEventListener("click", function(){
-    //     return showSlide(slider_index = slider_index - 1)
-    // })
-    
 
