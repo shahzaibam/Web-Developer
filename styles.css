@@ -91,15 +91,20 @@ body{
     list-style: none;
     border: 1px solid gray;
     width: 150px;
-    
 }
 
 .text1{
     font-weight: bold;
 }
 
-.div-btn-delete{
+.delete-note{
     background-color: greenyellow;
+    margin-bottom: 30px;
+    border: none;
+    padding: 7px;
+    border-radius: 2px;
+    cursor: pointer;
+    color: white;
 }
 
 .display{
