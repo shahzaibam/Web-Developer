@@ -4,22 +4,33 @@ const btn_delete = document.querySelector(".delete-note")
 const textarea = document.querySelector(".textarea")
 const deleteit = document.querySelector(".button-div-del")
 let unlist = document.querySelector(".unlist")
-let LIST = [{
-    notes : "undefined", 
-    id : 0
-}, {
-    notes : "undefined2", 
-    id : 1
-},{
-    notes : "undefined3", 
-    id : 2
-}]
+// let LIST = [{
+//     notes : "yputube", 
+//     id : 0
+// }, {
+//     notes : "youtabe", 
+//     id : 1
+// },{
+//     notes : "google", 
+//     id : 2
+// },{
+//     notes : "googlay", 
+//     id : 0
+// }, {
+//     notes : "facebook", 
+//     id : 1
+// },{
+//     notes : "instagram", 
+//     id : 2
+// }]
+
+let LIST = []
 let id = 1;
 
 function addNotes(notes, id){
     let text = `<div class="notes-body">
     <ul class="unlist">
-        <li>
+        <li class="list-item">
             <p class="text1">Note${id}</p>
             <p class="text2">${notes}</p>
 
@@ -42,21 +53,57 @@ function addNotes(notes, id){
 
 button_div.addEventListener("click", function(event){
     const notes = textarea.value 
-    LIST.push(textarea.value)
+    // LIST.push(textarea.value)
     console.log(LIST)
     if(notes){
         addNotes(notes, id)
         LIST.push({
-            notes : notes,
+            notes : textarea.value,
             id : id
         })
         console.log(LIST.notes)
     }
     textarea.value = ""
     id++
+    console.log(LIST)
+
+    
+    const filters = {
+        searchText : ""
+    }
+
+    const renderNotes = function(LIST, filters){
+        const filteredNotes = LIST.filter(function(note){ 
+        return note.notes.toLowerCase().includes(filters.searchText.toLowerCase())
+    })
+
+        document.querySelector(".list-item").innerHTML = ""
+
+        filteredNotes.forEach(function(note){
+            const noteEl = document.createElement("p")
+            noteEl.textContent = note.notes
+            document.querySelector(".list-item").appendChild(noteEl)
+
+        })
+        
+
+    }
+
+
+    renderNotes(LIST, filters)
+
+    document.getElementById("searchTxt").addEventListener("input", function(e){
+        filters.searchText = e.target.value
+        renderNotes(LIST, filters)
+        addNotes()
+
+    })
+
+
+
 })
 
-console.log(LIST)
+
 
 
 
@@ -82,33 +129,10 @@ console.log(LIST)
 // const note = findNote(LIST, "paula")
 // console.log(note)
 
+// let dataofNotes = {
+//     notes : textarea.value,
+//     id : id
+// }
 
-
-
-const filters = {
-    searchText : ""
-}
-
-const renderNotes = function(LIST, filters){
-    const filteredNotes = LIST.filter(function(note){ 
-        return note.notes.toLowerCase().includes(filters.searchText.toLowerCase())
-    })
-
-    document.querySelector(".notes-body-2").innerHTML = ""
-    
-    filteredNotes.forEach(function(note){
-        const noteEl = document.createElement("p")
-        noteEl.textContent = note.notes
-        document.querySelector(".notes-body-2").appendChild(noteEl)
-    })
-}
-
-renderNotes(LIST, filters)
-
-document.getElementById("searchTxt").addEventListener("input", function(e){
-    filters.searchText = e.target.value
-    renderNotes(LIST, filters)
-})
-
-
+// LIST.push(dataofNotes)
 
