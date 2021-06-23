@@ -31,9 +31,9 @@
             <input name="FILTRO_POLEN" type="text" class="input_text"><br>
             <label for="FILTRO_GASOIL">FILTRO_GASOIL</label><br>
             <input name="FILTRO_GASOIL" type="text" class="input_text"><br>
-            <label for="DELANTERAS">DELANTERAS</label><br>
+            <label for="DELANTERAS">PASTILLAS DELANTERAS</label><br>
             <input name="DELANTERAS" type="text" class="input_text"><br>
-            <label for="TRASERAS">TRASERAS</label><br>
+            <label for="TRASERAS">PASTILLAS TRASERAS</label><br>
             <input name="TRASERAS" type="text" class="input_text"><br>
             <label for="DISCOS_DELANTEROS">DISCO DELANTEROS</label><br>
             <input name="DISCOS_DELANTEROS" type="text" class="input_text"><br>
