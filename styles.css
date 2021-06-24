@@ -77,7 +77,7 @@ body{
     left: 300px;
 }
 
-.notes-cont{   
+#notes-body-first, #notes-body-two{   
     border: 1px solid gray;
     width: 600px !important;
     height: 0px;
@@ -107,10 +107,10 @@ body{
     color: white;
 }
 
-.display{
-    display: none;
+.add-note-li{
+    display: block;
 }
 
-
-
-
+.add-note-none{
+    display: none;
+}
