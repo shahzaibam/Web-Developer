@@ -71,10 +71,35 @@ body{
     cursor: pointer;
 }
 
+.deleteall{
+    width: 120px;
+    height: 40px;
+    position: relative;
+    top: 80px;
+    left: 150px;
+    margin-top: -30px;
+
+}
+
+.deleteall button{
+    background-color: rgba(224, 3, 3, 0.733);
+    font-size: 16px;
+    color: white;
+    font-weight:bold;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    margin-top: 5px;
+}
+
+
 .your-notes{
     position: relative;
-    top: 70px;
+    top: 60px;
     left: 300px;
+    margin-right: 1200px;
 }
 
 #notes-body-first, #notes-body-two{   
@@ -91,6 +116,10 @@ body{
     list-style: none;
     border: 1px solid gray;
     width: 150px;
+    margin: 3px;
+    padding-right: 10px;
+    margin-top: 10px;
+
 }
 
 .text1{
