@@ -3,23 +3,46 @@ const notes_body = document.querySelector("#notes-body-two")
 const add_note = document.querySelector("#Add_note")
 const btn_delete = document.querySelector(".delete-note")
 const textarea = document.querySelector(".textarea")
-let unlist = document.querySelector(".unlist")
-
+const note_name = document.querySelector(".note-name")
 
 let LIST = []
 
 let id = 1;
 
+let data = localStorage.getItem("save");
+
+if(data){
+    LIST = JSON.parse(data)
+    loadNotes(LIST)
+    id = LIST.length;
+
+    function loadNotes(array) {
+        array.forEach(function(index){
+            addNotes(index.notes, index.id, notes_body)
+      })
+    }
+}else{
+    LIST = []
+    id = 0;
+}
+
+
+
+document.querySelector(".deleteall").addEventListener("click", function(event){
+    localStorage.clear()
+    location.reload()
+})
+
 function addNotes(notes, id , body){
     let text = `<div class="notes-body">
-                    <ul class="unlist ">
+                    <ul class="unlist">
                         <li class="list-item">
-                            <p class="text1">Note${id}</p>
+                            <p class="text1">Note-${note_name.value}</p>
                             <p class="text2">${notes}</p>
 
                         </li>
                         <div class="button-div-del">
-                            <button id="${id}" onclick="deleteNote(this.id)" class="delete-note">delete</button>
+                            <button  class="delete-note">delete</button>
                         </div>
                     </ul>
                 </div>`
@@ -27,14 +50,18 @@ function addNotes(notes, id , body){
     let position = "afterbegin"
 
     body.insertAdjacentHTML(position, text)
-    
+    note_name.value = ""
+
+
+    const unlist = document.querySelector(".unlist")
+
+    document.querySelector(".delete-note").addEventListener("click", function(){
+        unlist.parentElement.style.display = "none"
+        localStorage.includes(LIST[id]).pop()
+
+        
+    })
 }
-
-
-// deleteit.addEventListener("click", function(){
-//     console.log("hola")
-// })
-
 
 add_note.addEventListener("click", function(event){
     const notes = textarea.value 
@@ -47,10 +74,12 @@ add_note.addEventListener("click", function(event){
             id : id
         })
         console.log(LIST.notes)
+    
     }
     textarea.value = ""
     id++
     console.log(LIST)
+    localStorage.setItem("save", JSON.stringify(LIST))
 
 })
 
@@ -74,10 +103,9 @@ const renderNotes = function(LIST, filters){
     })
 
     console.log(LIST)
+    localStorage.setItem("save", JSON.stringify(LIST))
+
 }
-
-
-
 
 document.getElementById("searchTxt").addEventListener("input", function(e){
     filters="";
