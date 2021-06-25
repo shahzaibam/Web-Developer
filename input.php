@@ -11,7 +11,7 @@
 <body>
 
     <div class="container">
-        <h1 id="heading-taxiProject">Taxi Project</h1>
+        <h1 id="heading-taxiProject" style="margin-top: 30px;">Taxi <span style="color: #FFFF00;">Project </span></h1>
         
 
 
@@ -49,7 +49,7 @@
             <input name="OTROS" type="text" class="input_text"><br>
             <label for="observation">observation</label><br>
             <input name="observation" type="text" class="input_text"><br>
-            <input type="submit" name="save">
+            <input type="submit" class="submit-btn" name="save" value="Save" style="padding; 20px;">
 
         </form>
 
