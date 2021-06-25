@@ -22,7 +22,7 @@ require_once("config.php")
 <body>
 
     <div class="container">
-        <h1 id="heading-taxiProject">Taxi <span style="color: #FFFF00;">Project</span></h1>
+        <h1 id="heading-taxiProject" style = "margin-top: 30px;">Taxi <span style="color: #FFFF00;">Project</span></h1>
         <table>
             <thead id="table-heading" style="background-color: white; color: black;">
             <th id="NUM" style="background-color: #355c7d; color: #fff;">NUM</th>    
@@ -50,23 +50,23 @@ require_once("config.php")
                      
             ?>
             <tr>
-                <td class="td"><?php echo $sr++; ?></td>
-                <td class="td"><?php echo $row['fecha']; ?></td>
-                <td class="td"><?php echo $row['kilometros']; ?></td>
-                <td class="td"><?php echo $row['aceite']; ?></td>
-                <td class="td"><?php echo $row['filtro_de_aceite']; ?></td>
-                <td class="td"><?php echo $row['filtro_aire']; ?></td>
-                <td class="td"><?php echo $row['filtro_polen']; ?></td>
-                <td class="td"><?php echo $row['filtro_gasoil']; ?></td>
-                <td class="td"><?php echo $row['pastillas_delanteras']; ?></td>
-                <td class="td"><?php echo $row['pastillas_traseras']; ?></td>
-                <td class="td"><?php echo $row['discos_delanteros']; ?></td>
-                <td class="td"><?php echo $row['discos_traseros']; ?></td>
-                <td class="td"><?php echo $row['ruedas_delanteras']; ?></td>
-                <td class="td"><?php echo $row['ruedas_traseras']; ?></td>
-                <td class="td"><?php echo $row['embrague']; ?></td>
-                <td class="td"><?php echo $row['otros']; ?></td>
-                <td class="td"><?php echo $row['observaciones']; ?></td>
+                <td class="td" style="padding-left: 10px;"><?php echo $sr++; ?></td>
+                <td class="td" style="padding: 3px;"><?php echo $row['fecha']; ?></td>
+                <td class="td" style="padding-left: 3px;"><?php echo $row['kilometros']; ?></td>
+                <td class="td" style="padding: 3px;"><?php echo $row['aceite']; ?></td>
+                <td class="td" style="padding: 3px;"><?php echo $row['filtro_de_aceite']; ?></td>
+                <td class="td" style="padding: 3px;"><?php echo $row['filtro_aire']; ?></td>
+                <td class="td" style="padding: 3px;"><?php echo $row['filtro_polen']; ?></td>
+                <td class="td" style="padding: 3px;"><?php echo $row['filtro_gasoil']; ?></td>
+                <td class="td" style="padding: 3px;"><?php echo $row['pastillas_delanteras']; ?></td>
+                <td class="td" style="padding: 3px;"><?php echo $row['pastillas_traseras']; ?></td>
+                <td class="td" style="padding: 3px;"><?php echo $row['discos_delanteros']; ?></td>
+                <td class="td" style="padding: 3px;"><?php echo $row['discos_traseros']; ?></td>
+                <td class="td" style="padding: 3px;"><?php echo $row['ruedas_delanteras']; ?></td>
+                <td class="td" style="padding: 3px;"><?php echo $row['ruedas_traseras']; ?></td>
+                <td class="td" style="padding: 3px;"><?php echo $row['embrague']; ?></td>
+                <td class="td" style="padding: 3px;"><?php echo $row['otros']; ?></td>
+                <td class="td" style="padding: 3px;"><?php echo $row['observaciones']; ?></td>
             </tr>
 
             <?php } ?>
