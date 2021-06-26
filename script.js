@@ -53,10 +53,33 @@ function addNotes(notes, id , body){
 
     const unlist = document.querySelector(".unlist")
 
+    let data = localStorage.getItem("save");
+
+    // if(data){
+    //     LIST = JSON.parse(data)
+    //     loadiTNotes(LIST)
+    //     id = LIST.length;
+    
+    //     function loadiTNotes(array) {
+    //         array.forEach(function(index){
+    //             addNotes(index.notes, index.id, notes_body)
+    //       })
+    //     }
+    // }else{
+    //     LIST = []
+    //     id = 0;
+    // }
+
     document.querySelector(".delete-note").addEventListener("click", function(){
         unlist.parentElement.style.display = "none"
-        LIST.splice(id)
+        //LIST.splice(id, id)
+        localStorage.removeItem("save")
+        localStorage.setItem("save", JSON.stringify(LIST))
+        // loadiTNotes(LIST)
+
     })
+
+
 }
 
 
