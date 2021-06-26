@@ -26,8 +26,6 @@ if(data){
     id = 0;
 }
 
-
-
 document.querySelector(".deleteall").addEventListener("click", function(event){
     localStorage.clear()
     location.reload()
@@ -57,11 +55,10 @@ function addNotes(notes, id , body){
 
     document.querySelector(".delete-note").addEventListener("click", function(){
         unlist.parentElement.style.display = "none"
-        localStorage.includes(LIST[id]).pop()
-
-        
+        LIST.splice(id)
     })
 }
+
 
 add_note.addEventListener("click", function(event){
     const notes = textarea.value 
@@ -82,6 +79,9 @@ add_note.addEventListener("click", function(event){
     localStorage.setItem("save", JSON.stringify(LIST))
 
 })
+
+console.log(LIST)
+
 
 const renderNotes = function(LIST, filters){
     const filteredNotes = LIST.filter(function(note){ 
