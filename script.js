@@ -40,7 +40,7 @@ function addNotes(notes, id , body){
 
                         </li>
                         <div class="button-div-del">
-                            <button  class="delete-note">delete</button>
+                            <button class="delete-note" job="trash">delete</button>
                         </div>
                     </ul>
                 </div>`
@@ -51,7 +51,7 @@ function addNotes(notes, id , body){
     note_name.value = ""
 
 
-    const unlist = document.querySelector(".unlist")
+    // const unlist = document.querySelector(".unlist")
 
     let data = localStorage.getItem("save");
 
@@ -69,14 +69,25 @@ function addNotes(notes, id , body){
     //     LIST = []
     //     id = 0;
     // }
+        
+    // document.querySelector(".delete-note").addEventListener("click", function(){
+    //     unlist.parentElement.style.display = "none"
+    //     //LIST.splice(id, id)
+    //     localStorage.removeItem("save")     
+    //     localStorage.getItem("save")
+
+    //     // loadiTNotes(LIST)
+
+    // })
+
+    const unlist = document.querySelector(".unlist")
 
     document.querySelector(".delete-note").addEventListener("click", function(){
         unlist.parentElement.style.display = "none"
-        //LIST.splice(id, id)
-        localStorage.removeItem("save")
-        localStorage.setItem("save", JSON.stringify(LIST))
+        LIST.splice(id, id)
+        localStorage.removeItem(id)     
+        // localStorage.getItem("save")
         // loadiTNotes(LIST)
-
     })
 
 
@@ -91,7 +102,8 @@ add_note.addEventListener("click", function(event){
         addNotes(notes, id, notes_body)
         LIST.push({
             notes : textarea.value,
-            id : id
+            id : id,
+            trash : false
         })
         console.log(LIST.notes)
     
@@ -101,7 +113,11 @@ add_note.addEventListener("click", function(event){
     console.log(LIST)
     localStorage.setItem("save", JSON.stringify(LIST))
 
+
+
 })
+
+
 
 console.log(LIST)
 
@@ -128,6 +144,8 @@ const renderNotes = function(LIST, filters){
     console.log(LIST)
     localStorage.setItem("save", JSON.stringify(LIST))
 
+    
+
 }
 
 document.getElementById("searchTxt").addEventListener("input", function(e){
@@ -135,4 +153,3 @@ document.getElementById("searchTxt").addEventListener("input", function(e){
     filters = e.target.value
     renderNotes(LIST, filters)
 })
-
