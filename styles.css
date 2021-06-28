@@ -1,23 +1,145 @@
-.container{
-    font-size: 2em;
-    display: grid;
-    grid-template-columns: repeat(4, 200px);
-    grid-template-rows: repeat(7, 200px);
-    grid-gap: 10px;
-
-
+body{
+    overflow-x: hidden;
 }
 
-.blue{
-    background-color: blue;
+*{
+    font-family: 'Roboto', sans-serif;
 }
 
-.blue img{
+.nav{
+    background-color: rgba(51, 51, 51, 0.795);
+    padding: 20px;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
-.green{
-    background-color: green;
+.input{
+    position: absolute;
+    right: 100px;
+    top: 10px;
+}
+
+.input input{
+    padding: 4px;
+    border-radius:7px;
+    outline: none;
+    border: none;
+}
+
+.input button{
+    background-color: transparent;
+    color: rgb(1, 75, 1);
+    border: 1px solid rgb(2, 94, 2);
+    font-size:15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.heading-welcome{
+    position: relative;
+    top: 60px;
+    left: 300px;
+}
+
+.add-container{
+    border: 1px solid gray;
+    width: 600px;
+    height: auto;
+    position: relative;
+    top: 60px;
+    left: 300px;
+    padding-top: -5px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.textarea{
+    width: 400px;
+    height: 80px;
+}
+
+.add-note{
+    background-color: rgb(1, 139, 185);
+    font-size: 16px;
+    color: white;
+    font-weight:bold;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.deleteall{
+    width: 120px;
+    height: 40px;
+    position: relative;
+    top: 80px;
+    left: 150px;
+    margin-top: -30px;
+
+}
+
+.deleteall button{
+    background-color: rgba(224, 3, 3, 0.733);
+    font-size: 16px;
+    color: white;
+    font-weight:bold;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    margin-top: 5px;
+}
+
+
+.your-notes{
+    position: relative;
+    top: 60px;
+    left: 300px;
+    margin-right: 1200px;
+}
+
+#notes-body-first, #notes-body-two{   
+    border: 1px solid gray;
+    width: 600px !important;
+    height: 0px;
+    position: relative;
+    left: 300px;
+    top: 70px;
+    display: flex;
+}
+
+.notes-body ul{
+    list-style: none;
+    border: 1px solid gray;
+    width: 150px;
+    margin: 3px;
+    padding-right: 10px;
+    margin-top: 10px;
+
+}
+
+.text1{
+    font-weight: bold;
+}
+
+.delete-note{
+    background-color: greenyellow;
+    margin-bottom: 30px;
+    border: none;
+    padding: 7px;
+    border-radius: 2px;
+    cursor: pointer;
+    color: white;
+}
+
+.add-note-li{
+    display: block;
+}
+
+.add-note-none{
+    display: none;
 }
