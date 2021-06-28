@@ -40,7 +40,7 @@ function addNotes(notes, id , body){
 
                         </li>
                         <div class="button-div-del">
-                            <button class="delete-note" job="trash">delete</button>
+                            <button id="${id}" class="delete-note" job="trash">delete</button>
                         </div>
                     </ul>
                 </div>`
@@ -53,7 +53,7 @@ function addNotes(notes, id , body){
 
     // const unlist = document.querySelector(".unlist")
 
-    let data = localStorage.getItem("save");
+    // let data = localStorage.getItem("save");
 
     // if(data){
     //     LIST = JSON.parse(data)
@@ -84,7 +84,10 @@ function addNotes(notes, id , body){
 
     document.querySelector(".delete-note").addEventListener("click", function(){
         unlist.parentElement.style.display = "none"
-        LIST.splice(id, id)
+        LIST.splice(id, 1)
+        console.log(LIST)
+        // localStorage.setItem("save", JSON.stringify(LIST))
+        // addNotes(notes, id, body)
         localStorage.removeItem(id)     
         // localStorage.getItem("save")
         // loadiTNotes(LIST)
@@ -103,7 +106,6 @@ add_note.addEventListener("click", function(event){
         LIST.push({
             notes : textarea.value,
             id : id,
-            trash : false
         })
         console.log(LIST.notes)
     
@@ -116,6 +118,8 @@ add_note.addEventListener("click", function(event){
 
 
 })
+
+
 
 
 
@@ -153,3 +157,32 @@ document.getElementById("searchTxt").addEventListener("input", function(e){
     filters = e.target.value
     renderNotes(LIST, filters)
 })
+
+
+// function deleteNote(id){
+//     console.log("i am deletinf", id)
+
+//     let notesData = localStorage.getItem("save")
+//     console.log(notesData)
+//     if(notesData==null){
+//         LIST = []
+//         console.log(LIST)
+
+//     }else{
+//         LIST = JSON.parse(notesData)
+//         console.log(LIST)
+
+//     }
+
+//     LIST.splice(id, 1)
+//     localStorage.setItem("notes", JSON.stringify(LIST))
+//     document.querySelector("#notes-body-first").innerHTML = ""
+//     LIST.push({
+//         notes : textarea.value,
+//         id : id,
+//     })
+//     addNotes(LIST.notes, id, notes_body)
+
+
+
+// }
