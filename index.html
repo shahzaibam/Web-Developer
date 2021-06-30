@@ -6,53 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harry Project 2</title>
     <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="nav">
             <div class="heading">
-                <h3>Harry Library</h3>
+                <h3>Shebi Library</h3>
                 <h5>Home</h5>
             </div>
 
             <div class="search">
-                <input type="text" placeholder="Search Here">
+                <input class="search-input" type="text" placeholder="Search Here">
                 <button class="btn-search">Search</button>
             </div>
         </div>
 
         <div class="body-start">
-            <h2>Harry Library</h2>
-            <hr>
+            <h2>Shebi Library</h2>
+            <hr class="shebi-library">
 
             <div class="name-div">
                 <p>Name</p>
-                <input class="book-name" type="text" placeholder="Book Name">
+                <input class="book-name" type="text" placeholder="Book Name" required>
             </div>
 
             <div class="author-div">
                 <p>Author</p>
-                <input type="text" placeholder="Author">
+                <input class="author_input" type="text" placeholder="Author" required>
             </div>
 
             <div class="radio-div">
                 <p>Type</p>
-                <input type="radio" id="fiction" name="type">
+                <input class="input" type="radio" id="fiction" name="typeIs" value="Fiction">
                 <label for="fiction">Fiction</label><br>
 
-                <input type="radio" id="computer_prg" name="type">
-                <label for="computer_prg">Computer Programming</label><br>
+                <input class="input-2" type="radio" id="computer_prg" name="typeIs" value="Programming">
+                <label for="computer_prg"> <span id="com_prg">Programming</span>  <br></label>
 
                 
-                <input type="radio" id="cooking" name="type">
+                <input class="input-3" type="radio" id="cooking" name="typeIs" value="Cooking">
                 <label for="cooking">Cooking</label><br>
             </div>
 
             <div class="btn-addBlock">
-                <button>Add Block</button>
+                <button class="btn-add-block">Add Block</button>
+            </div>
+        </div>
+
+        <div class="your-books">
+            <h2 class="your-books-heading">Your books</h2>
+            <hr class="hr-your-books">
+        </div>
+
+        <div class="mybooks">
+            <div class="types">
+                <p>Name</p>
+                <p>Author</p>
+                <p>Type</p>
+            </div>
+            <hr class="hr-types">
+        </div>
+
+        <div class="createdBook">
+            <!-- <div class="types-of-books-grey">
+                <p>Lazarillo de Thormes</p>
+                <p>Ivan Garcia</p>
+                <p>Fiction</p>
             </div>
 
+            <div class="types-of-books">
+                <p>Lazarillo de Thormes</p>
+                <p>Ivan Garcia</p>
+                <p>Fiction</p>
+            </div> -->
         </div>
+
+
     </div>
     <script src="/script.js"></script>
 </body>
