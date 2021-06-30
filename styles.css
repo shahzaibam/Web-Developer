@@ -1,11 +1,41 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
 .nav{
     background: #333;
     color: white;
     display: grid;
-    grid-template-columns: 3fr 250px;
+    grid-template-columns: 2fr 330px;
     width: 1366px;
     margin-left: -8px;
-    margin-top: -7px;   
+    margin-top: -7px;  
+    position: sticky; 
+    top: 0;
+}
+
+
+.search-input{
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+}
+
+.btn-search{
+    background: #0255d3cb;
+    outline: none;
+    border: 1px solid black;
+    padding: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-search:hover{
+    background: transparent;
+    color: white;
 }
 
 .heading{
@@ -19,6 +49,11 @@
 
 .body-start{
     margin-left:300px ;
+}
+
+.shebi-library{
+    width: 700px;
+    margin-right: 700px;
 }
 
 .name-div{
@@ -60,5 +95,75 @@
 
 .radio-div p{
     font-weight: bold;
+    display: flex;
 }
 
+.btn-add-block{
+    background: #0255d3cb;
+    outline: none;
+    border: 1px solid black;
+    padding: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 900;
+    margin-top: 30px;
+}
+
+.btn-add-block:hover{
+    background: transparent;
+    color: black;
+    font-weight: 900;
+
+}
+
+.your-books-heading{
+    margin-left: 300px;
+}
+
+.hr-your-books{
+    width: 700px;
+    margin-right: 349px;
+}
+
+.types{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    margin-left: 300px;
+    font-weight: bold;
+}
+
+.hr-types{
+    width: 700px;
+    margin-right: 350px;
+}
+
+
+.types-of-books-grey{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    margin-left: 300px;
+    font-weight: bold;
+    background: rgba(180, 179, 179, 0.308);
+    width: 700px;
+    position: relative;
+    left: -4px;
+    padding: 2px;
+    margin-bottom: 10px;
+
+}
+
+
+.types-of-books{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    margin-left: 300px;
+    font-weight: bold;
+    width: 700px;
+    position: relative;
+    left: -10px;
+    padding: 2px;
+}
+
+#comp_prg{
+    font-size: 12px;
+}
