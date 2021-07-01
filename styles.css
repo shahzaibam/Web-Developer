@@ -3,6 +3,7 @@ body{
     overflow-x: hidden;
 }
 
+
 .nav{
     background: #333;
     color: white;
@@ -45,6 +46,24 @@ body{
 
 .heading h5{
     padding-left: 30px;
+    cursor: pointer;
+}
+
+.heading h5:hover{
+    padding-left: 30px;
+    color: #0255d3cb;
+    transition: 0.8s;
+}
+
+.heading h3{
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.heading h3:hover{
+    padding-left: 30px;
+    color: #0255d3cb;
+    transition: 0.8s;
 }
 
 .body-start{
@@ -144,10 +163,11 @@ body{
     margin-left: 300px;
     font-weight: bold;
     background: rgba(180, 179, 179, 0.308);
-    width: 700px;
+    width: 682px;
     position: relative;
-    left: -4px;
-    padding: 2px;
+    left: -20px;
+    right: 10px;
+    padding-left: 18px;
     margin-bottom: 10px;
 
 }
@@ -164,6 +184,17 @@ body{
     padding: 2px;
 }
 
-#comp_prg{
-    font-size: 12px;
+.typeBook{
+    position: relative;
+    right: 20px;
+}
+
+.author_input{
+    position: relative;
+    right: 3px;
+}
+
+.authorBook{
+    width: 100px;
+    height: auto;
 }
