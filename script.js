@@ -1,6 +1,13 @@
-const bookname = document.querySelector(".book-name")
+let bookname = document.querySelector(".book-name")
 const createdBook = document.querySelector(".createdBook")
+let author = document.querySelector(".author_input")
+const delete_all = document.querySelector(".delete_all")
 
+
+delete_all.addEventListener("click", function(){
+    localStorage.clear()
+    location.reload()
+})
 
 // function Book(name, author, type){
 //     this.name = name.value;
@@ -8,11 +15,44 @@ const createdBook = document.querySelector(".createdBook")
 //     this.type = type;
 // }
 
-function Hola(name, author, type) {
-    name = this.name;
-    author = this.author;
-    type = this.type;
+// function Hola(name, author, type) {
+//     name = this.name;
+//     author = this.author;
+//     type = this.type;
+// }
+
+let LIST=[{
+    nombre : bookname.value,
+    author : author.value,
+    type : "",
+}]
+
+let data = localStorage.getItem("BookSave");
+
+if(data){
+    LIST = JSON.parse(data)
+    loadNotes(LIST)
+    id = LIST.length;
+
+    function loadNotes(array) {
+        array.forEach(function(index){
+            showBooks(index.name, index.author, index.type)
+      })
+    }
+}else{
+    LIST = []
+    id = 0;
 }
+
+// localStorage.setItem("Hola", JSON.stringify(Hola))
+
+// if(localStorage.getItem("Hola")){
+//     console.log("bien")
+
+// }else{
+//     console.log("mal")
+// }
+
 
 // let data = localStorage.getItem("BookSave")
 
@@ -47,8 +87,8 @@ document.querySelector(".btn-add-block").addEventListener("click", function(){
 })
 
 function Myfunction(e){
-    const name = document.querySelector(".book-name") 
-    const author = document.querySelector(".author_input")
+    let nombre = document.querySelector(".book-name") 
+    let author = document.querySelector(".author_input")
     let type;
 
 
@@ -70,12 +110,24 @@ function Myfunction(e){
     setTimeout(function(){ alert("Your book has added Succesfully"); }, 100);
 
 
-    let book = new Hola(name, author, type)
+    let book = LIST.push({
+        nombre : nombre.value,
+        author : author.value,
+        type : type
+    })
+
     console.log(book)
 
-    showBooks(name.value, author.value, type)
+    showBooks(nombre.value, author.value, type)
 
+    bookname.value = ""
+    author.value = ""
+
+    if(bookname.value == undefined){
+        console.log("you cannot add boook")
+    }
+
+    localStorage.setItem("BookSave", JSON.stringify(LIST))
+    console.log(localStorage.getItem("BookSave"))
 
 }
-
-// localStorage.setObject("BookSave", JSON.stringify(Book))
