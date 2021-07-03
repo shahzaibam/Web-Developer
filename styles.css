@@ -1,121 +1,218 @@
 *{
-    box-sizing: border-box;
-    margin: 0;
     padding: 0;
-}
-.container{
-    margin: 0px 2%;
-    padding: auto;
-
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
-
-#heading-taxiProject{
-    text-align: center;
+body{
+    overflow-x: hidden;
 }
 
-#kilometros{
-    background-color: rgba(0, 156, 78, 0.534);
+.landing-page{
+    background-color: #EEEEEE;
+    width: 1400px;
+    height: 656px;
 }
 
-/*
-#FECHA{
-    width: 90px;
+.nav-bar{
+    background-color: #EEEEEE;
+    width: 1320px;
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+    padding: 0;
+    margin: 0;
 }
 
-#KILOMETROS{
-    width: 130px;
+.nav-bar-with-logo{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
-#ACEITE{
-    width: 90px;
-}
-
-#FILTRO_ACEITE{
-    width: 90px;
-}
-#FILTRO_AIRE{
-    width: 90px;
-}
-
-#FILTRO_POLEN{
-    width: 90px;
-}
-
-#FILTRO_GASOIL{
-    width: 90px;
-}
-
-#DELANTERAS{
-    width: 150px;
-}
-
-#TRASERAS{
-    width: 110px;
+.logo p{
+    margin: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 60px;
 
 }
 
-#observation{
+.logo p:hover{
+    color: #FF3131;
+    transition: 0.5s;
+
+}
+
+.nav-ul{
+    display: flex;
+    list-style: none;
+    position: fixed;
+    top: 0px;
+    background-color: #EEEEEE;
+}
+
+.nav-ul li{
+    margin: 20px;
+    cursor: pointer;
+}
+
+.nav ul li a{
+    text-decoration: none;
+}
+
+.nav ul li a:hover{
+    color: #FF3131;
+    transition: 0.5s;
+}
+
+.nav-ul li:hover{
+    color: #FF3131;
+    transition: 0.5s;
+}
+
+.active{
+    color: #FF3131;
+}
+
+.heading-new{
+    font-size: 70px;
+    margin-left: 300px;
+    position: absolute;
+    top: 200px;
+}
+
+.arrivals{
+    position: absolute;
+    width: 500px;
+    right: -180px;
+}
+
+
+.div-image{
+    position: relative;
+    left: 100px;
     width: 300px;
 }
 
-*/
-
-th{
-    border: 1px solid black;
-    padding: 5px;
-    width: 90px;
-    text-align: center;
-    position: sticky;
-    top: -1px;
-    background: #fff;
+.div-image img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 900px;
+    height: auto;
+    margin-left: 360px;
+    position: absolute;
+    top: 200px;
 }
 
-
-
-
-.td{
-    border: 1px solid black;
-    width: 10px;
+.button{
+    position: absolute;
+    top: 450px;
+    left: 340px;
 }
 
-
-
-
-
-#add{
-    background-color: #355c7d;
+.go-shopping-btn{
+    background-color: #FF3131;
+    padding: 10px;
+    font-weight: 500;
     border: none;
     outline: none;
-    width:60px;
-    font-size: 23px;
-    font-weight: bold;
     cursor: pointer;
-    border-radius: 2px;
-    margin-top:10px;
-    color: white;
-
 }
 
-#add:hover{
-    border: 2px solid black;
+.go-shopping-btn:hover{
+    background-color: #ff3131b9;
+    transition: 0.5s;
 }
 
-.submit-btn{
-    background-color: #355c7d;
-    border: none;
-    outline: none;
-    width:70px;
-    font-size: 23px;
+.man-women-backpack{
+    display: flex;
+}
+
+.man{
+    margin-top: 60px;
+    background-color: #EEEEEE;
+    width: 550px;
+    height: 350px;
+    margin-left: 70px;
+}
+
+.man img{
+    height: 100%;
+    margin-top: 7px;
+}
+
+.heading-backpack{
+    margin-top: -330px;
+    margin-left: 300px;
+}
+
+.men-heading{
     font-weight: bold;
-    cursor: pointer;
-    border-radius: 2px;
-    margin-top: 10px;
-    margin-bottom:60px;
-    color: white;
-
+    font-size: 23px;
+    position: relative;
+    top: 100px;
 }
 
-.submit-btn:hover{
-    border: 2px solid black;
+.backpack{
+    position: relative;
+    top: 100px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.anchor-view{
+    position: relative;
+    top: 120px;
+    text-decoration: none;
+    color: black;
+}
+
+.anchor-view:hover{
+    color: #FF3131;
+}
+
+
+.women{
+    margin-top: 60px;
+    background-color: #EEEEEE;
+    width: 550px;
+    height: 350px;
+    margin-left: 70px;
+}
+
+.women img{
+    height: 95%;
+    margin-top: 16px;
+    margin-left: -80px;
+}
+
+.heading-backpack{
+    margin-top: -330px;
+    margin-left: 300px;
+}
+
+.men-heading{
+    font-weight: bold;
+    font-size: 23px;
+    position: relative;
+    top: 100px;
+}
+
+.backpack{
+    position: relative;
+    top: 100px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.anchor-view{
+    position: relative;
+    top: 120px;
+    text-decoration: none;
+    color: black;
+}
+
+.anchor-view:hover{
+    color: #FF3131;
 }
