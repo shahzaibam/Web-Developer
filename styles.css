@@ -1,218 +1,220 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
 body{
+    font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
 
-.landing-page{
-    background-color: #EEEEEE;
-    width: 1400px;
-    height: 656px;
-}
 
-.nav-bar{
-    background-color: #EEEEEE;
-    width: 1320px;
-    position: fixed;
-    top: 0px;
-    z-index: 100;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-bar-with-logo{
+.nav{
+    background: #333;
+    color: white;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-}
-
-.logo p{
-    margin: 25px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-left: 60px;
-
-}
-
-.logo p:hover{
-    color: #FF3131;
-    transition: 0.5s;
-
-}
-
-.nav-ul{
-    display: flex;
-    list-style: none;
-    position: fixed;
-    top: 0px;
-    background-color: #EEEEEE;
-}
-
-.nav-ul li{
-    margin: 20px;
-    cursor: pointer;
-}
-
-.nav ul li a{
-    text-decoration: none;
-}
-
-.nav ul li a:hover{
-    color: #FF3131;
-    transition: 0.5s;
-}
-
-.nav-ul li:hover{
-    color: #FF3131;
-    transition: 0.5s;
-}
-
-.active{
-    color: #FF3131;
-}
-
-.heading-new{
-    font-size: 70px;
-    margin-left: 300px;
-    position: absolute;
-    top: 200px;
-}
-
-.arrivals{
-    position: absolute;
-    width: 500px;
-    right: -180px;
+    grid-template-columns: 2fr 330px;
+    width: 1366px;
+    margin-left: -8px;
+    margin-top: -7px;  
+    position: sticky; 
+    top: 0;
 }
 
 
-.div-image{
-    position: relative;
-    left: 100px;
-    width: 300px;
-}
-
-.div-image img{
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 900px;
-    height: auto;
-    margin-left: 360px;
-    position: absolute;
-    top: 200px;
-}
-
-.button{
-    position: absolute;
-    top: 450px;
-    left: 340px;
-}
-
-.go-shopping-btn{
-    background-color: #FF3131;
-    padding: 10px;
-    font-weight: 500;
-    border: none;
+.search-input{
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
     outline: none;
+    border: 1px solid black;
+}
+
+.btn-search{
+    background: #0255d3cb;
+    outline: none;
+    border: 1px solid black;
+    padding: 4px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.go-shopping-btn:hover{
-    background-color: #ff3131b9;
-    transition: 0.5s;
+.btn-search:hover{
+    background: transparent;
+    color: white;
 }
 
-.man-women-backpack{
+.heading{
+    display: flex;
+    margin-left: 20px;
+}
+
+.heading h5{
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.heading h5:hover{
+    padding-left: 30px;
+    color: #0255d3cb;
+    transition: 0.8s;
+}
+
+.heading h3{
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.heading h3:hover{
+    padding-left: 30px;
+    color: #0255d3cb;
+    transition: 0.8s;
+}
+
+.body-start{
+    margin-left:300px ;
+}
+
+.shebi-library{
+    width: 700px;
+    margin-right: 700px;
+}
+
+.name-div{
     display: flex;
 }
 
-.man{
-    margin-top: 60px;
-    background-color: #EEEEEE;
-    width: 550px;
-    height: 350px;
-    margin-left: 70px;
+.name-div p{
+    font-weight: bold;
 }
 
-.man img{
-    height: 100%;
-    margin-top: 7px;
+.name-div input{
+    border-radius: 3px;
+    outline: none;
+    width: 400px;
+    margin-top: 10px;
+    height: 20px;
+    border: 1px solid black;
+    margin-left: 200px;
 }
 
-.heading-backpack{
-    margin-top: -330px;
+.author-div{
+    display: flex;
+}
+
+.author-div p{
+    font-weight: bold;
+}
+
+.author-div input{
+    border-radius: 3px;
+    outline: none;
+    width: 400px;
+    margin-top: 10px;
+    height: 20px;
+    border: 1px solid black;
+    margin-left: 200px;
+}
+
+.radio-div p{
+    font-weight: bold;
+    display: flex;
+}
+
+.btn-add-block{
+    background: #0255d3cb;
+    outline: none;
+    border: 1px solid black;
+    padding: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 900;
+    margin-top: 30px;
+    width: 100px;
+}
+
+.btn-add-block:hover{
+    background: transparent;
+    color: black;
+    font-weight: 900;
+
+}
+
+.your-books-heading{
     margin-left: 300px;
 }
 
-.men-heading{
-    font-weight: bold;
-    font-size: 23px;
-    position: relative;
-    top: 100px;
+.hr-your-books{
+    width: 800px;
+    margin-right: 300px;
 }
 
-.backpack{
-    position: relative;
-    top: 100px;
-    font-weight: bold;
-    font-size: 30px;
-}
-
-.anchor-view{
-    position: relative;
-    top: 120px;
-    text-decoration: none;
-    color: black;
-}
-
-.anchor-view:hover{
-    color: #FF3131;
-}
-
-
-.women{
-    margin-top: 60px;
-    background-color: #EEEEEE;
-    width: 550px;
-    height: 350px;
-    margin-left: 70px;
-}
-
-.women img{
-    height: 95%;
-    margin-top: 16px;
-    margin-left: -80px;
-}
-
-.heading-backpack{
-    margin-top: -330px;
+.types{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
     margin-left: 300px;
-}
-
-.men-heading{
     font-weight: bold;
-    font-size: 23px;
-    position: relative;
-    top: 100px;
+    margin-top: -30px;
 }
 
-.backpack{
-    position: relative;
-    top: 100px;
-    font-weight: bold;
-    font-size: 30px;
-}
-
-.anchor-view{
-    position: relative;
-    top: 120px;
-    text-decoration: none;
+.hr-types{
+    width: 800px;
+    margin-right: 300px;
     color: black;
 }
 
-.anchor-view:hover{
-    color: #FF3131;
+
+.types-of-books-grey{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    margin-left: 300px;
+    font-weight: bold;
+    background: rgba(180, 179, 179, 0.308);
+    width: 682px;
+    position: relative;
+    left:0px;
+    right: 10px;
+    padding-left: 18px;
+    margin-bottom: 10px;
+
+}
+
+
+.types-of-books{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    margin-left: 300px;
+    font-weight: bold;
+    width: 700px;
+    position: relative;
+    left: -10px;
+    padding: 2px;
+}
+
+.typeBook{
+    position: relative;
+    right: 20px;
+}
+
+.author_input{
+    position: relative;
+    right: 3px;
+}
+
+.authorBook{
+    width: 100px;
+    height: auto;
+}
+
+.delete_all{
+    position: relative;
+    left: 450px;
+    bottom: 108px;
+    background: rgba(255, 0, 0, 0.952);
+    outline: none;
+    border: 1px solid black;
+    padding: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 900;
+    width: 100px;
+}
+
+.delete_all:hover{
+    background: transparent;
 }
