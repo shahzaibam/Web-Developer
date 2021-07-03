@@ -4,70 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce</title>
+    <title>Harry Project 2</title>
     <link rel="stylesheet" href="/styles.css">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <div id="home" class="landing-page">
-            <div class="nav-bar">
-    
-                <div class="nav-bar-with-logo">
-                    <div class="logo">
-                        <p>SHEBI</p>
-                    </div>
-    
-                    <nav class="nav">
-                        <ul class="nav-ul">
-                            <li class="active"> <a href="#home">Home</a></li>
-                            <li><a href="#idwomen">Featured</a></li>
-                            <li>New</li>
-                            <li>Subscribed</li>
-                            <li class="li-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABHUlEQVRIS83VwTEFQRSF4e9FgAyIABEgAjLAlgUiQARs2CICZEAEiAARIALqqplXY9687q4ao5zNLPrO/fv0mdszMrBGA/f3p4DPhptTHPyGu6aDJiB6r+GuL6TriPZxgltsDAGYxVvVeAEvfSDTQr7EZo/Gj1iO96cBlvDQA/CK+RQg1mIXi9hGOCpR7fwYRznAFi4q0LfdjCK7Z8RznF1u0N4xU51nOEqp3tA9VuvCHCAGbg9XiAYpxcystI80B4igwnZoDuGoS3XdRxXuuC4HiGY3WK+ujnDUpQj0sMtpCSCm+TqXcLU+cb2UAOLd+pNNcZ4Q8/NDpYBCA5NlpYAz7OAcu602qbXiH07zKm9vKrVWDBjcweAZ/F/AF4BhMxlWUaegAAAAAElFTkSuQmCC"/></li>
-                        </ul>
-                    </nav>
-                </div>
+        <div class="nav">
+            <div class="heading">
+                <h3>Shebi Library</h3>
+                <h5>Home</h5>
             </div>
-    
-    
-            <div class="div-body">
-                <div class="heading-new-arrivals">
-                    <h1 class="heading-new">N E W <br> <span class="arrivals">A R R I V A L S</span>  <h1>
-                </div>
-    
-                <div class="button">
-                    <button class="go-shopping-btn">GO SHOPPING</button>
-                </div>
-    
-                <div class="div-image">
-                    <img src="/img/815-8151079_clique-e-acesse-shopping-avenida-center-girl-with.png" alt="">
-                </div>
+
+            <div class="search">
+                <input class="search-input" type="text" placeholder="Search Here">
+                <button class="btn-search">Search</button>
             </div>
         </div>
 
-        <div class="man-women-backpack">
-            <div class="man">
-                <img src="/img/16912311_figure-render-people-people-cutout-people-png-street.png" alt="">
+        <div class="body-start">
+            <h2>Shebi Library</h2>
+            <hr class="shebi-library">
 
-                <div class="heading-backpack">
-                    <p> <span class="men-heading">MEN</span> <br> <span class="backpack">BACKPACK</span></p>
-                    <a class="anchor-view" href="#">View Collection</a>
-                </div>
+            <div class="name-div">
+                <p>Name</p>
+                <input class="book-name" type="text" placeholder="Book Name" required>
             </div>
 
-            <div id="idwomen" class="women">
-                <img src="/img/image.png" alt="">
+            <div class="author-div">
+                <p>Author</p>
+                <input class="author_input" type="text" placeholder="Author" required>
+            </div>
 
-                <div class="heading-backpack">
-                    <p> <span class="men-heading">WOMEN</span> <br> <span class="backpack">BACKPACK</span></p>
-                    <a class="anchor-view" href="#">View Collection</a>
-                </div>
+            <div class="radio-div">
+                <p>Type</p>
+                <input class="input" type="radio" id="fiction" name="typeIs" value="Fiction"  checked>
+                <label for="fiction">Fiction</label><br>
+
+                <input class="input-2" type="radio" id="computer_prg" name="typeIs" value="Programming" >
+                <label for="computer_prg"> <span id="com_prg">Programming</span>  <br></label>
+
+                
+                <input class="input-3" type="radio" id="cooking" name="typeIs" value="Cooking" >
+                <label for="cooking">Cooking</label><br>
+            </div>
+
+            <div class="btn-addBlock">
+                <button class="btn-add-block">Add Block</button>
             </div>
         </div>
+
+        <div class="your-books">
+            <h2 class="your-books-heading">Your books</h2>
+            <hr class="hr-your-books">
+            <button class="delete_all">Delete All</button>
+        </div>
+
+        <div class="mybooks">
+            <div class="types">
+                <p>Name</p>
+                <p>Author</p>
+                <p>Type</p>
+            </div>
+            <hr class="hr-types">
+        </div>
+
+        <div class="createdBook">
+            <!-- <div class="types-of-books-grey">
+                <p>Lazarillo de Thormes</p>
+                <p>Ivan Garcia</p>
+                <p>Fiction</p>
+            </div>
+
+            <div class="types-of-books">
+                <p>Lazarillo de Thormes</p>
+                <p>Ivan Garcia</p>
+                <p>Fiction</p>
+            </div> -->
+        </div>
+
+
     </div>
+    <script src="/script.js"></script>
 </body>
 </html>
