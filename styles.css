@@ -1,23 +1,864 @@
-.container{
-    font-size: 2em;
-    display: grid;
-    grid-template-columns: repeat(4, 200px);
-    grid-template-rows: repeat(7, 200px);
-    grid-gap: 10px;
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
 
+body{
+    overflow-x: hidden;
+}
+
+.landing-page{
+    background-color: #EEEEEE;
+    width: 1350px;
+    height: 656px;
 
 }
 
-.blue{
-    background-color: blue;
-}
-
-.blue img{
+.nav-bar{
+    background-color: #EEEEEE;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    position: fied;
+    top: 0px;
+    z-index: 100;
+    padding: 0;
+    margin: 0;
 }
 
-.green{
-    background-color: green;
+.nav-bar-with-logo{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
 }
+
+.logo p{
+    margin: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    padding-left: 60px;
+    font-size: 27px;
+}
+
+.logo p:hover{
+    color: #FF3131;
+    transition: 0.5s;
+}
+
+.nav-bar-with-logo{
+    position: fixed;
+    top: 0px;
+    background: #EEEEEE;
+    z-index: 400;
+    width: 100%;
+}
+
+.nav-ul{
+    display: flex;
+    list-style: none;
+
+    background-color: #EEEEEE;
+}
+
+.nav-ul li{
+    margin: 25px;
+    cursor: pointer;
+}
+
+.nav ul li a{
+    text-decoration: none;
+}
+
+.nav ul li a:hover{
+    color: #FF3131;
+    transition: 0.5s;
+}
+
+.nav-ul li:hover{
+    color: #FF3131;
+    transition: 0.5s;
+}
+
+.active{
+    color: #FF3131;
+}
+
+.heading-new{
+    font-size: 70px;
+    margin-left: 300px;
+    position: absolute;
+    top: 200px;
+}
+
+.arrivals{
+    position: absolute;
+    width: 500px;
+    right: -180px;
+}
+
+
+.div-image{
+    position: relative;
+    left: 100px;
+    width: 300px;
+}
+
+.div-image img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 880px;
+    height: auto;
+    margin-left: 360px;
+    position: absolute;
+    top: 209px;
+}
+
+.button{
+    position: absolute;
+    top: 450px;
+    left: 340px;
+}
+
+.go-shopping-btn{
+    background-color: #FF3131;
+    padding: 10px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.go-shopping-btn:hover{
+    background-color: #ff3131b9;
+    transition: 0.5s;
+}
+
+.man-women-backpack{
+    display: flex;
+}
+
+.man{
+    margin-top: 60px;
+    background-color: #EEEEEE;
+    width: 550px;
+    height: 350px;
+    margin-left: 70px;
+}
+
+.man img{
+    height: 100%;
+    margin-top: 7px;
+}
+
+.heading-backpack{
+    margin-top: -330px;
+    margin-left: 300px;
+}
+
+.men-heading{
+    font-weight: bold;
+    font-size: 23px;
+    position: relative;
+    top: 100px;
+}
+
+.backpack{
+    position: relative;
+    top: 100px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.anchor-view{
+    position: relative;
+    top: 120px;
+    text-decoration: none;
+    color: black;
+}
+
+.anchor-view:hover{
+    color: #FF3131;
+}
+
+
+.women{
+    margin-top: 60px;
+    background-color: #EEEEEE;
+    width: 550px;
+    height: 350px;
+    margin-left: 70px;
+
+}
+
+.women img{
+    height: 95%;
+    margin-top: 16px;
+    margin-left: -80px;
+
+}
+
+.heading-backpack{
+    margin-top: -330px;
+    margin-left: 300px;
+
+}
+
+.men-heading{
+    font-weight: bold;
+    font-size: 23px;
+    position: relative;
+    top: 100px;
+
+}
+
+.backpack{
+    position: relative;
+    top: 100px;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+.anchor-view{
+    position: relative;
+    top: 120px;
+    text-decoration: none;
+    color: black;
+
+}
+
+.anchor-view:hover{
+    color: #FF3131;
+
+}
+
+
+.featured-products{
+    margin-left: 250px;
+    margin-top: 100px;
+
+}
+
+#featured{
+    margin-left: 290px;
+
+}
+
+.viewAll{
+    margin-left: 400px;
+    position: relative;
+    top: 20px;
+
+}
+
+.the-products{
+    display: flex;
+    margin-left: -200px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+}
+
+.product1{
+    height: 300px;
+    width: 300px;
+    background-color: #EEEEEE;
+    margin-top: 60px;
+    margin-right: 20px;
+    margin-left: -20px;
+    cursor: pointer;
+
+}
+
+.product1 img{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.product-name{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+
+.product-price{
+    margin-left: 140px;
+    margin-right: 140px;
+    padding-top: 10px;
+
+}
+
+.tagOfNew{
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 397px;
+    padding: 10px;
+    background-color: #FF3131;
+    color: white;
+
+}
+
+
+.text-new{
+    color: white;
+
+}
+
+.special-offer-woman{
+    margin-top: 300px;
+
+}
+
+.background-img img{
+    width: 100%;
+    height: 45%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.heading-special{
+    position: relative;
+    top: -400px;
+    color: white;
+    left: 35%;
+    font-weight: bold;
+    font-size: 40px;
+    width: 500px;
+
+}
+
+.heading-p{
+    position: relative;
+    top: -380px;
+    color: white;
+    left: 30%;
+    font-weight: bold;
+    width: 600px;
+}
+
+
+.shop-now{
+    position: relative;
+    top: -260px;
+    color: white;
+    left: 50%;
+    font-weight: bold;
+    background-color: #FF3131;
+    border: none;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+.shop-now:hover{
+    background-color: #ff3131b9;
+
+}
+
+
+
+
+.new-arrivals{
+    margin-left: 250px;
+    margin-top: 100px;
+
+}
+
+.viewAll-new-p{
+    margin-left: 400px;
+    position: relative;
+    top: 20px;
+
+}
+
+.the-products{
+    display: flex;
+    margin-left: -200px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+}
+
+.product1-new{
+    height: 300px;
+    width: 300px;
+    background-color: #EEEEEE;
+    margin-top: 60px;
+    margin-right: 20px;
+    margin-left: -20px;
+
+}
+
+.product1-new img{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-name{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.product-price{
+    margin-left: 140px;
+    margin-right: 140px;
+    padding-top: 10px;
+}
+
+.tagOfNew{
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 397px;
+    padding: 10px;
+    background-color: #FF3131;
+    color: white;
+}
+
+.view-product{
+    background-color: #FF3131;
+    border: none;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    bottom: 170px;
+    left: 30%;
+    display: none;
+}
+
+.product1-new:hover{
+    background-color: #ff3131b9;
+    bottom: 0;
+    transition: .8s;
+}
+
+.product1-new:hover .view-product{
+    display: block;
+    transition: .3s;
+}
+
+#imagereloj{
+    height: 350px;
+    width: 350px;
+    position: relative;
+    bottom: 40px;
+    right: 20px;
+}
+
+.featured-products-new{
+    margin-left: 340px;
+    margin-top: 100px;
+}
+
+
+.news-letter{
+    position: absolute;
+    left: 37%;
+    padding: 30px;
+    margin-top: 60px;   
+}
+
+.heading-newsletter h1{
+    margin-bottom: 30px;
+}
+
+.heading-newsletter p{
+    position: relative;
+    left: -10%;
+}
+
+.input{
+    margin-top: 40px;
+    display: flex;
+    margin-left: -80px;
+    margin-bottom: 200px;
+}
+
+.input .email{
+    width: 300px;
+    padding: 7px;
+    border: 1px solid black;
+}
+
+.sub-btn{
+    background-color: #FF3131;
+    border: none;
+    outline: none;
+    font-size: 23px;
+    padding: 5px;
+    cursor: pointer;
+} 
+
+.brand-icons{
+    display: flex;
+    position: relative;
+    right: 500px;
+    justify-content: space-between;
+}
+
+.icon-img img{
+    width: 200px;
+    height: 100px;
+    margin-left: 10px;
+    margin-right: 100px;
+}
+
+#adidas img{
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+}
+
+.footer{
+    position: relative;
+    top: 400px;
+    background: black;
+    height: 400px;
+    color: white;
+}
+
+.footer-black{
+    display: flex;
+}
+
+.footer-item h1{
+    padding:120px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.footer-item p{
+    position: relative;
+    bottom: 100px;
+    left: 120px;
+}
+
+.fb{
+    color: white;
+    width: 100px;
+    height: 100px;
+}
+
+.backpackpng{
+    display: block;
+}
+
+.menu{
+    display: none;
+}
+
+@media screen and (max-width: 375px){
+
+    body{
+        font-size: 7px;
+    }
+
+    .nav-bar-with-logo{
+        width: 375px;
+    }
+
+    .landing-page{
+        background-color: #EEEEEE;
+        width: 375px;
+        height: 610px;
+    }
+    
+    .nav-bar{
+        background-color: #EEEEEE;
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        z-index: 100;
+        padding: 0;
+        margin: 0;
+    }
+
+    .logo p{
+        font-size: 20px;
+        margin-left: -10px;
+    }
+
+    .nav{
+        display: flex;
+    }
+
+    .nav-ul{
+        display: none;
+    }
+
+    .heading-new{
+        position: relative;
+        left: -180px;
+        width: 100%;
+        font-size: 22px;
+    }
+
+    .arrivals{
+        position: relative;
+        left: -30px;
+    }
+
+    .button{
+        position: relative;
+        left: 110px;
+        top: 250px;
+        font-size: 20px;
+        padding: 2px;
+    }
+
+    .go-shopping-btn{
+        width: 100px;
+        font-size: 15px;
+        padding: 1px;
+        color: white;
+    }
+
+    .div-image{
+        position: relative;
+        left: -350px;
+        width: 300px;
+    }
+
+    .menu{
+        width: 100px;
+        height: 100px;
+    }
+    
+    .div-image img{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 300px;
+        height: auto;
+        margin-left: 360px;
+        position: absolute;
+        top: 355px;
+    }
+
+    .man{
+        margin-top: 60px;
+        background-color: #EEEEEE;
+        width: 300px;
+        height: 300px;
+        margin-left: 10px;
+        display: flex;
+        display: none;
+    }
+
+    .imageresponsive{
+        background-image: url(/img/146-1460916_one-punch-man-saitama-backpack-one-punch-man.png);
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+    }
+
+    .man img{
+        display: none;
+    }
+
+    .heading-backpack{
+        position: relative;
+        top: 250px;
+        right: 300px;
+        font-size: 10px;
+    }
+
+    .men-heading{
+        font-weight: bold;
+        font-size: 23px;
+        position: relative;
+        top: 100px;
+        padding-left: 10px;
+    }
+
+    .backpack{
+        position: relative;
+        top: 100px;
+        font-weight: bold;
+        font-size: 30px;
+        padding-left: 10px;
+    }
+
+    .anchor-view{
+        display: none;
+    }
+
+
+    .women{
+        display: none;
+
+    }
+
+    .featured-products{
+        width: 300px;
+    }
+
+    .the-products{
+        width: 300px;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: space-between;
+    }
+
+    .product1{
+        width: 250px;
+
+    }
+
+    .product1 img{
+        width: 250px;
+        height: auto;
+    }
+
+    .featured-products-div{
+        position: relative;
+        right: 10px;
+    }
+
+    .featured-products{
+        position: relative;
+        right: 420px;
+        background: #FF3131;
+        width: 150px;
+    }
+
+    .viewAll{
+        position: relative;
+        margin: 0;
+        right: 100px;
+    }
+
+    #apple{
+        display: none;
+    }
+
+    #smartwatch{
+        display: none;
+    }
+
+    .tagOfNew{
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        bottom: 376px;
+        left: 0px;
+        padding: 10px;
+        background-color: #FF3131;
+        color: white;
+        display: none;
+    }
+
+    .product-name{
+        position: relative;
+        bottom: 40px;
+    }
+
+    .product-price{
+        position: relative;
+        bottom: 40px;
+    }
+
+    .background-img{
+        margin-top: -100px;
+
+    }
+
+    .heading-special{
+        font-size: 7px;
+        margin-left: 5px;
+        margin-top: -20px;
+    }
+
+    .heading-special-offer{
+        font-size: 7px;
+        margin-top: 300px;
+        margin-left: 20px;
+    }
+
+    .heading-p{
+        margin-right: 150px;
+        position: relative;
+        left: 30px;
+    }
+
+    .shop-now{
+        width: 30px;
+        font-size: 4px;
+        position: relative;
+        top: -350px;
+        left: 160px;
+        padding:2px;
+
+    }
+
+    .special-offer-woman{
+        position: relative;
+        bottom: 100px;
+    }
+
+    .menu i{
+        display: block;
+        font-size: 20px;
+        position: relative;
+        left: 100px;
+        top: 13px;
+        margin-bottom: -100px;
+        margin-right: 80px;
+
+    }
+
+    .featured-products-new{
+        position: relative;
+        width: 100%;
+        
+    }
+
+
+    .featured-new{
+        position: relative;
+        right: 450px;
+        top: -400px;
+        width: 400px;
+        margin-right: 100px;
+    }
+
+    .viewAll-new-p{
+        padding: 0;
+        margin: 0;
+        position: relative;
+        left: 370px;
+    }
+
+    .product1-new{
+        position: relative;
+        bottom: 340px;
+    }
+
+}
+
+
+
+/* @media screen and (max-width: 700px) {
+    .landing-page{
+        background: #000;
+    }
+} */
+
