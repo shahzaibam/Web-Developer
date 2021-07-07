@@ -583,7 +583,6 @@ body{
     .nav-bar{
         background-color: #EEEEEE;
         width: 100%;
-        position: fixed;
         top: 0px;
         z-index: 100;
         padding: 0;
@@ -601,6 +600,20 @@ body{
 
     .nav-ul{
         display: none;
+    }
+
+    .nav-ul{
+        height: 200px;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        display: none;
+        width: 30px;
+    }
+
+    .change{
+        display: block;
     }
 
     .heading-new{
@@ -742,7 +755,7 @@ body{
     .viewAll{
         position: relative;
         margin: 0;
-        right: 100px;
+        right: 115px;
     }
 
     #apple{
@@ -774,6 +787,7 @@ body{
     .product-price{
         position: relative;
         bottom: 40px;
+        right: 20px;
     }
 
     .background-img{
@@ -814,12 +828,12 @@ body{
         bottom: 100px;
     }
 
-    .menu i{
+    .menu{
         display: block;
         font-size: 20px;
         position: relative;
         left: 100px;
-        top: 13px;
+        top: 24px;
         margin-bottom: -100px;
         margin-right: 80px;
 
@@ -828,7 +842,8 @@ body{
     .featured-products-new{
         position: relative;
         width: 100%;
-        
+        font-size: 23px;
+        left: -30px;
     }
 
 
@@ -837,21 +852,115 @@ body{
         right: 450px;
         top: -400px;
         width: 400px;
-        margin-right: 100px;
     }
 
     .viewAll-new-p{
         padding: 0;
         margin: 0;
         position: relative;
-        left: 370px;
+        left: 360px;
     }
 
     .product1-new{
         position: relative;
-        bottom: 340px;
+        bottom: 400px;
     }
 
+    .product1-new:hover{
+        display: block;
+    }
+    
+    .product1-new:hover .view-product{
+        display: none;
+    }
+
+    .newsletter-div{
+        position: relative;
+        bottom: 400px;
+        left: -60px;
+    }
+
+    .input{
+        width: 20px;
+        margin-left: -40px;
+    }
+
+    .sub-btn{
+        width: 60px;
+        font-size: 10px;
+
+    }
+
+    .heading-newsletter p{
+        width: 200px;
+    }
+
+
+    #roma{
+        display: none;
+    }
+    #wssa{
+        display: none;
+    }
+
+    #footer_of_black{
+        position: relative;
+        top: -100px;    
+        color: #ffffff;
+    }
+
+    .footer-black{
+        position: relative;
+        top: -300px;
+        color: #ffffff;
+    }
+
+    .footer-item{
+        margin-top: 200px;
+        margin-left: -100px;
+    }
+
+    #explore{
+        position: relative;
+        right: 100px;
+    }
+
+    #explore h1{
+        margin-bottom: -1px;
+    }
+
+    #our-services{
+        color: #ffffff;
+        position: relative;
+        right: 200px;
+
+    }
+
+    #our-services h1{
+        font-size: 7px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #our-services p{
+        position: relative;
+        bottom: 110px;
+    }
+
+    .footer-item h1{
+        font-size: 10px;
+    }
+
+    #follow{
+        position: relative;
+        right: 300px;
+    }
+
+    .icons{
+        position: absolute;
+        top: 140px;
+        left: 122px;
+    }
 }
 
 
