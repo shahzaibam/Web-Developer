@@ -1,4 +1,4 @@
-const menu = document.querySelector(".menu");
+const menu = document.querySelector(".fa-bars");
 const navlist = document.querySelector(".nav-ul");
 
 menu.addEventListener("click", (e) => {
