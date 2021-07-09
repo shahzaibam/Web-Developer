@@ -560,7 +560,7 @@ body{
     display: block;
 }
 
-.menu{
+.div-bars{
     display: none;
 }
 
@@ -581,7 +581,31 @@ body{
     bottom: 100px;
 }
 
+.footer-item p{
+    font-size: 17px;
+
+}
+
+.footer-item a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-item a:hover{
+    color: #ff3131b9;
+    transition: .8s;
+}
+
+.product1{
+    position: relative;
+    right: 30px;
+}
+
 @media  screen and (max-width: 414px) {
+
+    .div-bars{
+        display: block;
+    }
 
     .landing-page{
         background-color: #EEEEEE;
@@ -714,9 +738,6 @@ body{
     .heading-p{
         font-size: 23px;
         width: 900px;
-        
-
-        
     }
 
     .btn-shop-now button{
@@ -737,7 +758,6 @@ body{
     .heading-newsletter p{
         font-size: 23px;
         font-weight: bold;
-
         width: 100%;
     }
 
@@ -764,13 +784,17 @@ body{
 
     }
 
-    .newarrivals-div{
-        position: relative;
-        left: 40px;
+    .heading-p{
+        margin-left: 100px;
     }
 
-    
+    .the-products{
+        margin-left: -220px;
+    }
 
+    .change{
+        height: 260px;
+    }
 }
 
 
@@ -1217,8 +1241,8 @@ body{
     }
 } */
 
-
-@media screen and (max-width: 769px){
+/* 
+@media screen and (max-width: 768px){
 
 
     .man{
@@ -1275,11 +1299,35 @@ body{
         width: 50px;
     }
 
-}
+    .nav-ul{
+        font-size: 24px;
+    }
+
+
+    .featured-products{
+        width: 300px;
+    }
+
+    .heading-p{
+        position: relative;
+        top: -340px;
+    }
+
+    .shop-now{
+        font-size: 50px;
+    }
+
+    .newarrivals-div{
+        position: relative;
+        bottom: 120px;
+    }
+
+
+} */
 
 
 
-@media screen and (max-width: 1025px){
+@media screen and (max-width: 1024px){
 
     .man{
         padding: 20px;
@@ -1332,15 +1380,63 @@ body{
         position: relative;
         left: 120px;
         bottom: 100px;
-        width: 50px;
+        width: 100px;
     }
 
+    .the-products{
+        position: relative;
+        left: 50px;
+
+    }
+
+
+    .footer-item h1{
+        font-size: 30px;
+        width: 97px;
+
+    }
+
+    .footer-item p{
+        font-size: 23px;
+
+    }
+
+    .footer-item a{
+        color: white;
+        text-decoration: none;
+
+    }
+
+    .product1{
+        position: relative;
+        right: 30px;
+    }
+
+    .product1{
+        border: 1px solid black;
+        margin: 10px;
+        position: relative;
+        right: 110px;
+        top: 40px;
+    }
+
+    .product1-new{
+        border: 1px solid black;
+        margin: 10px;
+        position: relative;
+        right: 50px;
+        top: 40px;
+    }
+
+    .landing-page{
+        width: 1350px;
+    }
 }
 
 
 @media screen and (max-width: 540px){
     .featured-products{
-        width: 300px;
+        width: 500px;
     }
 
     .viewAll{
@@ -1358,7 +1454,8 @@ body{
         margin: 0;
         padding: 0;
         position: relative;
-        left: 400px;
+        left: 390px;
+        font-size: 20px;
     }
 
     .heading-newsletter h1{
@@ -1374,10 +1471,52 @@ body{
     .input{
         position: relative;
         left: 220px;
+        width: 500px;
     }
 
-    .featured-products{
-        width: 500px;
+    .icons{
+        width: 200px;
+    }
+
+    .heading-newsletter p{
+        font-size: 24px;
+        width: 700px;
+        position: relative;
+        left: -130px;
+    }
+
+    .shop-now{
+        font-size: 23px;
+        position: relative;
+        left: 630px;
+    }
+
+    .heading-special-offer p{
+        font-size: 23px;
+        width: 900px;
+        position: relative;
+        left:250px;
+        top: -350px;
+    }
+
+    .product-name{
+        font-size: 20px;
+        font-family: 900;
+    }
+
+    .product-price{
+        font-family: 900;
+    }
+
+    .go-shopping-btn{
+        color: white;
+        font-size: 1.5em;
+        position: relative;
+        right: 1.5em;
+    }
+
+    .logo p{
+        font-size: 2.5em;
     }
 }
 
