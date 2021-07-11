@@ -535,7 +535,38 @@ body{
     right: 5%;
 }
 
-@media screen and (max-width:700px) {
+
+
+.heading-backpack{
+    position: relative;
+    bottom: 100%;
+    left: 50%;
+}
+
+.men-heading{
+    font-weight: bold;
+    font-size: 1rem;
+    position: relative;
+    top: 6rem;
+    width: 30%;
+}
+
+.heading-backpack p{
+    width: 100%;
+}
+
+.backpack{
+    position: relative;
+    top: 6rem;
+    font-weight: bold;
+    font-size: 2rem;
+    width: 100%;
+}
+
+
+
+
+@media screen and (max-width:700px){
     
     .div-bars{
         display: block;
@@ -1542,447 +1573,57 @@ body{
 
 
 
-/* @media screen and (max-width: 375px){
-
-    body{
-        background: black;
-        font-size: 7px;
-    }
-
-    .nav-bar-with-logo{
-        width: 375px;
-    }
+@media screen and (max-width: 414px){
 
     .landing-page{
-        background-color: #EEEEEE;
-        width: 375px;
-        height: 610px;
-    }
-    
-    .nav-bar{
-        background-color: #EEEEEE;
-        width: 100%;
-        top: 0px;
-        z-index: 100;
-        padding: 0;
-        margin: 0;
+        width: 230%;
     }
 
-    .logo p{
-        font-size: 20px;
-        margin-left: -10px;
-    }
-
-    .nav{
-        display: flex;
-    }
-
-    .nav-ul{
-        display: none;
-    }
-
-    .nav-ul{
-        height: 200px;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 10;
-        display: none;
-        width: 100px;
-        font-size: 10px;
-        background-color: #000000;
-        color: white;
-
-    }
-
-    .nav-ul a{
-        color: white;
-    }
-
-    .li-img img{
-        background-color: white;
-    }
-
-    .change{
-        display: block;
-    }
-
-    .heading-new{
-        position: relative;
-        left: -180px;
-        width: 100%;
-        font-size: 22px;
-    }
-
-    .arrivals{
-        position: relative;
-        left: -30px;
-    }
-
-    .button{
-        position: relative;
-        left: 110px;
-        top: 250px;
-        font-size: 20px;
-        padding: 2px;
-    }
-
-    .go-shopping-btn{
-        width: 100px;
-        font-size: 15px;
-        padding: 1px;
-        color: white;
-    }
-
-    .div-image{
-        position: relative;
-        left: -350px;
-        width: 300px;
-    }
-
-    .menu{
-        width: 100px;
-        height: 100px;
-    }
-    
     .div-image img{
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 300px;
-        height: auto;
-        margin-left: 360px;
-        position: absolute;
-        top: 355px;
-    }
-
-    .man{
-        margin-top: 60px;
-        background-color: #EEEEEE;
-        width: 300px;
-        height: 300px;
-        margin-left: 10px;
-        display: flex;
-        display: none;
-    }
-
-    .imageresponsive{
-        background-image: url(/img/146-1460916_one-punch-man-saitama-backpack-one-punch-man.png);
-        background-position: center;
-        background-size: cover;
-        width: 300px;
-    }
-
-    .man img{
-        display: none;
-    }
-
-    .heading-backpack{
         position: relative;
-        top: 250px;
-        right: 300px;
-        font-size: 10px;
+        top: 9rem;
     }
 
-    .men-heading{
-        font-weight: bold;
-        font-size: 23px;
+    #man-back{
+        width: 150%;
         position: relative;
-        top: 100px;
-        padding-left: 10px;
+        left: 30%;
     }
 
-    .backpack{
+    #women{
+        width: 150%;
         position: relative;
-        top: 100px;
-        font-weight: bold;
-        font-size: 30px;
-        padding-left: 10px;
+        left: 30%;
+        top: 4rem;
     }
 
-    .anchor-view{
-        display: none;
+    #headphones{
+        margin-left: 70%;
+        width: 200%;
     }
 
-
-    .women{
-        display: none;
-
+    #airpod{
+        margin-left: 70%;
+        width: 200%;
+        margin-top: 50%;
     }
 
-    .featured-products{
-        width: 300px;
-    }
-
-    .the-products{
-        width: 300px;
-        display: grid;
-        grid-template-columns: 1fr;
-        justify-content: space-between;
-    }
-
-    .product1{
-        width: 250px;
-
-    }
-
-    .product1 img{
-        width: 250px;
-        height: auto;
-    }
-
-    .featured-products-div{
+    .featured-products-div h1{
         position: relative;
-        right: 10px;
+        left: 70%;
+        top: 2rem;
+        padding-top: 4rem;
     }
 
-    .featured-products{
+    .featured-products-div a{
+        margin-left: 12rem;
         position: relative;
-        right: 420px;
-        background: #FF3131;
-        width: 150px;
+        top: 40px;
     }
-
-    .viewAll{
-        position: relative;
-        margin: 0;
-        right: 125px;
-        font-size: 13px;
-    }
-
-    #apple{
-        display: none;
-    }
-
-    #smartwatch{
-        display: none;
-    }
-
-    .tagOfNew{
-        width: 30px;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        bottom: 376px;
-        left: 0px;
-        padding: 10px;
-        background-color: #FF3131;
-        color: white;
-        display: none;
-    }
-
-    .product-name{
-        position: relative;
-        bottom: 40px;
-    }
-
-    .product-price{
-        position: relative;
-        bottom: 40px;
-        right: 20px;
-    }
-
-    .background-img{
-        margin-top: -100px;
-
-    }
-
-    .heading-special{
-        font-size: 7px;
-        margin-left: 5px;
-        margin-top: -20px;
-    }
-
-    .heading-special-offer{
-        font-size: 7px;
-        margin-top: 300px;
-        margin-left: 20px;
-    }
-
-    .heading-p{
-        margin-right: 150px;
-        position: relative;
-        left: 30px;
-    }
-
-    .shop-now{
-        width: 40px;
-        font-size: 8px;
-        position: relative;
-        top: -350px;
-        left: 150px;
-        padding:2px;
-
-    }
-
-    .special-offer-woman{
-        position: relative;
-        bottom: 100px;
-    }
-
-    .menu{
-        display: block;
-        font-size: 20px;
-        position: fixed;
-        left: 300px;
-        top: 24px;
-        margin-bottom: -100px;
-        margin-right: 80px;
-    }
-
-    .featured-products-new{
-        position: relative;
-        width: 100%;
-        font-size: 23px;
-        left: -30px;
-    }
+}
 
 
-    .featured-new{
-        position: relative;
-        right: 450px;
-        top: -400px;
-        width: 400px;
-    }
 
-    .viewAll-new-p{
-        padding: 0;
-        margin: 0;
-        position: relative;
-        left: 350px;
-        font-size: 13px;
-    }
-
-    .product1-new{
-        position: relative;
-        bottom: 400px;
-    }
-
-    .product1-new:hover{
-        position: fixed;
-    }
-    
-    .product1-new:hover .view-product{
-        position: fixed;
-    }
-
-    .newsletter-div{
-        position: relative;
-        bottom: 700px;
-        left: -80px;
-    }
-
-    .input{
-        width: 20px;
-        margin-left: -40px;
-    }
-
-    .sub-btn{
-        width: 60px;
-        font-size: 10px;
-
-    }
-
-    .heading-newsletter p{
-        width: 200px;
-    }
-
-
-    #roma{
-        display: none;
-    }
-    #wssa{
-        display: none;
-    }
-
-    #footer_of_black{
-        position: relative;
-        top: -400px;    
-        color: #ffffff;
-        display: flex;
-        height: 300px;
-    }
-
-    .footer-black{
-        position: relative;
-        top: -300px;
-        color: #ffffff;
-        z-index: 1000;
-        height: 00px;
-    }
-
-    .footer-item{
-        margin-top: 200px;
-        margin-left: -100px;
-    }
-
-    #explore{
-        position: relative;
-        right: 100px;
-    }
-
-    #explore h1{
-        margin-bottom: -1px;
-    }
-
-    #our-services{
-        color: #ffffff;
-        position: relative;
-        right: 200px;
-
-    }
-
-    #our-services h1{
-        font-size: 7px;
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    #our-services p{
-        position: relative;
-        bottom: 110px;
-    }
-
-    .footer-item h1{
-        font-size: 10px;
-    }
-
-    #follow{
-        position: relative;
-        right: 300px;
-    }
-
-    .icons{
-        position: absolute;
-        top: 140px;
-        left: 122px;
-    }
-
-    .heading-newsletter h1{
-        font-weight: bold;
-        font-size: 23px;
-        position: relative;
-        left: -20px;
-        width: 300px;
-    }
-
-    .heading-newsletter p{
-        font-size: 10px;
-        width: 300px;
-        position: relative;
-        left: -50px;
-    }
-
-    #new{
-        padding-top: 300px;
-        position: relative;
-        bottom: 300px;
-    }
-
-    .container{
-        height: 100vh;
-    }
-} */
 
 /* 
 @media screen and (max-width: 768px){
