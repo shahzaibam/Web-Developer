@@ -10,16 +10,13 @@ body{
 
 .landing-page{
     background-color: #EEEEEE;
-    width: 1350px;
+    width: 100%;
     height: 656px;
-
 }
 
 .nav-bar{
     background-color: #EEEEEE;
     width: 100%;
-    position: fied;
-    top: 0px;
     z-index: 100;
     padding: 0;
     margin: 0;
@@ -31,11 +28,11 @@ body{
 }
 
 .logo p{
-    margin: 25px;
+    margin: 3.5%;
     cursor: pointer;
     font-weight: bold;
-    padding-left: 60px;
-    font-size: 27px;
+    padding-left: 10%;
+    font-size: 1.5rem;
 }
 
 .logo p:hover{
@@ -45,7 +42,7 @@ body{
 
 .nav-bar-with-logo{
     position: fixed;
-    top: 0px;
+    top: 0;
     background: #EEEEEE;
     z-index: 400;
     width: 100%;
@@ -59,7 +56,7 @@ body{
 }
 
 .nav-ul li{
-    margin: 25px;
+    margin: 4%;
     cursor: pointer;
 }
 
@@ -82,45 +79,43 @@ body{
 }
 
 .heading-new{
-    font-size: 70px;
+    font-size: 4.5rem;
     margin-left: 300px;
     position: absolute;
-    top: 200px;
+    top: 30%;
 }
 
 .arrivals{
     position: absolute;
-    width: 500px;
-    right: -180px;
+    width: 230%;
+    right: -11rem;
 }
-
 
 .div-image{
     position: relative;
-    left: 100px;
-    width: 300px;
+    left: 8%;
 }
 
 .div-image img{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 880px;
+    width: 65%;
     height: auto;
-    margin-left: 360px;
+    margin-left: 27%;
     position: absolute;
-    top: 209px;
+    top: 13.2rem;
 }
 
 .button{
     position: absolute;
-    top: 450px;
-    left: 340px;
+    top: 70%;
+    left: 26%;
 }
 
 .go-shopping-btn{
     background-color: #FF3131;
-    padding: 10px;
+    padding: 5%;
     font-weight: 500;
     border: none;
     outline: none;
@@ -137,90 +132,64 @@ body{
 }
 
 .man{
-    margin-top: 60px;
+    margin-top: 5%;
     background-color: #EEEEEE;
-    width: 550px;
-    height: 350px;
-    margin-left: 70px;
+    width: 45%;
+    height: 20rem;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .man img{
     height: 100%;
-    margin-top: 7px;
+    margin-top: 1%;
 }
 
-.heading-backpack{
-    margin-top: -330px;
-    margin-left: 300px;
+
+.heading-backpack p{
+    width: 10%;
 }
 
-.men-heading{
-    font-weight: bold;
-    font-size: 23px;
-    position: relative;
-    top: 100px;
-}
-
-.backpack{
-    position: relative;
-    top: 100px;
-    font-weight: bold;
-    font-size: 30px;
-}
 
 .anchor-view{
-    position: relative;
-    top: 120px;
     text-decoration: none;
     color: black;
 }
 
 .anchor-view:hover{
     color: #FF3131;
-}
-
-
-.women{
-    margin-top: 60px;
-    background-color: #EEEEEE;
-    width: 550px;
-    height: 350px;
-    margin-left: 70px;
-
-}
-
-.women img{
-    height: 95%;
-    margin-top: 16px;
-    margin-left: -80px;
-
+    transition: .8s;
 }
 
 .heading-backpack{
-    margin-top: -330px;
-    margin-left: 300px;
-
+    position: relative;
+    bottom: 100%;
+    left: 50%;
 }
 
 .men-heading{
     font-weight: bold;
-    font-size: 23px;
+    font-size: 1rem;
     position: relative;
-    top: 100px;
+    top: 6rem;
+    width: 30%;
+}
 
+.heading-backpack p{
+    width: 100%;
 }
 
 .backpack{
     position: relative;
-    top: 100px;
+    top: 6rem;
     font-weight: bold;
-    font-size: 30px;
-
+    font-size: 2rem;
+    width: 100%;
 }
 
 .anchor-view{
     position: relative;
-    top: 120px;
+    top: 7rem;
     text-decoration: none;
     color: black;
 
@@ -230,48 +199,47 @@ body{
     color: #FF3131;
 
 }
-
 
 .featured-products{
-    margin-left: 250px;
-    margin-top: 100px;
+    margin-left: 22%;
+    margin-top: 20%;
 
 }
 
 #featured{
-    margin-left: 290px;
-
+    margin-left: 22%;
 }
 
 .viewAll{
-    margin-left: 400px;
+    margin-left: 33%;
     position: relative;
-    top: 20px;
+    top: 2rem;
+    text-decoration: none;
+    color: #FF3131;
+}
 
+.viewAll:hover{
+    color: #ff3131b9;
 }
 
 .the-products{
     display: flex;
-    margin-left: -200px;
     justify-content: space-between;
-    margin-bottom: 30px;
-
 }
 
 .product1{
-    height: 300px;
-    width: 300px;
+    height: 50%;
+    width: 80%;
     background-color: #EEEEEE;
-    margin-top: 60px;
-    margin-right: 20px;
-    margin-left: -20px;
+    margin-top: 5%;
+    margin-right: -2%;
+    margin-left: -4%;
     cursor: pointer;
-
 }
 
 .product1 img{
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 20rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -281,29 +249,13 @@ body{
 .product-name{
     display: flex;
     justify-content: center;
-    margin-top: 50px;
 
 }
 
 .product-price{
-    margin-left: 140px;
-    margin-right: 140px;
-    padding-top: 10px;
+    padding-left: 10%;
 
 }
-
-.tagOfNew{
-    width: 30px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 397px;
-    padding: 10px;
-    background-color: #FF3131;
-    color: white;
-
-}
-
 
 .text-new{
     color: white;
@@ -311,13 +263,12 @@ body{
 }
 
 .special-offer-woman{
-    margin-top: 300px;
-
+    margin-top: 10%;    
 }
 
 .background-img img{
     width: 100%;
-    height: 45%;
+    height: auto;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -326,35 +277,35 @@ body{
 
 .heading-special{
     position: relative;
-    top: -400px;
+    bottom: 27rem;
     color: white;
     left: 35%;
     font-weight: bold;
-    font-size: 40px;
-    width: 500px;
+    font-size: 2.5rem;
+    width: 100%;
 
 }
 
 .heading-p{
     position: relative;
-    top: -380px;
+    bottom: 25rem;
     color: white;
     left: 30%;
     font-weight: bold;
-    width: 600px;
+    width: 100%;
 }
 
 
 .shop-now{
     position: relative;
-    top: -260px;
+    bottom: 15rem;
     color: white;
     left: 50%;
     font-weight: bold;
     background-color: #FF3131;
     border: none;
     outline: none;
-    padding: 10px;
+    padding: 1rem;
     cursor: pointer;
 
 }
@@ -368,39 +319,41 @@ body{
 
 
 .new-arrivals{
-    margin-left: 250px;
-    margin-top: 100px;
-
+    margin-left: 15rem;
 }
 
 .viewAll-new-p{
-    margin-left: 400px;
+    margin-left: 35%;
     position: relative;
-    top: 20px;
+    top: 1rem;
+    text-decoration: none;
+    color: #FF3131;
+}
 
+.viewAll-new-p:hover{
+    color: #ff3131b9;
 }
 
 .the-products{
     display: flex;
-    margin-left: -200px;
+    margin-left: -18%;
     justify-content: space-between;
-    margin-bottom: 30px;
 
 }
 
 .product1-new{
-    height: 300px;
-    width: 300px;
+    height: auto;
+    width: 23% ;
     background-color: #EEEEEE;
-    margin-top: 60px;
-    margin-right: 20px;
-    margin-left: -20px;
+    margin-top: 5%;
+    margin-right: 1%;
+    margin-left: -2%;
 
 }
 
 .product1-new img{
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -409,36 +362,37 @@ body{
 .product-name{
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 15%;
 }
 
 .product-price{
-    margin-left: 140px;
-    margin-right: 140px;
-    padding-top: 10px;
+    margin-left: 35%;
+    padding-top: 2%;
 }
 
+
 .tagOfNew{
-    width: 30px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 397px;
-    padding: 10px;
+    width: 10%;
     background-color: #FF3131;
-    color: white;
+    position: relative;
+    bottom: 26rem;
+    left: 1rem;
+    padding: 1rem;
 }
+
+
+
 
 .view-product{
     background-color: #FF3131;
     border: none;
     outline: none;
-    padding: 10px;
+    padding: .5rem;
     cursor: pointer;
     font-weight: bold;
     color: white;
     position: relative;
-    bottom: 170px;
+    bottom: 50%;
     left: 30%;
     display: none;
 }
@@ -455,28 +409,26 @@ body{
 }
 
 #imagereloj{
-    height: 350px;
-    width: 350px;
+    height:auto ;
+    width: 100%;
     position: relative;
-    bottom: 40px;
-    right: 20px;
 }
 
 .featured-products-new{
-    margin-left: 340px;
-    margin-top: 100px;
+    margin-left: 30%;
+    margin-top: 10%;
 }
 
 
 .news-letter{
     position: absolute;
     left: 37%;
-    padding: 30px;
-    margin-top: 60px;   
+    padding: 2rem;
+    margin-top: 4rem;   
 }
 
 .heading-newsletter h1{
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
 }
 
 .heading-newsletter p{
@@ -485,52 +437,38 @@ body{
 }
 
 .input{
-    margin-top: 40px;
+    margin-top: 10%;
     display: flex;
-    margin-left: -80px;
-    margin-bottom: 200px;
+    margin-right: 20%;
+    margin-bottom: 10%;
+    outline: none;
 }
 
 .input .email{
-    width: 300px;
-    padding: 7px;
+    width: 100%;
+    padding: .5rem;
     border: 1px solid black;
+    outline: none;
 }
 
 .sub-btn{
     background-color: #FF3131;
     border: none;
     outline: none;
-    font-size: 23px;
-    padding: 5px;
+    font-size: 1rem;
+    padding: .7rem;
     cursor: pointer;
 } 
 
-.brand-icons{
-    display: flex;
-    position: relative;
-    right: 500px;
-    justify-content: space-between;
-}
-
-.icon-img img{
-    width: 200px;
-    height: 100px;
-    margin-left: 10px;
-    margin-right: 100px;
-}
-
-#adidas img{
-    height: 100px;
-    background-position: center;
-    background-size: cover;
+.sub-btn:hover{
+    background-color: #ff3131b9;
 }
 
 .footer{
     position: relative;
-    top: 400px;
+    top: 30rem;
     background: black;
-    height: 400px;
+    height: auto;
     color: white;
 }
 
@@ -539,25 +477,21 @@ body{
 }
 
 .footer-item h1{
-    padding:120px;
+    padding: 7rem;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 .footer-item p{
     position: relative;
-    bottom: 100px;
-    left: 120px;
+    bottom: 25%;
+    left: 7rem;
 }
 
 .fb{
     color: white;
-    width: 100px;
-    height: 100px;
-}
-
-.backpackpng{
-    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .div-bars{
@@ -577,13 +511,13 @@ body{
 
 .icons{
     position: relative;
-    left: 120px;
-    bottom: 100px;
+    left: 40%;
+    bottom: 26%;
+    width:100%;
 }
 
 .footer-item p{
-    font-size: 17px;
-
+    font-size: 1rem;
 }
 
 .footer-item a{
@@ -598,85 +532,98 @@ body{
 
 .product1{
     position: relative;
-    right: 30px;
+    right: 5%;
 }
 
-@media  screen and (max-width: 414px) {
-
+@media screen and (max-width:700px) {
+    
     .div-bars{
         display: block;
     }
 
+    .div-bars i{
+        font-size: 2rem;
+        margin-left:15rem;
+    }
+
     .landing-page{
         background-color: #EEEEEE;
-        width: 1350px;
-        height: 806px;
+        width: 110%;
+        height: 110vh;
     }
 
     .logo p{
-        font-size: 3em;
+        font-size: 2rem;
+        padding-top: .8rem;
     }
 
-
-    /* .nav-bar-with-logo{
-        height: 300px;
-    } */
-
-
     .nav-ul{
-        font-size: 2.5em;
+        font-size: 1rem;
         display: none;
         background-color: #EEEEEE;
-        height: 500px;
         font-weight: bold;
     }
 
-    .fa-bars{
-        font-size: 4em;
-        margin-left: 400px;
-        margin-top: 22px;
-        position: fixed;
-        top: 10px;
 
+    .fa-bars{
+        font-size: 1rem;
+        margin-left: 22rem;
+        margin-top: 0.9rem;
+        position: fixed;
+        top: .9rem;
     }
 
     .change{
         display: block;
-        height: 9em;
+        height: 19rem;
         background-color: #EEEEEE;
     }
 
     .nav{
         background-color: #eee;
-        height: 2em;
+        height: 2rem;
     }
 
     .heading-new{
-        width: 4em;
-        margin-top: 3em;     
+        width: 80%;
         background-color: #EEEEEE;
+        font-size: 3rem;
+        position: relative;
+        top: 10rem;
+        left:3rem;
+        margin-left:30%;
     }
 
-    .arrivals{
-        margin-right: 1.5em;
 
+    .arrivals{
+        width: 100%;
+        margin-right: 30%;
+        margin-left: 0%;
+        position: relative;
+        bottom: 7rem;
+        top: 2rem;
+        right: 5rem;
     }
 
     .go-shopping-btn{
-        font-size: 1.5em;
+        font-size: 1.5rem;
         font-weight: bold;
-        width: 10em;
+        width: 100%;
         position: relative;
-        top: 1em;
-        right: 2em;
+        top: -4rem;
+        left: -7rem;
         color: white;
-        margin-top: 150px;
+
+    }
+
+    .div-body{
+        margin-right: 20%;
     }
 
     .div-image{
         position: relative;
-        left: 7em;
-        width: 3em;
+        left: 7rem;
+        width: 100%;
 
     }
     
@@ -684,38 +631,81 @@ body{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 880px;
+        width: 65%;
         height: auto;
-        margin-left: 360px;
-        position: absolute;
+        padding-top: 6.2rem;
+    }
 
-        top: 360px;
+    .man-women-backpack{
+        width: 100%;
+
+    }
+
+    .man{
+        width: 50%;
     }
 
     .anchor-view{
-        font-size: 20px;
+        font-size: .8rem;
         color: black;
-
         font-weight: bold;
     }
 
-    .viewAll{
-        font-size: 22px;
+    .man-women-backpack{
+        margin-left: -1.5rem;
+    }
 
+    .backpack{
+        margin-left: 0px;
+        font-size: 1.4rem;
+    }
+
+
+    .featured-products-div a{
+        position: relative;
+        left: 20px;
+        font-size: 13px;
+        font-weight: 900;
+    }
+
+    .featured-products-div h1{
+        font-size: 2em;
+        margin-left: 14%;
+    }
+
+
+    .product1 img{
+        width: 20rem;
+    }
+
+    #iphone{
+        display: none;
+    }
+
+    #smartwatch{
+        display: none;
+    }
+
+    #headphones{
+        margin-left: 24%;
+        width: 80%;
+    }
+
+    #airpod{
+        width: 80%;
     }
 
     .tagOfNew{
-        width: 60px;
-
+        display: none;
     }
 
-    .text-new{
-        font-size: 25px;
-
+    
+    .the-products{
+        margin-left: -15.7rem;
     }
 
     .product-name{
-        font-size: 20px;
+        font-size: 1rem;
         font-weight: bold;
 
     }
@@ -725,77 +715,830 @@ body{
 
     }
 
+    .special-offer-woman{
+        padding-top: 20%;
+    }
+
     .heading-special-offer{
         position: relative;
-        right: 100px;
+        right: 12rem;
+        top:5.5rem;
+        width: 100%;
+
     }
 
     .heading-special-offer h1{
         position: relative;
-        left: 550px;
+        left: 48%;
+        color: white;
+        font-size: 2rem;
     }
 
     .heading-p{
-        font-size: 23px;
-        width: 900px;
+        font-size: 1rem;
+        width: 100%;
+        padding-left:5rem;
     }
 
     .btn-shop-now button{
         position: relative;
-        left: 700px;
+        left: 29rem;
+        width: 20%;
+        padding: .3rem;
     }
 
     .shop-now{
-        font-size: 30px;
+        font-size: 2em;
+
+    }
+
+    .newarrivals-div{
+        margin-left: -6rem;
     }
 
     .viewAll-new-p{
-        font-size: 23px;
-        width: 300px;
+        color: red;
+        font-size: 1em;
+        padding-left: 1rem;
+    }
+
+    #products-new-arr{
+       display: none;
+    }
+
+    #shirt-new{
+        margin-left: -9rem;
+        
+    }
+
+    .product1-new img{
+        width: 12rem;
+        position: relative;
+        right:2rem ;
+    }
+
+    .product1-new{
+        margin: 1rem;
+        padding: 6rem;
 
     }
 
+    #shirt3{
+        display: none;
+    }
+
+
+    #shirt4{
+        display: none;
+    }
+
+    .newsletter-div{
+        margin-right: 2rem;
+    }
+
     .heading-newsletter p{
-        font-size: 23px;
+        font-size: .9rem;
         font-weight: bold;
         width: 100%;
     }
 
     .sub-btn{
-        font-size: 24px;
+        font-size: 1rem;
         color: white;
 
     }
 
+    .footer{
+        margin-right: -200px;
+        height: 13rem;
+    }
+
+    .footer-item{
+        margin: -100px;
+
+    }
+
     .footer-item h1{
-        font-size: 30px;
-        width: 97px;
+        font-size: 1rem;
+        width: 100%;
 
     }
 
     .footer-item p{
-        font-size: 23px;
+        font-size: 1rem;
 
     }
 
     .footer-item a{
         color: white;
         text-decoration: none;
+        
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+    .div-bars{
+        display: block;
 
     }
 
-    .heading-p{
-        margin-left: 100px;
+    .landing-page{
+        background-color: #EEEEEE;
+        width: 110%;
+        height: 110vh;
     }
 
+    .logo p{
+        font-size: 2rem;
+    }
+
+    .nav-ul{
+        font-size: 1rem;
+        display: none;
+        background-color: #EEEEEE;
+        font-weight: bold;
+    }
+
+
+    .fa-bars{
+        font-size: 1rem;
+        margin-left: 22rem;
+        margin-top: 0.9rem;
+        position: fixed;
+        top: .9rem;
+    }
+
+    .change{
+        display: block;
+        height: 19rem;
+        background-color: #EEEEEE;
+    }
+
+    .nav{
+        background-color: #eee;
+        height: 2rem;
+    }
+
+    .heading-new{
+        width: 80%;
+        background-color: #EEEEEE;
+        font-size: 3rem;
+        position: relative;
+        top: 10rem;
+        left:3rem;
+    }
+
+
+    .arrivals{
+        width: 100%;
+        margin-right: 20%;
+        position: relative;
+        bottom: 7rem;
+        top: 2rem;
+        right: 5rem;
+    }
+
+    .go-shopping-btn{
+        font-size: 1.5rem;
+        font-weight: bold;
+        width: 100%;
+        position: relative;
+        top: -4rem;
+        left: -7rem;
+        color: white;
+
+    }
+
+    .div-body{
+        margin-right: 10%;
+    }
+
+    .div-image{
+        position: relative;
+        left: 3rem;
+        width: 100%;
+
+    }
+    
+    .div-image img{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 65%;
+        height: auto;
+        padding-top: 6.9rem;
+    }
+
+    .man-women-backpack{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: .1rem;
+    }
+
+    .man{
+        width: 80%;
+        padding-right: 3rem;
+
+
+    }
+
+    .anchor-view{
+        font-size: 12px;
+        color: black;
+        font-weight: bold;
+    }
+
+    .the-products{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+    .featured-products-div a{
+        position: relative;
+        left: 1rem;
+        font-size: 1rem;
+        font-weight: 900;
+    }
+
+    .featured-products-div h1{
+        font-size: 2em;
+        margin-left: 3rem;
+    }
+
+
+    .product1 img{
+        width: 20rem;
+    }
+
+    #iphone{
+        display: none;
+    }
+
+    #smartwatch{
+        display: none;
+    }
+
+    #headphones{
+        margin-left: 56%;
+        width: 70%;
+    }
+
+    #airpod{
+        margin-left: 56%;
+        margin-top: 25%;
+        width: 70%;
+    }
+
+    .tagOfNew{
+        display: none;
+    }
+
+    
     .the-products{
         margin-left: -220px;
     }
 
-    .change{
-        height: 260px;
+    .product-name{
+        font-size: 1rem;
+        font-weight: bold;
+
     }
+
+    .product-price{
+        font-weight: bold;
+
+    }
+
+    .special-offer-woman{
+        padding-top: 25%;  
+    }
+
+
+
+    .heading-special-offer{
+        position: relative;
+        right: 12rem;
+        top:3rem;
+        width: 100%;
+        color: black;
+        padding-bottom: 1rem;
+    }
+
+    .heading-special-offer h1{
+        position: relative;
+        left: 55%;
+        bottom: 16rem;
+        color: white;
+        font-size: 1.6rem;
+        color: white;
+        margin-top: 1rem;
+
+    }
+
+    .heading-p{
+        font-size: 1rem;
+        width: 72%;
+        padding-left:10rem;
+        margin-top: 10%;
+    }
+
+    .btn-shop-now button{
+        position: relative;
+        left:36rem;
+        bottom: 16rem;
+        padding: .1rem;
+    }
+
+    .btn-shop-now button{
+        font-size: 1rem;
+        margin-left: -27%;
+        width: 20%;
+        margin-bottom: 2rem;
+    }
+
+    .featured-products-new{
+        position: relative;
+        right: 3rem;
+    }
+
+    .viewAll-new-p{
+        color: red;
+        font-size: 1em;
+        position: relative;
+        right: 10%;
+    }
+
+    #products-new-arr{
+       display: none;
+    }
+
+    #shirt-new{
+        width: 100%;
+    }
+
+    .product1-new img{
+        width: 14rem;
+        position: relative;
+        left: 1rem;
+        
+    }
+
+    .product1-new{
+        margin-left: 4rem;
+        padding: 6rem;
+        width: 80%;
+    }
+
+    #shirt3{
+        display: none;
+    }
+
+
+    #shirt4{
+        display: none;
+    }
+
+    .view-product{
+        position: relative;
+        bottom: 8rem;
+        margin-left: 2rem;
+    }
+
+    .heading-newsletter h1{
+        width: 120%;
+        margin-right: -10rem;
+        position: relative;
+        right: 3rem;
+    }
+
+    .heading-newsletter p{
+        font-size: .9rem;
+        font-weight: bold;
+        width: 150%;
+        margin-left: -4rem;
+    }
+
+    .input{
+        width: 120%;
+        margin-left: -3rem;
+    }
+
+
+    .sub-btn{
+        font-size: 1rem;
+        color: white;
+        width: 40%;
+    }
+
+    .footer{
+        margin-right: -100px;
+        height: 13rem;
+    }
+
+    .footer-item{
+        margin: -100px;
+
+    }
+
+    .footer-item h1{
+        font-size: 1rem;
+        width: 100%;
+
+    }
+
+    .footer-item p{
+        font-size: 1rem;
+
+    }
+
+    .footer-item a{
+        color: white;
+        text-decoration: none;
+        
+    }
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .div-bars{
+        display: block;
+        margin-right: 300px;
+    }
+
+    .landing-page{
+        background-color: #EEEEEE;
+        width: 110%;
+        height: 110vh;
+    }
+
+    .logo p{
+        font-size: 2rem;
+    }
+
+    .nav-ul{
+        font-size: 1rem;
+        display: none;
+        background-color: #EEEEEE;
+        font-weight: bold;
+    }
+
+
+    .fa-bars{
+        font-size: 1rem;
+        margin-left: 22rem;
+        margin-top: 0.9rem;
+        position: fixed;
+        top: .9rem;
+    }
+
+    .change{
+        display: block;
+        height: 19rem;
+        background-color: #EEEEEE;
+    }
+
+    .nav{
+        background-color: #eee;
+        height: 2rem;
+    }
+
+    .heading-new{
+        width: 70%;
+        background-color: #EEEEEE;
+        font-size: 2rem;
+        position: relative;
+        top: 10rem;
+        left:1rem;
+    }
+
+
+    .arrivals{
+        width: 100%;
+        margin-right: 10%;
+        position: relative;
+        bottom: 7rem;
+        top: 2rem;
+        right: 3rem;
+    }
+
+    .go-shopping-btn{
+        font-size: 1rem;
+        font-weight: bold;
+        width: 120%;
+        position: relative;
+        top: -4rem;
+        left: -11rem;
+        color: white;
+
+    }
+
+    .div-body{
+        margin-right: 10%;
+    }
+
+    .div-image{
+        position: relative;
+        left: 3rem;
+        width: 100%;
+
+    }
+    
+    .div-image img{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 65%;
+        height: auto;
+        padding-top: 12rem;
+    }
+
+    .man-women-backpack{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: .1rem;
+    }
+
+    .man{
+        width: 80%;
+        padding-right: 3rem;
+
+
+    }
+
+    .anchor-view{
+        font-size: 12px;
+        color: black;
+        font-weight: bold;
+    }
+
+    .the-products{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+    .featured-products-div a{
+        position: relative;
+        left: 6rem;
+        font-size: 1rem;
+        font-weight: 900;
+    }
+
+    .featured-products-div h1{
+        font-size: 2em;
+        margin-left: -1rem;
+    }
+
+
+    .product1 img{
+        width: 100%;
+    }
+
+    #iphone{
+        display: none;
+    }
+
+    #smartwatch{
+        display: none;
+    }
+
+    #headphones{
+        margin-left: 56%;
+        width: 80%;
+    }
+
+    #airpod{
+        margin-left: 56%;
+        margin-top: 25%;
+        width: 80%;
+    }
+
+    .tagOfNew{
+        display: none;
+    }
+
+    
+    .the-products{
+        margin-left: -220px;
+    }
+
+    .product-name{
+        font-size: 1rem;
+        font-weight: bold;
+
+    }
+
+    .product-price{
+        font-weight: bold;
+
+    }
+
+    .special-offer-woman{
+        padding-top: 25%;  
+    }
+
+
+
+    .heading-special-offer{
+        position: relative;
+        right: 12rem;
+        top:3rem;
+        width: 100%;
+        color: black;
+        padding-bottom: 1rem;
+    }
+
+    .heading-special-offer h1{
+        position: relative;
+        left: 60%;
+        bottom: 16rem;
+        color: white;
+        font-size: 1.6rem;
+        color: white;
+        margin-top: 3rem;
+
+    }
+
+    .heading-p{
+
+        width: 7%;
+        padding-left:rem;
+        margin-top: 30%;
+        margin-left: -80%;
+    }
+    
+    .heading-special-offer p{
+        display: none;
+    }
+
+    .btn-shop-now button{
+        position: relative;
+        left:33rem;
+        bottom: 13rem;
+        padding: .1rem;
+    }
+
+    .btn-shop-now button{
+        font-size: 1rem;
+        margin-left: -27%;
+        width: 20%;
+        margin-bottom: 2rem;
+    }
+
+    .featured-products-new{
+        position: relative;
+        right: 5rem;
+    }
+
+    .viewAll-new-p{
+        display: none;
+
+    }
+
+    #products-new-arr{
+       display: none;
+    }
+
+    #shirt-new{
+        width: 100%;
+    }
+
+    .product1-new img{
+        width: 14rem;
+        position: relative;
+        left: -1rem;
+        
+    }
+
+    .product1-new{
+        margin-left: 3rem;
+        padding: 6rem;
+        width: 80%;
+    }
+
+    #shirt3{
+        display: none;
+    }
+
+
+    #shirt4{
+        display: none;
+    }
+
+    #esp{
+        margin-bottom: -15rem;
+    }
+
+    .view-product{
+        position: relative;
+        bottom: 8rem;
+        margin-left: 1rem;
+    }
+
+    .newsletter-div{
+        display: none;
+    }
+
+    .heading-newsletter h1{
+        width: 100%;
+        position: relative;
+        right: 1rem;
+    }
+
+    .news-p{
+        position: relative;
+        right: 200px; 
+        font-size: 10px;
+        display: none;
+    }
+
+    .input{
+        width: 120%;
+        margin-left: -3rem;
+    }
+
+
+    .sub-btn{
+        font-size: 1rem;
+        color: white;
+        width: 40%;
+    }
+
+    .footer{
+        height: 12rem;
+        margin-top: 10px;
+        padding-top: 1rem;
+    }
+
+    #our-services{
+        display: none;
+    }
+
+    .footer-item{
+        margin: -90px;
+
+    }
+
+    .footer-item h1{
+        font-size: 12px;
+        width: 100%;
+
+    }
+
+    .footer-item p{
+        font-size: 1rem;
+
+    }
+
+    .footer-item a{
+        color: white;
+        text-decoration: none;
+        
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -1260,6 +2003,8 @@ body{
     .viewAll{
         position: relative;
         right: 30px;
+        color: black;
+        margin-left: 380px;
     }
 
     .background-img img{
@@ -1308,6 +2053,7 @@ body{
         width: 300px;
     }
 
+
     .heading-p{
         position: relative;
         top: -340px;
@@ -1329,114 +2075,151 @@ body{
 
 @media screen and (max-width: 1024px){
 
+    .container{
+        height: auto;
+    }
+
+
+    .heading-new-arrivals h1{
+        margin-bottom: 2%;
+    }
+
+    .button button{
+        margin-left: 100%;
+    }
+
+    .man-women-backpack{
+        width: 90%;
+
+    }
+
     .man{
-        padding: 20px;
         border: 1px solid black;
-        margin-left: 100px;
+        margin: 1%;
+        position: relative;
+        left: 10%;
+        top: 2rem;
     }
 
     .women{
-        padding: 20px;
-        margin-left: 100px;
         border: 1px solid black;
     }
 
-    .viewAll{
-        position: relative;
-        right: 30px;
+    .div-image img{
+        margin-top: 11.5%;
     }
 
-    .background-img img{
-        width: 1350px;
+    .featured-products-div{
+        margin-right: 12%;
+    }
+
+    .the-products{
+        width: 120%;
+    }
+
+    .the-products{
+        position: relative;
+        left:2%;
+        top: 4rem;
+
+    }
+
+    .product1{
+        border: 1px solid black;
+        margin: 10px;
+        height: 20rem;
+    }
+
+    .tagOfNew{
+        width: 20%;
+        position: relative;
+        bottom: 127.5% ;
+        left: 0%;  
+    }
+
+    .special-offer-woman{
+        margin-top: 20%;
     }
 
     .heading-special{
         position: relative;
-        left: 450px;
+        left: 30%;
+        bottom: 20rem;
+        color: white;
     }
  
     .heading-p{
         position: relative;
-        left: 380px;
-        bottom: 65px;
+        left: 23%;
+        bottom: 18rem;
         color: white;
     }
 
     .shop-now{
         position: relative;
-        left: 630px;
+        left: 44%;
+        width: 20%;
+        bottom: 12rem;
+        font-size: 1.4rem;
+    }
+
+    .newarrivals-div{
+        margin-right: 20%;
+    }
+
+    .view-product{
+        position: relative;
+        left: 20%;
+    }
+
+    .products-new-arr{
+        margin-top: 10%;
+        width: 100%;
+        margin-left: -30%;
+
+    }
+
+    .viewAll{
+        margin-left: 35%;
+    }
+
+    .viewAll-new-p{
+        margin-left: 40%;
+    }
+
+    .featured-products-new{
+        width: 100%;
     }
 
     .newsletter-div{
         position: relative;
-        left: 100px;
+        right: 6%;
+        top: 5rem;
     }
 
     .footer{
-        width: 1353px;
+        width: 100%;
+        font-size: 10px;
+        padding-right: 300px;
     }
 
-    .icons{
-        position: relative;
-        left: 120px;
-        bottom: 100px;
-        width: 100px;
+    .footer-item{
+        margin-right: -20px;
     }
 
-    .the-products{
-        position: relative;
-        left: 50px;
-
-    }
-
-
-    .footer-item h1{
-        font-size: 30px;
-        width: 97px;
-
-    }
-
-    .footer-item p{
-        font-size: 23px;
-
-    }
-
-    .footer-item a{
-        color: white;
-        text-decoration: none;
-
-    }
-
-    .product1{
-        position: relative;
-        right: 30px;
-    }
-
-    .product1{
-        border: 1px solid black;
-        margin: 10px;
-        position: relative;
-        right: 110px;
-        top: 40px;
-    }
-
-    .product1-new{
-        border: 1px solid black;
-        margin: 10px;
-        position: relative;
-        right: 50px;
-        top: 40px;
-    }
-
-    .landing-page{
-        width: 1350px;
-    }
 }
+
+
 
 
 @media screen and (max-width: 540px){
     .featured-products{
         width: 500px;
+        
+    }
+
+    .nav-ul{
+        font-size: 30px;
     }
 
     .viewAll{
