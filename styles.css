@@ -120,11 +120,13 @@ body{
     border: none;
     outline: none;
     cursor: pointer;
+    width: 20%;
 }
 
 .go-shopping-btn:hover{
     background-color: #ff3131b9;
     transition: 0.5s;
+    width: 130%;
 }
 
 .man-women-backpack{
@@ -213,7 +215,7 @@ body{
 .viewAll{
     margin-left: 33%;
     position: relative;
-    top: 2rem;
+    top: .5rem;
     text-decoration: none;
     color: #FF3131;
 }
@@ -225,16 +227,30 @@ body{
 .the-products{
     display: flex;
     justify-content: space-between;
+    position: relative;
+    left: 1.2rem;
+    top: 2rem;
+
 }
 
 .product1{
     height: 50%;
     width: 80%;
     background-color: #EEEEEE;
-    margin-top: 5%;
+    margin-top: 10rem;
     margin-right: -2%;
     margin-left: -4%;
     cursor: pointer;
+    border: 1px solid black;
+    margin: 3px;
+}
+
+#iphone-price{
+    margin-bottom: 3.1rem;
+}
+
+#smartwatch-price{
+    margin-bottom: 3.1rem;
 }
 
 .product1 img{
@@ -323,7 +339,7 @@ body{
 }
 
 .viewAll-new-p{
-    margin-left: 35%;
+    margin-left: 38%;
     position: relative;
     top: 1rem;
     text-decoration: none;
@@ -372,11 +388,10 @@ body{
 
 
 .tagOfNew{
-    width: 10%;
+    width: 12%;
     background-color: #FF3131;
     position: relative;
-    bottom: 26rem;
-    left: 1rem;
+    bottom: 25.56rem;
     padding: 1rem;
 }
 
@@ -415,7 +430,7 @@ body{
 }
 
 .featured-products-new{
-    margin-left: 30%;
+    margin-left: 33%;
     margin-top: 10%;
 }
 
@@ -486,6 +501,7 @@ body{
     position: relative;
     bottom: 25%;
     left: 7rem;
+    width: 20%;
 }
 
 .fb{
@@ -602,6 +618,7 @@ body{
         margin-top: 0.9rem;
         position: fixed;
         top: .9rem;
+        cursor: pointer;
     }
 
     .change{
@@ -910,6 +927,7 @@ body{
         margin-top: 0.9rem;
         position: fixed;
         top: .9rem;
+        cursor: pointer;
     }
 
     .change{
@@ -950,7 +968,6 @@ body{
         top: -4rem;
         left: -7rem;
         color: white;
-
     }
 
     .div-body{
@@ -1249,6 +1266,7 @@ body{
         margin-top: 0.9rem;
         position: fixed;
         top: .9rem;
+        cursor: pointer;
     }
 
     .change{
@@ -1282,14 +1300,14 @@ body{
     }
 
     .go-shopping-btn{
-        font-size: 1rem;
+        font-size: .5rem;
         font-weight: bold;
-        width: 120%;
+        width: 90%;
         position: relative;
         top: -4rem;
         left: -11rem;
         color: white;
-
+        z-index: 1000;
     }
 
     .div-body{
@@ -1298,7 +1316,7 @@ body{
 
     .div-image{
         position: relative;
-        left: 3rem;
+        left: 1rem;
         width: 100%;
 
     }
@@ -1559,15 +1577,19 @@ body{
     }
 
 
+    .go-shopping-btn{
+        background: #000;
+        position: relative;
+        left: -9rem;
+        font-size: .9rem;
+    }
+
+    .go-shopping-btn:hover{
+        background: #ff3131b9;
+    }
 
 
 }
-
-
-
-
-
-
 
 
 
@@ -1581,32 +1603,84 @@ body{
 
     .div-image img{
         position: relative;
-        top: 9rem;
+        top: 4rem;
+        left: 7rem;
+    }
+
+    #new{
+        position: relative;
+        left: 3rem;
+    }
+
+    .heading-new-arrivals h1{
+        font-size: 4rem;
+    }
+
+    .button button{
+        color: white;
+        font-size: 2em;
+        position: relative;
+        margin-right: 9rem;
+        
+    }
+
+    .man-women-backpack{
+        display: flex;
+        flex-direction: row;
     }
 
     #man-back{
-        width: 150%;
+        width: 100%;
         position: relative;
-        left: 30%;
+        left: 3rem;
+        padding-left: 20px;
+        padding-right: 140px;
+    }
+
+    .heading-backpack{
+        margin-left: 3rem;
+        
+    }
+
+    .backpack{
+        font-size: 2rem;
+    }
+
+    .anchor-view{
+        font-size: 1rem;
     }
 
     #women{
-        width: 150%;
+        width: 100%;
         position: relative;
-        left: 30%;
-        top: 4rem;
+        left: 6rem;
+        padding-left: 20px;
+        padding-right: 140px;
     }
 
+    .featured-products-div h1{
+        margin-left: 2rem;
+    }
+
+    .featured-products-div a{
+        position: relative;
+        left: 55%;
+        margin-top: 2rem;
+    }
+
+
     #headphones{
-        margin-left: 70%;
-        width: 200%;
+        width: 160%;
+        margin-left: 22rem;
     }
 
     #airpod{
-        margin-left: 70%;
-        width: 200%;
+        width: 160%;
+        margin-left: 22rem;
         margin-top: 50%;
     }
+
+
 
     .featured-products-div h1{
         position: relative;
@@ -1620,6 +1694,101 @@ body{
         position: relative;
         top: 40px;
     }
+
+    
+    .special-offer-woman{
+        padding-top: 10rem;
+    }
+
+    .background-img img{
+        width: 940px;
+        margin-left: 7px;
+    }
+
+    .heading-special-offer h1{
+        position: relative; 
+        bottom: 400px;  
+        left: 480px; 
+        color: white;
+        font-size: 2rem;
+    }
+
+    .heading-special-offer p{
+        display: block;
+        margin-top: -20px;
+        padding-left:320px;
+    }
+
+    .btn-shop-now button{
+        margin-left: 1rem;
+        width: 60%;
+        font-size: 23px;
+    }
+
+    .featured-new h1{
+        margin-left: 260px;
+        font-size: 3rem;
+
+    }
+
+    .products-new-arr{
+        width: 100%;
+    }
+
+    .product1-new{
+        position: relative;
+        left: 8rem;
+        width: 200%;
+    }
+
+    .product1-new img{
+        margin-left: 5rem;
+    }
+
+    
+    .footer{
+        height: 12rem;
+        margin-top: 10px;
+
+    }
+
+    #footer_of_black{
+        width: 640px;
+        height: 50vh;
+    }
+
+
+    #our-services{
+        display: block;
+    }
+
+    .footer-item{
+        margin: -50px;
+
+    }
+
+    .footer-item h1{
+        font-size: 12px;
+        width: 10%;
+
+    }
+
+    .footer-item p{
+        font-size: 1rem;
+
+    }
+
+    .footer-item a{
+        color: white;
+        text-decoration: none;
+        
+    }
+
+
+    .fa-bars{
+        cursor: pointer;
+    }
+
 }
 
 
@@ -1751,7 +1920,8 @@ body{
     }
 
     .featured-products-div{
-        margin-right: 12%;
+        position: relative;
+        right: 2.2rem;
     }
 
     .the-products{
@@ -1760,9 +1930,13 @@ body{
 
     .the-products{
         position: relative;
-        left:2%;
+        left:.5%;
         top: 4rem;
 
+    }
+
+    .product1-new:hover{
+        background-color: #000;
     }
 
     .product1{
@@ -1773,9 +1947,11 @@ body{
 
     .tagOfNew{
         width: 20%;
-        position: relative;
-        bottom: 127.5% ;
-        left: 0%;  
+        margin-top: .99rem;
+    }
+
+    #headphone-tag-new{
+        margin-top: -.2rem;
     }
 
     .special-offer-woman{
@@ -1806,19 +1982,35 @@ body{
 
     .newarrivals-div{
         margin-right: 20%;
+        width: 100%;
     }
+
+    .new-arrivals{
+        position: relative;
+        right: 5rem;
+    }
+
 
     .view-product{
         position: relative;
-        left: 20%;
+        left: 24%;
     }
 
     .products-new-arr{
         margin-top: 10%;
-        width: 100%;
-        margin-left: -30%;
-
+        width: 200%;
     }
+
+    .the-products{
+        padding: 2rem;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        right: 10rem;
+    }
+
+
+
 
     .viewAll{
         margin-left: 35%;
@@ -1847,6 +2039,21 @@ body{
     .footer-item{
         margin-right: -20px;
     }
+
+    .button button{
+        margin-left: 100px;
+    }
+
+    .go-shopping-btn{
+        width: 100%;
+        cursor: pointer;
+
+    }
+
+    .go-shopping-btn:hover{
+        background: #000;
+    }
+
 
 }
 
