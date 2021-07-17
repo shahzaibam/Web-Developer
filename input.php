@@ -6,83 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taxi Project</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href=".styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-
+<nav class="navigation-bar">
+        <ul class="unList">
+            <a href="/project/index.php"><li>Taxi Project</li></a>
+            <a href="/project/index.php"><li>Home</li></a>
+            <a href="/project/input.php"><li>Input</li></a>
+        </ul>
+    </nav>
     <div class="container">
-        <h1 id="heading-taxiProject" style="margin-top: 30px; background: #355c7d; position: relative; top: -30px; left: -130px; width: 1368px; padding: 10px;">Taxi <span style="color: #FFFF00;">Project </span></h1>
-        
+        <h1 id="heading-taxiProject" class="input-heading-taxi"> Taxi Project </span></h1>
 
         <div class="form">
             <form action="save.php" method="post">
+            <h2 class="trabajos" >Trabajos Realizados</h2>
 
-                <div class="firstsec" style="display: grid; grid-template-columns: 200px 200px 200px 200px; margin-top: 50px;">
+                <div class="firstsec">
             
                     <label for="FECHA">FECHA</label>
-                    <input style="margin: 3px;" name="FECHA" type="date" class="input_text" required>
+                    <input class="inp-fecha" name="FECHA" type="date" class="input_text" required>
 
 
-                    <label style="margin-left: 20px;" for="KILOMETROS">KILOMETROS</label>
-                    <input style="margin: 3px;" name="KILOMETROS" type="text" class="input_text">
+                    <label class="kilo-label" for="KILOMETROS">KILOMETROS</label>
+                    <input class="inp-kilo" name="KILOMETROS" type="text" class="input_text">
 
 
-                    <label for="ACEITE">ACEITE</label>
-                    <input style="margin: 3px;" name="ACEITE" type="text" class="input_text">
+                    <label class="aceite-label" for="ACEITE">ACEITE</label>
+                    <input class="aceite-input"  name="ACEITE" type="text" class="input_text">
 
 
-                    <label style="margin-left: 20px;" for="FILTRO_ACEITE">FILTRO_ACEITE</label>
-                    <input style="margin: 3px;" name="FILTRO_ACEITE" type="text" class="input_text">
+                    <label class="filtroaceite-label" for="FILTRO_ACEITE">FILTRO_ACEITE</label>
+                    <input class="filtroaceite-inp" name="FILTRO_ACEITE" type="text" class="input_text">
 
 
                     <label for="FILTRO_AIRE">FILTRO_AIRE</label>
-                    <input style="margin: 3px;" name="FILTRO_AIRE" type="text" class="input_text">
+                    <input class="input-faire" name="FILTRO_AIRE" type="text" class="input_text">
 
 
-                    <label style="margin-left: 20px;" for="FILTRO_POLEN">FILTRO_POLEN</label>
-                    <input style="margin: 3px;" name="FILTRO_POLEN" type="text" class="input_text">
+                    <label class="polen-lab" for="FILTRO_POLEN">FILTRO_POLEN</label>
+                    <input class="input-polen" name="FILTRO_POLEN" type="text" class="input_text">
 
-
+ 
                     <label for="FILTRO_GASOIL">FILTRO_GASOIL</label>
-                    <input style="margin: 3px;" name="FILTRO_GASOIL" type="text" class="input_text">
+                    <input class="input-gasoil" name="FILTRO_GASOIL" type="text" class="input_text">
 
 
-                    <label style="margin-left: 20px;" for="DELANTERAS">PASTILLAS DELANTERAS</label>
-                    <input style="margin: 3px;" name="DELANTERAS" type="text" class="input_text">
+                    <label class="label-embrague" style="margin-left: 20px;" for="EMBRAGUE">EMBRAGUE</label>
+                    <input class="input-embrague" style="margin: 3px;" name="EMBRAGUE" type="text" class="input_text">
+
+
 
                 </div>
-                <div class="secsect" style="display: grid; grid-template-columns: 200px 200px 200px 200px;  margin-top: 100px;">
+                <div class="secsect" style="display: grid; grid-template-columns: 200px 200px 200px 200px;">
                     <label  for="TRASERAS">PASTILLAS TRASERAS</label>
-                    <input style="margin: 3px;"  name="TRASERAS" type="text" class="input_text">
+                    <input class="input-sec2" name="TRASERAS" type="text" class="input_text">
+
+                    <label class="label-sec2-dos" for="DELANTERAS">PASTILLAS DELANTERAS</label>
+                    <input class="input-sec2-dos" name="DELANTERAS" type="text" class="input_text">
+
+                    <label class="label-sec2"  for="DISCOS_DELANTEROS">DISCO DELANTEROS</label>
+                    <input class="input-sec2" name="DISCOS_DELANTEROS" type="text" class="input_text">
 
 
-                    <label style="margin-left: 20px;" for="DISCOS_DELANTEROS">DISCO DELANTEROS</label>
-                    <input style="margin: 3px;" name="DISCOS_DELANTEROS" type="text" class="input_text">
+                    <label class="label-sec2-dos"  for="DISCO_TRASEROS">DISCO TRASEROS</label>
+                    <input class="input-sec2-dos" name="DISCOS_TRASEROS" type="text" class="input_text">
+
+                    <label class="label-sec2"  for="RUEDAS_DELANTERAS">RUEDAS DELANTERAS</label>
+                    <input class="input-sec2" name="RUEDAS_DELANTERAS" type="text" class="input_text">
 
 
-                    <label for="DISCO_TRASEROS">DISCO TRASEROS</label>
-                    <input style="margin: 3px;" name="DISCOS_TRASEROS" type="text" class="input_text">
-
-                    <label style="margin-left: 20px;" for="RUEDAS_DELANTERAS">RUEDAS DELANTERAS</label>
-                    <input style="margin: 3px;" name="RUEDAS_DELANTERAS" type="text" class="input_text">
+                    <label class="label-sec2-dos" for="RUEDAS_TRASERAS">RUEDAS TRASERAS</label>
+                    <input class="input-sec2-dos"name="RUEDAS_TRASERAS" type="text" class="input_text">
 
 
-                    <label for="RUEDAS_TRASERAS">RUEDAS TRASERAS</label>
-                    <input style="margin: 3px;" name="RUEDAS_TRASERAS" type="text" class="input_text">
-
-
-                    <label style="margin-left: 20px;" for="EMBRAGUE">EMBRAGUE</label>
-                    <input style="margin: 3px;" name="EMBRAGUE" type="text" class="input_text">
-
-
-                    <label for="OTROS">OTROS</label>
-                    <input style="margin: 3px; height: 32px;" name="OTROS" type="text" class="input_text">
+                    <label class="label-sec2"  for="OTROS">OTROS</label>
+                    <input class="input-sec2" id="otros"  name="OTROS" type="text" class="input_text">
                 
                 
-                    <label style="margin-left: 20px;" for="observation">OBSERVATION</label>
-                    <textarea style="margin: 3px;" name="observation" type="text" class="input_text"></textarea>
+
                 </div>
-                <input type="submit" class="submit-btn" name="save" value="Save" style="padding; 20px; margin-left: 460px; margin-top: 30px; background: #355c7d ; cursor: pointer; border: 1px solid black; width: 50px; padding: 5px; border-radius: 7px; color: white; font-weight: 100;">
+                <label class="observacion" for="observation">OBSERVATION</label>
+                <textarea class="textarea" name="observation" type="text" class="input_text"></textarea><br>
+                <input type="submit" class="submit-btn" name="save" value="Save" style="">
 
             </form>
         </div>
