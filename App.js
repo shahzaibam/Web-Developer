@@ -1,66 +1,69 @@
 import logo from './logo.svg';
 import './App.css';
-import React from 'react'
-import ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom'
 
 class Contact extends React.Component {
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
-      password: '123456789',
+      password: 'shebi123',
       authorized: false
     }
-    this.authorize = this.authorize.bind(this) 
+    this.authorize = this.authorize.bind(this);
   }
 
-  authorize(e) {
-    const password = e.target.querySelector('input[type = "pasword"]').value
+  authorize(e){
+  
+    const password = e.target.querySelector('input[type="password"]').value;
 
     const auth = password == this.state.password
 
     this.setState({
-      authorized: auth
-    })
+      authorized : auth
+    });
   }
 
   render() {
     let login = (
       <form action="#" onSubmit={this.authorize}>
-        <input type="password" placeholder="Password" />
-        <input type="submit" />
+        <input type="password" placeholder="password" />
+        <input type="Submit" />
       </form>
     )
 
     let contactInfo = (
       <ul>
         <li>
-          Home
+          contact@info.com
         </li>
-
         <li>
-        Home
-        </li>
-
-        <li>
-        Home
+          555.444.333
         </li>
       </ul>
-      )
+    )
 
+    return (
+      <div id="authorization">
+        <h1>{this.state.authorized ? 'Contact' : 'Enter the password'}</h1>
+        {this.state.authorized ? contactInfo : login}
 
-      return (
-        <div id="authoriziation">
-          <h1>{this.state.password ? 'contact' : 'Ennter password'}</h1>
-        </div>
-      )
+      </div>
+    )
   }
+
 }
 
-ReactDOM.render(<Contact />, document.getElementById("app"))
+
+
 
 function App() {
   return (
-   <h1></h1>
+    ReactDOM.render(
+      <Contact/>,
+      document.getElementById("app")
+    )
+
   )
 }
 
