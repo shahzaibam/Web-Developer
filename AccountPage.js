@@ -1,7 +1,7 @@
 import React from 'react'
 import firstImg3 from '../images/img-3.jpg'
 
-
+ 
 export function AccountPage() {
     return (
         <div>
