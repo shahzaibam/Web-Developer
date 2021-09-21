@@ -1,61 +1,35 @@
 import React from 'react'
-import firstImg from '../images/img-1.jpg'
-import firstImg2 from '../images/img-6.jpg'
-import firstImg3 from '../images/img-3.jpg'
 
-export function Carousel() {
+const Carousel = () => {
     return (
-        <div className="container-3 mt-4 mr-2 ml-1">
-
-            <div id="carouselIndicator" className="carousel slide ml-2" data-ride="carousel">
-                <ol className="carousel-indicators">
-                    <li className="#carouselIndicator" data-slide-to="0" className="active"></li>
-                    <li className="#carouselIndicator" data-slide-to="1"></li>
-                    <li className="#carouselIndicator" data-slide-to="2"></li>
-                    <li className="#carouselIndicator" data-slide-to="3"></li>
-                    <li className="#carouselIndicator" data-slide-to="4"></li>
-                    <li className="#carouselIndicator" data-slide-to="5"></li>
-                </ol>
-
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img className="d-block w-100" src="https://static.dw.com/image/54650513_303.jpg" alt="" height='400px' />
-                    </div>
-
-                    <div className="carousel-item">
-                        <img className="d-block w-100" src="https://images2.minutemediacdn.com/image/fetch/w_736,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Ftherealchamps.com%2Fwp-content%2Fuploads%2Fgetty-images%2F2017%2F07%2F669976398-850x560.jpeg" alt="" height='400px' />
-                    </div>
-
-                    <div className="carousel-item">
-                        <img className="d-block w-100" src="https://s3.amazonaws.com/futbolsapiensbucket/wp-content/uploads/2020/10/juventus.jpg" alt="" height='400px' />
-                    </div>
-
-                    <div className="carousel-item">
-                        <img className="d-block w-100" src="https://thumb.besoccer.com/media/img_news/afp_fr_6a42277fccb737e5302595e8009201b4b02a337a.jpg?size=1000x&ext=jpeg" alt="" height='400px' />
-                    </div>
-
-                    <div className="carousel-item">
-                        <img className="d-block w-100" src="https://i1.wp.com/www.sopitas.com/wp-content/uploads/2020/02/Manchester-City-fue-expulsado-de-la-Champions-League-por-dos-anos.png" alt="" height='400px' />
-                    </div>
-
-                    <div className="carousel-item">
-                        <img className="d-block w-100" src="https://forzaitalianfootball.com/wp-content/uploads/2020/03/Napoli-Torino-2.png" alt="" height='400px' />
-                    </div>
-
-                    
+        <>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-
-                <a className="carousel-control-prev" href="#carouselIndicator" role="button" data-slide="prev">
-                    <span className="carousel-control-prev-icon" role="button" aria-hidden="true"></span>
-                    <span className="sr-only">Previous</span>
-                </a>
-
-                <a className="carousel-control-next" href="#carouselIndicator" data-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Next</span>
-                </a>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://d1ez3020z2uu9b.cloudfront.net/imagecache/blog-photos/17596_Fill_800_800.jpg" class="d-block w-100" alt="..." height="400px"/>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://thelandscapephotoguy.com/wp-content/uploads/2019/01/landscape%20new%20zealand%20S-shape.jpg" class="d-block w-100" alt="..." height="400px"/>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://store-images.s-microsoft.com/image/apps.13801.13777613854529434.257959da-c3a7-4c0c-bc46-4eab0d9b3b45.74fd1573-5988-4d86-bbaa-911fc4e99efe?mode=scale&q=90&h=1080&w=1920" class="d-block w-100" alt="..." height="400px"/>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-        </div>
+        </>
     )
 }
 
